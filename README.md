@@ -11,26 +11,38 @@ Sav programski kod potrebno je verzionirati u glavnoj **master** grani i **obvez
 
 Nakon vaše prijave bit će vam dodijeljen mentor s kojim ćete tijekom semestra raditi na ovom projektu. A sada, vrijeme je da prijavite vaš projekt. Za prijavu vašeg projektnog prijedloga molimo vas koristite **predložak** koji je naveden u nastavku, a započnite tako da kliknete na *olovku* u desnom gornjem kutu ovoga dokumenta :) 
 
-# Naziv projekta
-(u redak iznad navedite kratki proizvoljni naziv projekta prikladan akademskoj zajednici, a ovaj tekst obrišite)
+# Rent-A-Field
+
 
 ## Projektni tim
 
 Ime i prezime | E-mail adresa (FOI) | JMBAG | Github korisničko ime
 ------------  | ------------------- | ----- | ---------------------
-Ime i prezime | mojaadresa@foi.hr | 000000000 | githubuser
-Ime i prezime | ... | ... | ...
+Petar Šemiga | psemiga@foi.hr | 0016141857 | petarsemiga
+Leon Špiranec | lspiranec@foi.hr | 0016144710 | leonspiranec19
+Tomislav Smetisko | tsmetisko@foi.hr | 0016143232 | tsmetisko
 
 ## Opis domene
-Umjesto ovih uputa opišite domenu ili problem koji pokrivate vašim  projektom. Domena može biti proizvoljna, ali obratite pozornost da sukladno ishodima učenja, domena omogući primjenu zahtijevanih koncepata kako je to navedeno u sljedećem poglavlju. Priložite odgovarajuće skice gdje je to prikladno.
+Rent-A-Field je aplikacija koja omogućava rezervaciju i najam sportskih prostora. Rad aplikacije započinje registracijom korisnika u sustav. 
+Nakon uspješne registracije, korisnik prijavom pristupa aplikaciji. 
+Početni zaslon aplikacije prikazuje uvid u sve sportske prostore i odabirom pojedinog prostora moguće je pregledati dostupnost i raspored odvijanja aktivnosti u tom prostoru. 
+Ukoliko korisnik želi iznajmiti ili rezervirati prostor, potrebno je ispuniti podatke za rezervaciju. 
+Osim već navedenih mogućnosti korisnik se može priključiti aktivnostima koje su na raspolaganju u određenom prostoru. 
+Korisniku se nudi pregled i pisanje recenzija za određene prostore. 
+Aplikacija bi podržavala dvije uloge tj. zaposlenici i administracija .
 
 ## Specifikacija projekta
-Umjesto ovih uputa opišite zahtjeve za funkcionalnošću programskog proizvoda. Pobrojite osnovne funkcionalnosti i za svaku naznačite ime odgovornog člana tima. Opišite buduću arhitekturu programskog proizvoda. Obratite pozornost da bi arhitektura trebala biti višeslojna s odvojenom (dislociranom) bazom podatka. Također uzmite u obzir da bi svaki član tima treba biti odgovorana za otprilike 3 funkcionalnosti, te da bi opterećenje članova tima trebalo biti ujednačeno. Priložite odgovarajuće dijagrame i skice gdje je to prikladno. Funkcionalnosti sustava bobrojite u tablici ispod koristeći predložak koji slijedi:
-
 Oznaka | Naziv | Kratki opis | Odgovorni član tima
 ------ | ----- | ----------- | -------------------
-F01 | Login | Za pristup dnevniku potrebnba je autentikacija korisnika pomoću login funkcionalnosti. Korisnik se logira s podacima koji su mu dodijeljeni prilikom ... | Zlatko Stapić
-F02 | Pregled dnevnika | .... | ...
+F01 | Registracija | Za pristup aplikaciji potrebna je registracija korisnika. | Leon Špiranec
+F02 | Prijava | Prije korištenja aplikacije korisnik se mora prijaviti (obični korisnik ili zaposlenik) | Leon Špiranec
+F03 | Izbor i pregled terena | Korisnik dobiva uvid u raspoloživost i popis terena | Leon Špiranec
+F04 | Rezervacija prostora | Korisnik može pregledati i rezervirati termin u željenom prostoru, ovisno žele li svoj termin ili se priključiti već postojećem. | Petar Šemiga
+F05 | Evidencija termina | Zaposlenik može dodavati, ažurirati i brisati termine nekon prostora. | Petar Šemiga
+F06 | Stvaranje i brisanje terena | Zaposlenik može dodavati nove i brisati postojeće prostore | Petar Šemiga
+F07 | Najam sportske opreme | Korisnik je u mogućnosti unajmiti dodatne sportske rekvizite (lopte, reketi, sprave i pomagala...) | Tomislav Smetiško
+F08 | Najam privatnog trenera | Korisnik može unajmiti privatnog trenera i ima mogućnost individualnih treninga | Tomislav Smetiško
+F09 | Plaćanje | Korisnik odabire način plaćanja, ima opciju plačanja gotovinom u centru ili karticom preko aplikacije. | Tomislav Smetiško
 
 ## Tehnologije i oprema
-Umjesto ovih uputa jasno popišite sve tehnologije, alate i opremu koju ćete koristiti pri implementaciji vašeg rješenja. Ne zaboravite planirati korištenje tehnologija u aktivnostima kao što su projektni menadžment ili priprema dokumentacije. Tehnologije koje ćete koristiti bi trebale biti javno dostupne, a ako ih ne budemo obrađivali na vježbama u vašoj dokumentaciji ćete morati navesti način preuzimanja, instaliranja i korištenja onih tehnologija koje su neopbodne kako bi se vaš programski proizvod preveo i pokrenuo. Pazite da svi alati koje ćete koristiti moraju imati odgovarajuću licencu.
+Microsoft Visual Studio 2022, C# (.NET Framework), MySQL, Draw.io, GitHub, Microsoft Word
