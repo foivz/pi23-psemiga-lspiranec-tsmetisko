@@ -34,13 +34,13 @@ Aplikacija bi podržavala dvije uloge tj. zaposlenici i administracija .
 ## Specifikacija projekta
 Oznaka | Naziv | Kratki opis | Odgovorni član tima
 ------ | ----- | ----------- | -------------------
-F01 | Registracija | Za pristup aplikaciji potrebna je registracija korisnika. | Leon Špiranec
-F02 | Prijava | Prije korištenja aplikacije korisnik se mora prijaviti (obični korisnik ili zaposlenik) | Leon Špiranec
+F01 | Registracija i prijava| Prilikom registracije generira se "članska" iskaznica (QR/Barcode) preko koje će se korisnici moći prijaviti u sustav. | Leon Špiranec
+F02 | Prijava za izradu vlastitih trening programa | Korisnik se može prijaviti za izradu vlastitog programa u koji se mogu uključiti ostali korisnici | Leon Špiranec
 F03 | Izbor i pregled terena | Korisnik dobiva uvid u raspoloživost i popis terena | Leon Špiranec
-F04 | Rezervacija prostora | Korisnik može pregledati i rezervirati termin u željenom prostoru, ovisno žele li svoj termin ili se priključiti već postojećem. | Petar Šemiga
+F04 | Kreiranje događaja | Korisnik kreira događaj kojem prirodaje teren | Petar Šemiga
 F05 | Evidencija termina | Zaposlenik može dodavati, ažurirati i brisati termine nekon prostora. | Petar Šemiga
 F06 | Stvaranje i brisanje terena | Zaposlenik može dodavati nove i brisati postojeće prostore | Petar Šemiga
-F07 | Najam sportske opreme | Korisnik je u mogućnosti unajmiti dodatne sportske rekvizite (lopte, reketi, sprave i pomagala...) | Tomislav Smetiško
+F07 | Najam sportske opreme | Korisnik je u mogućnosti unajmiti dodatne sportske rekvizite (lopte, reketi, sprave i pomagala...), a rezervacija je potvrđena ispisanom potvrdom | Tomislav Smetiško
 F08 | Najam privatnog trenera | Korisnik može unajmiti privatnog trenera i ima mogućnost individualnih treninga | Tomislav Smetiško
 F09 | Plaćanje | Korisnik odabire način plaćanja, ima opciju plačanja gotovinom u centru ili karticom preko aplikacije. | Tomislav Smetiško
 
