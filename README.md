@@ -21,6 +21,7 @@ Ime i prezime | E-mail adresa (FOI) | JMBAG | Github korisničko ime
 Petar Šemiga | psemiga@foi.hr | 0016141857 | petarsemiga
 Leon Špiranec | lspiranec@foi.hr | 0016144710 | leonspiranec19
 Tomislav Smetisko | tsmetisko@foi.hr | 0016143232 | tsmetisko
+David Milanovic | dmilanovi@foi.hr | 0016145536 | dmilanovi
 
 ## Opis domene
 Rent-A-Field je aplikacija koja omogućava rezervaciju i najam sportskih prostora. Rad aplikacije započinje registracijom korisnika u sustav. 
