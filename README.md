@@ -21,7 +21,7 @@ Ime i prezime | E-mail adresa (FOI) | JMBAG | Github korisničko ime
 Petar Šemiga | psemiga@foi.hr | 0016141857 | petarsemiga
 Leon Špiranec | lspiranec@foi.hr | 0016144710 | leonspiranec19
 Tomislav Smetisko | tsmetisko@foi.hr | 0016143232 | tsmetisko
-David Milanovic | dmilanovi@foi.hr | 0016145536 | DavidMilanovic1
+David Milanović | dmilanovi@foi.hr | 0016145536 | DavidMilanovic1
 
 ## Opis domene
 Rent-A-Field je aplikacija koja omogućava rezervaciju i najam sportskih prostora. Rad aplikacije započinje registracijom korisnika u sustav. 
@@ -44,6 +44,11 @@ F06 | Stvaranje i brisanje terena | Zaposlenik može dodavati nove i brisati pos
 F07 | Najam sportske opreme | Korisnik je u mogućnosti unajmiti dodatne sportske rekvizite (lopte, reketi, sprave i pomagala...), a rezervacija je potvrđena ispisanom potvrdom | Tomislav Smetiško
 F08 | Najam privatnog trenera | Korisnik može unajmiti privatnog trenera i ima mogućnost individualnih treninga | Tomislav Smetiško
 F09 | Plaćanje | Korisnik odabire način plaćanja, ima opciju plačanja gotovinom u centru ili karticom preko aplikacije. | Tomislav Smetiško
+F10 | Kreiranje i ažuriranje cjenika | Zaposlenik ima mogućnost dodavanja novih stavki u cjenik te ažuriranje postojećih, dok korisnik ima opciju samo pregledati cjenik. | David Milanović
+F11 | Stvaranje obrazca za prigovore/poboljšanja | Korisnik ima mogućnost kreiranja obrazca za prigovore/poboljšanja. Zaposlenik prigovor/poboljšanje može prihvatiti ili odbiti uz obrazloženje u komentaru. | David Milanović
+F12 | Evidencija termina korisnika | Aplikacija ima mogućnost evidentiranja termina gdje korisnik može evidentirati rezultate odigranih susreta. Također aplikacija nudi mogućnost generiranja osoba u timove za sljedeći termin odigravanja susreta. | David Milanović
+
+
 
 ## Tehnologije i oprema
 Microsoft Visual Studio 2022, C# (.NET Framework), MySQL, Draw.io, GitHub, Microsoft Word
