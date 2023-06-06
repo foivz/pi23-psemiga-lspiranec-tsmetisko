@@ -47,6 +47,7 @@ F09 | Plaćanje | Korisnik odabire način plaćanja, ima opciju plačanja gotovi
 F10 | Kreiranje i ažuriranje cjenika | Zaposlenik ima mogućnost dodavanja novih stavki u cjenik te ažuriranje postojećih, dok korisnik ima opciju samo pregledati cjenik. | David Milanović
 F11 | Stvaranje obrazca za prigovore/poboljšanja | Korisnik ima mogućnost kreiranja obrazca za prigovore/poboljšanja. Zaposlenik prigovor/poboljšanje može prihvatiti ili odbiti uz obrazloženje u komentaru. | David Milanović
 F12 | Evidencija termina korisnika | Aplikacija ima mogućnost evidentiranja termina gdje korisnik može evidentirati rezultate odigranih susreta. Također aplikacija nudi mogućnost generiranja osoba u timove za sljedeći termin odigravanja susreta. | David Milanović
+F13 | Najam sportskih prostora | Korisnik može unajmiti željeni sportski prostor u određenom terminu | Tomislav Smetiško
 
 
 
