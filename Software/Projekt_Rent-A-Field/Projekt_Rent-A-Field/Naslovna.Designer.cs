@@ -39,6 +39,7 @@
             this.buttonPopisRezervacija.TabIndex = 0;
             this.buttonPopisRezervacija.Text = "Popis rezervacija";
             this.buttonPopisRezervacija.UseVisualStyleBackColor = true;
+            this.buttonPopisRezervacija.Click += new System.EventHandler(this.buttonPopisRezervacija_Click);
             // 
             // Naslovna
             // 

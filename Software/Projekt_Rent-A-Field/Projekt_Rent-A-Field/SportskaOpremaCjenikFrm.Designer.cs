@@ -44,6 +44,7 @@
             this.ZatvoriOpremuButton.TabIndex = 9;
             this.ZatvoriOpremuButton.Text = "Zatvori";
             this.ZatvoriOpremuButton.UseVisualStyleBackColor = true;
+            this.ZatvoriOpremuButton.Click += new System.EventHandler(this.ZatvoriOpremuButton_Click);
             // 
             // ObrisiOpremuButton
             // 
@@ -53,6 +54,7 @@
             this.ObrisiOpremuButton.TabIndex = 8;
             this.ObrisiOpremuButton.Text = "Obrisi";
             this.ObrisiOpremuButton.UseVisualStyleBackColor = true;
+            this.ObrisiOpremuButton.Click += new System.EventHandler(this.ObrisiOpremuButton_Click);
             // 
             // AzurirajOpremuButton
             // 
@@ -62,6 +64,7 @@
             this.AzurirajOpremuButton.TabIndex = 7;
             this.AzurirajOpremuButton.Text = "Ažuriraj";
             this.AzurirajOpremuButton.UseVisualStyleBackColor = true;
+            this.AzurirajOpremuButton.Click += new System.EventHandler(this.AzurirajOpremuButton_Click);
             // 
             // DodajOpremuButton
             // 
@@ -71,6 +74,7 @@
             this.DodajOpremuButton.TabIndex = 6;
             this.DodajOpremuButton.Text = "Dodaj";
             this.DodajOpremuButton.UseVisualStyleBackColor = true;
+            this.DodajOpremuButton.Click += new System.EventHandler(this.DodajOpremuButton_Click);
             // 
             // dataGridViewOprema
             // 
@@ -92,6 +96,7 @@
             this.Controls.Add(this.dataGridViewOprema);
             this.Name = "SportskaOpremaCjenikFrm";
             this.Text = "Sportska oprema";
+            this.Load += new System.EventHandler(this.SportskaOpremaCjenikFrm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOprema)).EndInit();
             this.ResumeLayout(false);
 

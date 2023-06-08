@@ -58,6 +58,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AzurirajOpremuFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AzurirajOpremuFrm.Designer.cs">
+      <DependentUpon>AzurirajOpremuFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DodajOpremuFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DodajOpremuFrm.Designer.cs">
+      <DependentUpon>DodajOpremuFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dogadaj.cs">
       <DependentUpon>PI2306_DB.tt</DependentUpon>
     </Compile>
@@ -156,8 +168,14 @@
     <Compile Include="Uloga.cs">
       <DependentUpon>PI2306_DB.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AzurirajOpremuFrm.resx">
+      <DependentUpon>AzurirajOpremuFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CjenikFrm.resx">
       <DependentUpon>CjenikFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DodajOpremuFrm.resx">
+      <DependentUpon>DodajOpremuFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPopisRezervacija.resx">
       <DependentUpon>FrmPopisRezervacija.cs</DependentUpon>
