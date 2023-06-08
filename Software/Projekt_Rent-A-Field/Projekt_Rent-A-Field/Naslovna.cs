@@ -16,5 +16,11 @@ namespace Projekt_Rent_A_Field
         {
             InitializeComponent();
         }
+
+        private void buttonPopisRezervacija_Click(object sender, EventArgs e)
+        {
+            FrmPopisRezervacija frmPopisRezervacija = new FrmPopisRezervacija();
+            frmPopisRezervacija.ShowDialog();
+        }
     }
 }
