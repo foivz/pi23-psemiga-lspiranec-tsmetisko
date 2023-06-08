@@ -73,6 +73,12 @@
     <Compile Include="Korisnik.cs">
       <DependentUpon>PI2306_DB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Naslovna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Naslovna.Designer.cs">
+      <DependentUpon>Naslovna.cs</DependentUpon>
+    </Compile>
     <Compile Include="PI2306_DB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -146,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPopisRezervacija.resx">
       <DependentUpon>FrmPopisRezervacija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Naslovna.resx">
+      <DependentUpon>Naslovna.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
