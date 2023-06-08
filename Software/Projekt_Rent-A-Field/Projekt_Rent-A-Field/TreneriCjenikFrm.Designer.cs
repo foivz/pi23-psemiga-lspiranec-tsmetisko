@@ -44,6 +44,7 @@
             this.ZatvoriProstorButton.TabIndex = 19;
             this.ZatvoriProstorButton.Text = "Zatvori";
             this.ZatvoriProstorButton.UseVisualStyleBackColor = true;
+            this.ZatvoriProstorButton.Click += new System.EventHandler(this.ZatvoriProstorButton_Click);
             // 
             // ObrisiProstorButton
             // 
@@ -53,6 +54,7 @@
             this.ObrisiProstorButton.TabIndex = 18;
             this.ObrisiProstorButton.Text = "Obrisi";
             this.ObrisiProstorButton.UseVisualStyleBackColor = true;
+            this.ObrisiProstorButton.Click += new System.EventHandler(this.ObrisiProstorButton_Click);
             // 
             // AzurirajProstorButton
             // 
@@ -62,6 +64,7 @@
             this.AzurirajProstorButton.TabIndex = 17;
             this.AzurirajProstorButton.Text = "Ažuriraj";
             this.AzurirajProstorButton.UseVisualStyleBackColor = true;
+            this.AzurirajProstorButton.Click += new System.EventHandler(this.AzurirajProstorButton_Click);
             // 
             // DodajProstorButton
             // 
@@ -71,6 +74,7 @@
             this.DodajProstorButton.TabIndex = 16;
             this.DodajProstorButton.Text = "Dodaj";
             this.DodajProstorButton.UseVisualStyleBackColor = true;
+            this.DodajProstorButton.Click += new System.EventHandler(this.DodajProstorButton_Click);
             // 
             // dataGridViewTreneri
             // 
@@ -92,6 +96,7 @@
             this.Controls.Add(this.dataGridViewTreneri);
             this.Name = "TreneriCjenikFrm";
             this.Text = "Treneri cjenik";
+            this.Load += new System.EventHandler(this.TreneriCjenikFrm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTreneri)).EndInit();
             this.ResumeLayout(false);
 

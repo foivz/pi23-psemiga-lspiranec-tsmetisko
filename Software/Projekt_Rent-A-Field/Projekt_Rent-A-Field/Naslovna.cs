@@ -22,5 +22,11 @@ namespace Projekt_Rent_A_Field
             FrmPopisRezervacija frmPopisRezervacija = new FrmPopisRezervacija();
             frmPopisRezervacija.ShowDialog();
         }
+
+        private void buttonPristupCjeniku_Click(object sender, EventArgs e)
+        {
+            CjenikFrm cjenikfrm = new CjenikFrm();
+            cjenikfrm.ShowDialog();
+        }
     }
 }

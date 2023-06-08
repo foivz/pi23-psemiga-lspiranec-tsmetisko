@@ -75,6 +75,12 @@
     <Compile Include="AzurirajProstorFrm.Designer.cs">
       <DependentUpon>AzurirajProstorFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AzurirajTreneraFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AzurirajTreneraFrm.Designer.cs">
+      <DependentUpon>AzurirajTreneraFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DodajOpremuFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,12 @@
     </Compile>
     <Compile Include="DodajProstorFrm.Designer.cs">
       <DependentUpon>DodajProstorFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DodajTreneraFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DodajTreneraFrm.Designer.cs">
+      <DependentUpon>DodajTreneraFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Dogadaj.cs">
       <DependentUpon>PI2306_DB.tt</DependentUpon>
@@ -209,6 +221,9 @@
     <EmbeddedResource Include="AzurirajProstorFrm.resx">
       <DependentUpon>AzurirajProstorFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AzurirajTreneraFrm.resx">
+      <DependentUpon>AzurirajTreneraFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CjenikFrm.resx">
       <DependentUpon>CjenikFrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -217,6 +232,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DodajProstorFrm.resx">
       <DependentUpon>DodajProstorFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DodajTreneraFrm.resx">
+      <DependentUpon>DodajTreneraFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPopisRezervacija.resx">
       <DependentUpon>FrmPopisRezervacija.cs</DependentUpon>
