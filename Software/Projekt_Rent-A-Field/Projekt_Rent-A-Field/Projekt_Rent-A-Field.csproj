@@ -55,26 +55,88 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Dogadaj.cs">
+      <DependentUpon>PI2306_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CjenikFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="CjenikFrm.Designer.cs">
+      <DependentUpon>CjenikFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Korisnik.cs">
+      <DependentUpon>PI2306_DB.tt</DependentUpon>
     </Compile>
     <Compile Include="PI2306_DB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PI2306_DB.Context.tt</DependentUpon>
     </Compile>
+    <Compile Include="PI2306_DB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PI2306_DB.tt</DependentUpon>
+    </Compile>
     <Compile Include="PI2306_DB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PI2306_DB.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Povratna_informacija_obrazac.cs">
+      <DependentUpon>PI2306_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Prihvati_prigovor.cs">
+      <DependentUpon>PI2306_DB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Rezervacija_opreme.cs">
+      <DependentUpon>PI2306_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Rezervacija_prostora.cs">
+      <DependentUpon>PI2306_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Rezervacija_trenera.cs">
+      <DependentUpon>PI2306_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Rezultat.cs">
+      <DependentUpon>PI2306_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SportskaOpremaCjenikFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SportskaOpremaCjenikFrm.Designer.cs">
+      <DependentUpon>SportskaOpremaCjenikFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sportska_oprema.cs">
+      <DependentUpon>PI2306_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SportskiProstorCjenikFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SportskiProstorCjenikFrm.Designer.cs">
+      <DependentUpon>SportskiProstorCjenikFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sportski_prostor.cs">
+      <DependentUpon>PI2306_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Trener.cs">
+      <DependentUpon>PI2306_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TreneriCjenikFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TreneriCjenikFrm.Designer.cs">
+      <DependentUpon>TreneriCjenikFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Trening_program.cs">
+      <DependentUpon>PI2306_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Uloga.cs">
+      <DependentUpon>PI2306_DB.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CjenikFrm.resx">
+      <DependentUpon>CjenikFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -85,6 +147,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SportskaOpremaCjenikFrm.resx">
+      <DependentUpon>SportskaOpremaCjenikFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SportskiProstorCjenikFrm.resx">
+      <DependentUpon>SportskiProstorCjenikFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TreneriCjenikFrm.resx">
+      <DependentUpon>TreneriCjenikFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="PI2306_DB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>PI2306_DB.Designer.cs</LastGenOutput>
@@ -110,6 +181,12 @@
     <Content Include="PI2306_DB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>PI2306_DB.Context.cs</LastGenOutput>
+      <DependentUpon>PI2306_DB.edmx</DependentUpon>
+    </Content>
+    <Content Include="PI2306_DB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PI2306_DB.edmx</DependentUpon>
+      <LastGenOutput>PI2306_DB.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
