@@ -44,6 +44,7 @@
             this.ZatvoriProstorButton.TabIndex = 14;
             this.ZatvoriProstorButton.Text = "Zatvori";
             this.ZatvoriProstorButton.UseVisualStyleBackColor = true;
+            this.ZatvoriProstorButton.Click += new System.EventHandler(this.ZatvoriProstorButton_Click);
             // 
             // ObrisiProstorButton
             // 
@@ -53,6 +54,7 @@
             this.ObrisiProstorButton.TabIndex = 13;
             this.ObrisiProstorButton.Text = "Obrisi";
             this.ObrisiProstorButton.UseVisualStyleBackColor = true;
+            this.ObrisiProstorButton.Click += new System.EventHandler(this.ObrisiProstorButton_Click);
             // 
             // AzurirajProstorButton
             // 
@@ -62,6 +64,7 @@
             this.AzurirajProstorButton.TabIndex = 12;
             this.AzurirajProstorButton.Text = "Azuriraj";
             this.AzurirajProstorButton.UseVisualStyleBackColor = true;
+            this.AzurirajProstorButton.Click += new System.EventHandler(this.AzurirajProstorButton_Click);
             // 
             // DodajProstorButton
             // 
@@ -71,6 +74,7 @@
             this.DodajProstorButton.TabIndex = 11;
             this.DodajProstorButton.Text = "Dodaj";
             this.DodajProstorButton.UseVisualStyleBackColor = true;
+            this.DodajProstorButton.Click += new System.EventHandler(this.DodajProstorButton_Click);
             // 
             // dataGridViewProstor
             // 
@@ -92,6 +96,7 @@
             this.Controls.Add(this.dataGridViewProstor);
             this.Name = "SportskiProstorCjenikFrm";
             this.Text = "Sportski prostor";
+            this.Load += new System.EventHandler(this.SportskiProstorCjenikFrm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProstor)).EndInit();
             this.ResumeLayout(false);
 

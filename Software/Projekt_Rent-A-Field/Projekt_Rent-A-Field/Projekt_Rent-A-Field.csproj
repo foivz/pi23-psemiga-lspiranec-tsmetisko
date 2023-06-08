@@ -42,7 +42,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
@@ -64,11 +66,23 @@
     <Compile Include="AzurirajOpremuFrm.Designer.cs">
       <DependentUpon>AzurirajOpremuFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AzurirajProstorFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AzurirajProstorFrm.Designer.cs">
+      <DependentUpon>AzurirajProstorFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DodajOpremuFrm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DodajOpremuFrm.Designer.cs">
       <DependentUpon>DodajOpremuFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DodajProstorFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DodajProstorFrm.Designer.cs">
+      <DependentUpon>DodajProstorFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Dogadaj.cs">
       <DependentUpon>PI2306_DB.tt</DependentUpon>
@@ -171,11 +185,17 @@
     <EmbeddedResource Include="AzurirajOpremuFrm.resx">
       <DependentUpon>AzurirajOpremuFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AzurirajProstorFrm.resx">
+      <DependentUpon>AzurirajProstorFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CjenikFrm.resx">
       <DependentUpon>CjenikFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DodajOpremuFrm.resx">
       <DependentUpon>DodajOpremuFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DodajProstorFrm.resx">
+      <DependentUpon>DodajProstorFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPopisRezervacija.resx">
       <DependentUpon>FrmPopisRezervacija.cs</DependentUpon>
