@@ -315,6 +315,8 @@
             this.Controls.Add(this.btnRezervirajDodatnuSportskuOpremu);
             this.Name = "FrmPopisRezervacija";
             this.Text = "Popis rezervacija";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FrmPopisRezervacija_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
