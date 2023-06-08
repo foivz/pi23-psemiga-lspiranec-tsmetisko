@@ -132,8 +132,8 @@ namespace Projekt_Rent_A_Field
                         }
 
                         context.SaveChanges();
-                        //GeneriranjeQR generiranje = new GeneriranjeQR(email, lozinka);
-                        //generiranje.Show();
+                        GeneriranjeQR generiranje = new GeneriranjeQR(email, lozinka);
+                        generiranje.Show();
 
                         break;
                 }

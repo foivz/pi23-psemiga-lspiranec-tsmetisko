@@ -56,6 +56,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="Zen.Barcode.Core, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b5ae55aa76d2d9de, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zen.Barcode.Rendering.Framework.3.1.10729.1\lib\Zen.Barcode.Core.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AzurirajOpremuFrm.cs">
@@ -84,6 +87,12 @@
     </Compile>
     <Compile Include="FrmPopisRezervacija.Designer.cs">
       <DependentUpon>FrmPopisRezervacija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneriranjeQR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneriranjeQR.Designer.cs">
+      <DependentUpon>GeneriranjeQR.cs</DependentUpon>
     </Compile>
     <Compile Include="Korisnik.cs">
       <DependentUpon>PI2306_DB.tt</DependentUpon>
@@ -115,8 +124,20 @@
     <Compile Include="Prihvati_prigovor.cs">
       <DependentUpon>PI2306_DB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Prijava.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prijava.Designer.cs">
+      <DependentUpon>Prijava.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QRkod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QRkod.Designer.cs">
+      <DependentUpon>QRkod.cs</DependentUpon>
+    </Compile>
     <Compile Include="Registracija.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,8 +201,14 @@
     <EmbeddedResource Include="FrmPopisRezervacija.resx">
       <DependentUpon>FrmPopisRezervacija.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GeneriranjeQR.resx">
+      <DependentUpon>GeneriranjeQR.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Naslovna.resx">
       <DependentUpon>Naslovna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prijava.resx">
+      <DependentUpon>Prijava.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -192,6 +219,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="QRkod.resx">
+      <DependentUpon>QRkod.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Registracija.resx">
       <DependentUpon>Registracija.cs</DependentUpon>
     </EmbeddedResource>
