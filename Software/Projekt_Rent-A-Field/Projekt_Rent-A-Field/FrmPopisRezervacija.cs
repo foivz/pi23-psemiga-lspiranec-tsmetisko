@@ -26,15 +26,7 @@ namespace Projekt_Rent_A_Field
         {
             DohvatiRezervacijeTrenera();
             DohvatiRezervacijeOpreme();
-
-            dgvRezervacijeProstora.DataSource = DohvatiRezervacijeProstora();
-            dgvRezervacijeProstora.Columns["Korisnik"].Visible = false;
-            dgvRezervacijeProstora.Columns["Dogadaj"].Visible = false;
-            dgvRezervacijeProstora.Columns["Rezultat"].Visible = false;
-            dgvRezervacijeProstora.Columns["Sportski_prostor"].Visible = false;
-            dgvRezervacijeProstora.Columns["korisnik_id"].Visible = false;
-            dgvRezervacijeProstora.Columns["rezervacija_prostora_id"].Visible = false;
-            dgvRezervacijeProstora.Columns["dogadaj_id"].Visible = false;
+            DohvatiRezervacijeProstora();
         }
 
         private void DohvatiRezervacijeTrenera()
@@ -65,14 +57,17 @@ namespace Projekt_Rent_A_Field
             }
         }
 
-        private List<Rezervacija_prostora> DohvatiRezervacijeProstora()
+        private void DohvatiRezervacijeProstora()
         {
             using (var context = new PI2306_DBEntities())
             {
                 var query = from rp in context.Rezervacija_prostora
-                            select rp;
+                            from sp in context.Sportski_prostor
+                            where rp.korisnik_id == 1
+                            where rp.sportski_prostor_id == sp.sportski_prostor_id
+                            select new { sp.naziv, sp.adresa, rp.datum, rp.vrijeme_od, rp.duljina_rezervacije, rp.placeno, rp.cijena };
 
-                return query.ToList();
+                dgvRezervacijeProstora.DataSource = query.ToList();
             }
         }
     }
