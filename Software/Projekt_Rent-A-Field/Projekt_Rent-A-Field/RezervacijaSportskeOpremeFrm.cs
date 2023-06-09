@@ -31,6 +31,7 @@ namespace Projekt_Rent_A_Field
 
                 dgvSportskaOprema.DataSource = query.ToList();
                 dgvSportskaOprema.Columns["Rezervacija_opreme"].Visible = false;
+                dgvSportskaOprema.Columns["sportska_oprema_id"].Visible = false;
             }
         }
 
