@@ -144,6 +144,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PI2306_DB.edmx</DependentUpon>
     </Compile>
+    <Compile Include="PopisTreningPrograma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopisTreningPrograma.Designer.cs">
+      <DependentUpon>PopisTreningPrograma.cs</DependentUpon>
+    </Compile>
     <Compile Include="Povratna_informacija_obrazac.cs">
       <DependentUpon>PI2306_DB.tt</DependentUpon>
     </Compile>
@@ -250,6 +256,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Naslovna.resx">
       <DependentUpon>Naslovna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopisTreningPrograma.resx">
+      <DependentUpon>PopisTreningPrograma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Prijava.resx">
       <DependentUpon>Prijava.cs</DependentUpon>
