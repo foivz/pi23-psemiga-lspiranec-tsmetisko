@@ -197,6 +197,12 @@
     <Compile Include="TreneriCjenikFrm.Designer.cs">
       <DependentUpon>TreneriCjenikFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="TreningProgram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TreningProgram.Designer.cs">
+      <DependentUpon>TreningProgram.cs</DependentUpon>
+    </Compile>
     <Compile Include="Trening_program.cs">
       <DependentUpon>PI2306_DB.tt</DependentUpon>
     </Compile>
@@ -253,6 +259,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TreneriCjenikFrm.resx">
       <DependentUpon>TreneriCjenikFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TreningProgram.resx">
+      <DependentUpon>TreningProgram.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="PI2306_DB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
