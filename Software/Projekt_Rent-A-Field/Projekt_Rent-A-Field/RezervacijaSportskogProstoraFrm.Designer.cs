@@ -73,6 +73,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(214, 328);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(152, 16);
@@ -89,6 +90,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(12, 328);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 16);
@@ -105,6 +107,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(12, 285);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(246, 16);
@@ -114,6 +117,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(12, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(107, 16);
@@ -134,6 +138,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(502, 440);
             this.Controls.Add(this.dgvPopisProstora);
             this.Controls.Add(this.btnOdustani);
