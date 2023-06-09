@@ -193,12 +193,13 @@
             this.btnRezervirajProstor.BackColor = System.Drawing.Color.IndianRed;
             this.btnRezervirajProstor.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRezervirajProstor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRezervirajProstor.Location = new System.Drawing.Point(12, 344);
+            this.btnRezervirajProstor.Location = new System.Drawing.Point(12, 127);
             this.btnRezervirajProstor.Name = "btnRezervirajProstor";
             this.btnRezervirajProstor.Size = new System.Drawing.Size(282, 76);
             this.btnRezervirajProstor.TabIndex = 29;
             this.btnRezervirajProstor.Text = "Rezerviraj sportski prostor";
             this.btnRezervirajProstor.UseVisualStyleBackColor = false;
+            this.btnRezervirajProstor.Click += new System.EventHandler(this.btnRezervirajProstor_Click);
             // 
             // button1
             // 
@@ -268,24 +269,26 @@
             this.btnRezervirajTrenera.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRezervirajTrenera.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRezervirajTrenera.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnRezervirajTrenera.Location = new System.Drawing.Point(12, 129);
+            this.btnRezervirajTrenera.Location = new System.Drawing.Point(12, 231);
             this.btnRezervirajTrenera.Name = "btnRezervirajTrenera";
             this.btnRezervirajTrenera.Size = new System.Drawing.Size(282, 76);
             this.btnRezervirajTrenera.TabIndex = 22;
             this.btnRezervirajTrenera.Text = "Rezerviraj trenera";
             this.btnRezervirajTrenera.UseVisualStyleBackColor = false;
+            this.btnRezervirajTrenera.Click += new System.EventHandler(this.btnRezervirajTrenera_Click);
             // 
             // btnRezervirajDodatnuSportskuOpremu
             // 
             this.btnRezervirajDodatnuSportskuOpremu.BackColor = System.Drawing.Color.IndianRed;
             this.btnRezervirajDodatnuSportskuOpremu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRezervirajDodatnuSportskuOpremu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRezervirajDodatnuSportskuOpremu.Location = new System.Drawing.Point(12, 238);
+            this.btnRezervirajDodatnuSportskuOpremu.Location = new System.Drawing.Point(12, 336);
             this.btnRezervirajDodatnuSportskuOpremu.Name = "btnRezervirajDodatnuSportskuOpremu";
             this.btnRezervirajDodatnuSportskuOpremu.Size = new System.Drawing.Size(282, 76);
             this.btnRezervirajDodatnuSportskuOpremu.TabIndex = 21;
             this.btnRezervirajDodatnuSportskuOpremu.Text = "Rezerviraj dodatnu sportsku opremu";
             this.btnRezervirajDodatnuSportskuOpremu.UseVisualStyleBackColor = false;
+            this.btnRezervirajDodatnuSportskuOpremu.Click += new System.EventHandler(this.btnRezervirajDodatnuSportskuOpremu_Click);
             // 
             // FrmPopisRezervacija
             // 
