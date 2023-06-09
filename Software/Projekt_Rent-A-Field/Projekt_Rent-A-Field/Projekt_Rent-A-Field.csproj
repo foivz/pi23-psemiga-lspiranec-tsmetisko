@@ -182,6 +182,24 @@
     <Compile Include="Registracija.Designer.cs">
       <DependentUpon>Registracija.cs</DependentUpon>
     </Compile>
+    <Compile Include="RezervacijaSportskeOpremeFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RezervacijaSportskeOpremeFrm.Designer.cs">
+      <DependentUpon>RezervacijaSportskeOpremeFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RezervacijaSportskogProstoraFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RezervacijaSportskogProstoraFrm.Designer.cs">
+      <DependentUpon>RezervacijaSportskogProstoraFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RezervacijaTreneraFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RezervacijaTreneraFrm.Designer.cs">
+      <DependentUpon>RezervacijaTreneraFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Rezervacija_opreme.cs">
       <DependentUpon>PI2306_DB.tt</DependentUpon>
     </Compile>
@@ -286,6 +304,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Registracija.resx">
       <DependentUpon>Registracija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RezervacijaSportskeOpremeFrm.resx">
+      <DependentUpon>RezervacijaSportskeOpremeFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RezervacijaSportskogProstoraFrm.resx">
+      <DependentUpon>RezervacijaSportskogProstoraFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RezervacijaTreneraFrm.resx">
+      <DependentUpon>RezervacijaTreneraFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SportskaOpremaCjenikFrm.resx">
       <DependentUpon>SportskaOpremaCjenikFrm.cs</DependentUpon>

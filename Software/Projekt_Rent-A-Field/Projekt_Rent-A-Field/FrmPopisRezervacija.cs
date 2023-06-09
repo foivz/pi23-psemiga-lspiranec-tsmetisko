@@ -70,5 +70,26 @@ namespace Projekt_Rent_A_Field
                 dgvRezervacijeProstora.DataSource = query.ToList();
             }
         }
+
+        private void btnRezervirajProstor_Click(object sender, EventArgs e)
+        {
+            RezervacijaSportskogProstoraFrm rezervirajProstor = new RezervacijaSportskogProstoraFrm();
+            rezervirajProstor.ShowDialog();
+            Osvjezi();
+        }
+
+        private void btnRezervirajTrenera_Click(object sender, EventArgs e)
+        {
+            RezervacijaTreneraFrm rezervirajTrenera = new RezervacijaTreneraFrm();
+            rezervirajTrenera.ShowDialog();
+            Osvjezi();
+        }
+
+        private void btnRezervirajDodatnuSportskuOpremu_Click(object sender, EventArgs e)
+        {
+            RezervacijaSportskeOpremeFrm rezervirajOpremu = new RezervacijaSportskeOpremeFrm();
+            rezervirajOpremu.ShowDialog();
+            Osvjezi();
+        }
     }
 }
