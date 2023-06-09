@@ -144,6 +144,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PI2306_DB.edmx</DependentUpon>
     </Compile>
+    <Compile Include="PojedinacanTreningProgram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PojedinacanTreningProgram.Designer.cs">
+      <DependentUpon>PojedinacanTreningProgram.cs</DependentUpon>
+    </Compile>
     <Compile Include="PopisTreningPrograma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -256,6 +262,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Naslovna.resx">
       <DependentUpon>Naslovna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PojedinacanTreningProgram.resx">
+      <DependentUpon>PojedinacanTreningProgram.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PopisTreningPrograma.resx">
       <DependentUpon>PopisTreningPrograma.cs</DependentUpon>

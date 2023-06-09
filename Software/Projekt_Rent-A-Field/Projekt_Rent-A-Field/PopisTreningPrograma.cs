@@ -43,8 +43,8 @@ namespace Projekt_Rent_A_Field
         private void btnPrikaziPojedinosti_Click(object sender, EventArgs e)
         {
             Trening_program odabrani = dataGridView1.CurrentRow.DataBoundItem as Trening_program;
-            //PojedinacanTreningProgram ptp = new PojedinacanTreningProgram(odabrani);
-            //ptp.Show();
+            PojedinacanTreningProgram ptp = new PojedinacanTreningProgram(odabrani);
+            ptp.Show();
         }
     }
 }
