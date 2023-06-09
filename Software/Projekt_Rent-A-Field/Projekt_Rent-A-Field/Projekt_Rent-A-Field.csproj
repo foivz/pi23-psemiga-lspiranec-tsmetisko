@@ -108,6 +108,12 @@
     <Compile Include="CjenikFrm.Designer.cs">
       <DependentUpon>CjenikFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EvidentirajFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EvidentirajFrm.Designer.cs">
+      <DependentUpon>EvidentirajFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPopisRezervacija.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -224,6 +230,12 @@
     <Compile Include="Rezultat.cs">
       <DependentUpon>PI2306_DB.tt</DependentUpon>
     </Compile>
+    <Compile Include="SortiranjeObrazacaFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SortiranjeObrazacaFrm.Designer.cs">
+      <DependentUpon>SortiranjeObrazacaFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SportskaOpremaCjenikFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -284,6 +296,9 @@
     <EmbeddedResource Include="DodajTreneraFrm.resx">
       <DependentUpon>DodajTreneraFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EvidentirajFrm.resx">
+      <DependentUpon>EvidentirajFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmPopisRezervacija.resx">
       <DependentUpon>FrmPopisRezervacija.cs</DependentUpon>
     </EmbeddedResource>
@@ -331,6 +346,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RezervacijaTreneraFrm.resx">
       <DependentUpon>RezervacijaTreneraFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SortiranjeObrazacaFrm.resx">
+      <DependentUpon>SortiranjeObrazacaFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SportskaOpremaCjenikFrm.resx">
       <DependentUpon>SportskaOpremaCjenikFrm.cs</DependentUpon>

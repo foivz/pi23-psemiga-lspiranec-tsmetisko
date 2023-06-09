@@ -28,5 +28,17 @@ namespace Projekt_Rent_A_Field
             CjenikFrm cjenikfrm = new CjenikFrm();
             cjenikfrm.ShowDialog();
         }
+
+        private void buttonKreirajPrigovor_Click(object sender, EventArgs e)
+        {
+            ObrazacZaPrigovoreFrm forma = new ObrazacZaPrigovoreFrm();
+            forma.ShowDialog();
+        }
+
+        private void buttonSortiranjePrigovora_Click(object sender, EventArgs e)
+        {
+            SortiranjeObrazacaFrm forma = new SortiranjeObrazacaFrm();
+            forma.ShowDialog();
+        }
     }
 }
