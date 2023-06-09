@@ -42,37 +42,45 @@ namespace Projekt_Rent_A_Field
 
         private void btnRezerviraj_Click(object sender, EventArgs e)
         {
-            using (var context = new PI2306_DBEntities())
+            if (txtVrijemeOd.Text != "" && txtDuljinaRezervacije.Text != "")
             {
-                DateTime datum = dtpRezervacijaProstora.Value.Date;
-                string vrijemeOd = txtVrijemeOd.Text;
-                int duljinaRezervacije = int.Parse(txtDuljinaRezervacije.Text);
-
-                float cijenaPoSatu = int.Parse(dgvPopisProstora.CurrentRow.Cells[3].Value.ToString());
-                float cijena = cijenaPoSatu * duljinaRezervacije;
-
-                Rezervacija_prostora rezervacijaProstora = new Rezervacija_prostora()
+                using (var context = new PI2306_DBEntities())
                 {
-                    sportski_prostor_id = int.Parse(dgvPopisProstora.CurrentRow.Cells[0].Value.ToString()),
-                    korisnik_id = 1,
-                    datum = datum,
-                    vrijeme_od = vrijemeOd,
-                    duljina_rezervacije = duljinaRezervacije,
-                    placeno = 0,
-                    cijena = cijena
-                };
+                
+                    DateTime datum = dtpRezervacijaProstora.Value.Date;
+                    string vrijemeOd = txtVrijemeOd.Text;
+                    int duljinaRezervacije = int.Parse(txtDuljinaRezervacije.Text);
 
-                if (ProvjeraDostupnostiProstora((int)rezervacijaProstora.sportski_prostor_id, (DateTime)rezervacijaProstora.datum, rezervacijaProstora.vrijeme_od, (int)rezervacijaProstora.duljina_rezervacije))
-                {
-                    context.Rezervacija_prostora.Add(rezervacijaProstora);
-                    context.SaveChanges();
-                    MessageBox.Show("Uspješna rezervacija!");
-                    Close();
+                    float cijenaPoSatu = int.Parse(dgvPopisProstora.CurrentRow.Cells[3].Value.ToString());
+                    float cijena = cijenaPoSatu * duljinaRezervacije;
+
+                    Rezervacija_prostora rezervacijaProstora = new Rezervacija_prostora()
+                    {
+                        sportski_prostor_id = int.Parse(dgvPopisProstora.CurrentRow.Cells[0].Value.ToString()),
+                        korisnik_id = 1,
+                        datum = datum,
+                        vrijeme_od = vrijemeOd,
+                        duljina_rezervacije = duljinaRezervacije,
+                        placeno = 0,
+                        cijena = cijena
+                    };
+                
+                    if (ProvjeraDostupnostiProstora((int)rezervacijaProstora.sportski_prostor_id, (DateTime)rezervacijaProstora.datum, rezervacijaProstora.vrijeme_od, (int)rezervacijaProstora.duljina_rezervacije))
+                    {
+                        context.Rezervacija_prostora.Add(rezervacijaProstora);
+                        context.SaveChanges();
+                        MessageBox.Show("Uspješna rezervacija!");
+                        Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Odabrani prostor je zauzet u odabanom vremenu!");
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("Odabrani prostor je zauzet u odabanom vremenu!");
-                }
+            }
+            else
+            {
+                MessageBox.Show("Molimo unesite vrijeme za koje želite rezervirati sportski prostor.");
             }
         }
 

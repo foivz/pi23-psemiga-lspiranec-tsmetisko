@@ -42,33 +42,38 @@ namespace Projekt_Rent_A_Field
 
         private void btnRezerviraj_Click(object sender, EventArgs e)
         {
-            using (var context = new PI2306_DBEntities())
-            {
-                DateTime datum = dtpDatumRezervacije.Value.Date;
-                string vrijemeOd = txtVrijemeOd.Text;
-                int duljinaRezervacije = int.Parse(txtDuljinaRezervacije.Text);
-
-                float cijenaOpreme = float.Parse(dgvSportskaOprema.CurrentRow.Cells[2].Value.ToString());
-                float cijena = duljinaRezervacije * cijenaOpreme;
-
-
-                Rezervacija_opreme rezervacijaOpreme = new Rezervacija_opreme()
+            if (txtVrijemeOd.Text != "" && txtDuljinaRezervacije.Text != "") {
+                using (var context = new PI2306_DBEntities())
                 {
-                    sportska_oprema_id = int.Parse(dgvSportskaOprema.CurrentRow.Cells[0].Value.ToString()),
-                    korisnik_id = 1,
-                    datum = datum,
-                    vrijeme_od = vrijemeOd,
-                    duljina_rezervacije = duljinaRezervacije,
-                    placeno = 0,
-                    cijena = cijena
-                };
+                    DateTime datum = dtpDatumRezervacije.Value.Date;
+                    string vrijemeOd = txtVrijemeOd.Text;
+                    int duljinaRezervacije = int.Parse(txtDuljinaRezervacije.Text);
 
-                context.Rezervacija_opreme.Add(rezervacijaOpreme);
-                context.SaveChanges();
-                MessageBox.Show("Uspješna rezervacija!");
+                    float cijenaOpreme = float.Parse(dgvSportskaOprema.CurrentRow.Cells[2].Value.ToString());
+                    float cijena = duljinaRezervacije * cijenaOpreme;
+
+
+                    Rezervacija_opreme rezervacijaOpreme = new Rezervacija_opreme()
+                    {
+                        sportska_oprema_id = int.Parse(dgvSportskaOprema.CurrentRow.Cells[0].Value.ToString()),
+                        korisnik_id = 1,
+                        datum = datum,
+                        vrijeme_od = vrijemeOd,
+                        duljina_rezervacije = duljinaRezervacije,
+                        placeno = 0,
+                        cijena = cijena
+                    };
+
+                    context.Rezervacija_opreme.Add(rezervacijaOpreme);
+                    context.SaveChanges();
+                    MessageBox.Show("Uspješna rezervacija!");
+                    Close();
+                }
             }
-
-            Close();
+            else
+            {
+                MessageBox.Show("Molimo unesite vrijeme za koje želite rezervirati dodatku sportsku opremu.");
+            }
         }
     }
 }

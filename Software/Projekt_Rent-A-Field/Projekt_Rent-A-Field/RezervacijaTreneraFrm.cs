@@ -43,37 +43,43 @@ namespace Projekt_Rent_A_Field
 
         private void btnRezerviraj_Click(object sender, EventArgs e)
         {
-            using (var context = new PI2306_DBEntities())
+            if (txtVrijemeOd.Text != "" && txtDuljinaRezervacije.Text != "") {
+                using (var context = new PI2306_DBEntities())
+                {
+                    DateTime datum = dtpRezervacijaTrenera.Value.Date;
+                    string vrijemeOd = txtVrijemeOd.Text;
+                    int duljinaRezervacije = int.Parse(txtDuljinaRezervacije.Text);
+
+                    float cijenaPoSatu = float.Parse(dgvPopisTrenera.CurrentRow.Cells[4].Value.ToString());
+                    float cijena = cijenaPoSatu * duljinaRezervacije;
+
+                    Rezervacija_trenera rezervacijaTrenera = new Rezervacija_trenera()
+                    {
+                        trener_id = int.Parse(dgvPopisTrenera.CurrentRow.Cells[0].Value.ToString()),
+                        korisnik_id = 1,
+                        datum = datum,
+                        vrijeme_od = vrijemeOd,
+                        duljina_rezervacije = duljinaRezervacije,
+                        placeno = 0,
+                        cijena = cijena
+                    };
+
+                    if (ProvjeraDostupnostiTrenera((int)rezervacijaTrenera.trener_id, (DateTime)rezervacijaTrenera.datum, rezervacijaTrenera.vrijeme_od, (int)rezervacijaTrenera.duljina_rezervacije))
+                    {
+                        context.Rezervacija_trenera.Add(rezervacijaTrenera);
+                        context.SaveChanges();
+                        MessageBox.Show("Uspješna rezervacija!");
+                        Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Odabrani trener je zauzet u tom periodu.");
+                    }
+                }
+            }
+            else
             {
-                DateTime datum = dtpRezervacijaTrenera.Value.Date;
-                string vrijemeOd = txtVrijemeOd.Text;
-                int duljinaRezervacije = int.Parse(txtDuljinaRezervacije.Text);
-
-                float cijenaPoSatu = float.Parse(dgvPopisTrenera.CurrentRow.Cells[4].Value.ToString());
-                float cijena = cijenaPoSatu * duljinaRezervacije;
-
-                Rezervacija_trenera rezervacijaTrenera = new Rezervacija_trenera()
-                {
-                    trener_id = int.Parse(dgvPopisTrenera.CurrentRow.Cells[0].Value.ToString()),
-                    korisnik_id = 1,
-                    datum = datum,
-                    vrijeme_od = vrijemeOd,
-                    duljina_rezervacije = duljinaRezervacije,
-                    placeno = 0,
-                    cijena = cijena
-                };
-
-                if (ProvjeraDostupnostiTrenera((int)rezervacijaTrenera.trener_id, (DateTime)rezervacijaTrenera.datum, rezervacijaTrenera.vrijeme_od, (int)rezervacijaTrenera.duljina_rezervacije))
-                {
-                    context.Rezervacija_trenera.Add(rezervacijaTrenera);
-                    context.SaveChanges();
-                    MessageBox.Show("Uspješna rezervacija!");
-                    Close();
-                }
-                else
-                {
-                    MessageBox.Show("Odabrani trener je zauzet u tom periodu.");
-                }
+                MessageBox.Show("Molimo unesite vrijeme za koje želite rezervirati trenera.");
             }
         }
 
