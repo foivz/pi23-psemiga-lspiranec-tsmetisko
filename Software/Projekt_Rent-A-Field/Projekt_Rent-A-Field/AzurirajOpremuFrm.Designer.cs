@@ -35,6 +35,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxImeOpreme = new System.Windows.Forms.TextBox();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.SuspendLayout();
             // 
             // label4
@@ -101,6 +102,10 @@
             this.textBoxImeOpreme.Size = new System.Drawing.Size(173, 20);
             this.textBoxImeOpreme.TabIndex = 23;
             // 
+            // helpProvider1
+            // 
+            this.helpProvider1.HelpNamespace = "C:\\Users\\david\\Desktop\\Novo Dokument programa Microsoft Word.htm";
+            // 
             // AzurirajOpremuFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -115,6 +120,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxImeOpreme);
             this.Name = "AzurirajOpremuFrm";
+            this.helpProvider1.SetShowHelp(this, true);
             this.Text = "AzurirajOpremuFrm";
             this.Load += new System.EventHandler(this.AzurirajOpremuFrm_Load);
             this.ResumeLayout(false);
@@ -131,5 +137,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxImeOpreme;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }
