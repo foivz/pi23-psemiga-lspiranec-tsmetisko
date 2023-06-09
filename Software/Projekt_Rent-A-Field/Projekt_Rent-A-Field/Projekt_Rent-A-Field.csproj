@@ -129,6 +129,18 @@
     <Compile Include="Naslovna.Designer.cs">
       <DependentUpon>Naslovna.cs</DependentUpon>
     </Compile>
+    <Compile Include="NoviObrazacFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NoviObrazacFrm.Designer.cs">
+      <DependentUpon>NoviObrazacFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObrazacZaPrigovoreFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ObrazacZaPrigovoreFrm.Designer.cs">
+      <DependentUpon>ObrazacZaPrigovoreFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PI2306_DB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -280,6 +292,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Naslovna.resx">
       <DependentUpon>Naslovna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NoviObrazacFrm.resx">
+      <DependentUpon>NoviObrazacFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ObrazacZaPrigovoreFrm.resx">
+      <DependentUpon>ObrazacZaPrigovoreFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PojedinacanTreningProgram.resx">
       <DependentUpon>PojedinacanTreningProgram.cs</DependentUpon>
