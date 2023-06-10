@@ -153,6 +153,24 @@
     <Compile Include="Korisnik.cs">
       <DependentUpon>PI2306_DB.tt</DependentUpon>
     </Compile>
+    <Compile Include="KorisnikOpremaCjenikFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KorisnikOpremaCjenikFrm.Designer.cs">
+      <DependentUpon>KorisnikOpremaCjenikFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KorisnikProstorCjenikFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KorisnikProstorCjenikFrm.Designer.cs">
+      <DependentUpon>KorisnikProstorCjenikFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KorisnikTreneriCjenikFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KorisnikTreneriCjenikFrm.Designer.cs">
+      <DependentUpon>KorisnikTreneriCjenikFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="KreiranjeDogadajaFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -389,6 +407,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GeneriranjeQR.resx">
       <DependentUpon>GeneriranjeQR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KorisnikOpremaCjenikFrm.resx">
+      <DependentUpon>KorisnikOpremaCjenikFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KorisnikProstorCjenikFrm.resx">
+      <DependentUpon>KorisnikProstorCjenikFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KorisnikTreneriCjenikFrm.resx">
+      <DependentUpon>KorisnikTreneriCjenikFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KreiranjeDogadajaFrm.resx">
       <DependentUpon>KreiranjeDogadajaFrm.cs</DependentUpon>

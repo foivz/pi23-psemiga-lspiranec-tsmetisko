@@ -42,7 +42,7 @@
             this.TreneriCjenikButton.TabIndex = 7;
             this.TreneriCjenikButton.Text = "Treneri";
             this.TreneriCjenikButton.UseVisualStyleBackColor = true;
-
+            this.TreneriCjenikButton.Click += new System.EventHandler(this.TreneriCjenikButton_Click);
             // 
             // ZatvoriCjenikButton
             // 
@@ -62,7 +62,7 @@
             this.ProstorCjenikButton.TabIndex = 5;
             this.ProstorCjenikButton.Text = "Sportski prostor";
             this.ProstorCjenikButton.UseVisualStyleBackColor = true;
-
+            this.ProstorCjenikButton.Click += new System.EventHandler(this.ProstorCjenikButton_Click);
             // 
             // OpremaCjenikButton
             // 
@@ -72,7 +72,7 @@
             this.OpremaCjenikButton.TabIndex = 4;
             this.OpremaCjenikButton.Text = "Sportska oprema";
             this.OpremaCjenikButton.UseVisualStyleBackColor = true;
-
+            this.OpremaCjenikButton.Click += new System.EventHandler(this.OpremaCjenikButton_Click);
             // 
             // CjenikFrm
             // 
