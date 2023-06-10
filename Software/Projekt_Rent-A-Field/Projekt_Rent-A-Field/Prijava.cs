@@ -12,6 +12,9 @@ namespace Projekt_Rent_A_Field
 {
     public partial class Prijava : Form
     {
+        int korisnikID;
+        int uloga;
+
         bool PrikaziLozinku = false;
         bool Autentifican = false;
         public Prijava()
@@ -32,13 +35,16 @@ namespace Projekt_Rent_A_Field
                 if (item.email == email && item.lozinka == lozinka)
                 {
                     pronaden = true;
+                    korisnikID = item.korisnik_id;
+                    uloga = (int)item.uloga_id;
                 }
             }
             if (pronaden)
             {
                 MessageBox.Show("uspjesno");
-                //TreningProgram tren = new TreningProgram();
-                //tren.Show();
+                Naslovna naslovna = new Naslovna(korisnikID, uloga);
+                naslovna.Show();
+                //Close();
             }
             else
             {

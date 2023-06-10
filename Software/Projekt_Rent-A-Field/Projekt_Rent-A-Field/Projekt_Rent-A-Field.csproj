@@ -81,6 +81,12 @@
     <Compile Include="AzurirajTreneraFrm.Designer.cs">
       <DependentUpon>AzurirajTreneraFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AzuriranjeSportskihProstoraFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AzuriranjeSportskihProstoraFrm.Designer.cs">
+      <DependentUpon>AzuriranjeSportskihProstoraFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DodajOpremuFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,12 @@
     </Compile>
     <Compile Include="DodajTreneraFrm.Designer.cs">
       <DependentUpon>DodajTreneraFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DodavanjeSportskogProstoraFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DodavanjeSportskogProstoraFrm.Designer.cs">
+      <DependentUpon>DodavanjeSportskogProstoraFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Dogadaj.cs">
       <DependentUpon>PI2306_DB.tt</DependentUpon>
@@ -134,6 +146,12 @@
     </Compile>
     <Compile Include="Korisnik.cs">
       <DependentUpon>PI2306_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KreiranjeDogadajaFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KreiranjeDogadajaFrm.Designer.cs">
+      <DependentUpon>KreiranjeDogadajaFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Naslovna.cs">
       <SubType>Form</SubType>
@@ -200,6 +218,18 @@
     </Compile>
     <Compile Include="Povratna_informacija_obrazac.cs">
       <DependentUpon>PI2306_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PregledDogadajaFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PregledDogadajaFrm.Designer.cs">
+      <DependentUpon>PregledDogadajaFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PregledSportskihProstoraFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PregledSportskihProstoraFrm.Designer.cs">
+      <DependentUpon>PregledSportskihProstoraFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Prihvati_prigovor.cs">
       <DependentUpon>PI2306_DB.tt</DependentUpon>
@@ -275,6 +305,7 @@
     <Compile Include="SportskiProstorCjenikFrm.Designer.cs">
       <DependentUpon>SportskiProstorCjenikFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sportski_prostor.code.cs" />
     <Compile Include="Sportski_prostor.cs">
       <DependentUpon>PI2306_DB.tt</DependentUpon>
     </Compile>
@@ -308,6 +339,9 @@
     <EmbeddedResource Include="AzurirajTreneraFrm.resx">
       <DependentUpon>AzurirajTreneraFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AzuriranjeSportskihProstoraFrm.resx">
+      <DependentUpon>AzuriranjeSportskihProstoraFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CjenikFrm.resx">
       <DependentUpon>CjenikFrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -320,6 +354,9 @@
     <EmbeddedResource Include="DodajTreneraFrm.resx">
       <DependentUpon>DodajTreneraFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DodavanjeSportskogProstoraFrm.resx">
+      <DependentUpon>DodavanjeSportskogProstoraFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EvidentirajFrm.resx">
       <DependentUpon>EvidentirajFrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -331,6 +368,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GeneriranjeQR.resx">
       <DependentUpon>GeneriranjeQR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KreiranjeDogadajaFrm.resx">
+      <DependentUpon>KreiranjeDogadajaFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Naslovna.resx">
       <DependentUpon>Naslovna.cs</DependentUpon>
@@ -355,6 +395,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PopisTreningPrograma.resx">
       <DependentUpon>PopisTreningPrograma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PregledDogadajaFrm.resx">
+      <DependentUpon>PregledDogadajaFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PregledSportskihProstoraFrm.resx">
+      <DependentUpon>PregledSportskihProstoraFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Prijava.resx">
       <DependentUpon>Prijava.cs</DependentUpon>

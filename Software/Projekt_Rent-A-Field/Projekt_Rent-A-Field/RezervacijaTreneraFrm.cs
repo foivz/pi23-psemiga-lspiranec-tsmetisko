@@ -12,9 +12,12 @@ namespace Projekt_Rent_A_Field
 {
     public partial class RezervacijaTreneraFrm : Form
     {
-        public RezervacijaTreneraFrm()
+        int korisnikID;
+
+        public RezervacijaTreneraFrm(int korID)
         {
             InitializeComponent();
+            korisnikID = korID;
         }
 
         private void RezervacijaTreneraFrm_Load(object sender, EventArgs e)
@@ -56,7 +59,7 @@ namespace Projekt_Rent_A_Field
                     Rezervacija_trenera rezervacijaTrenera = new Rezervacija_trenera()
                     {
                         trener_id = int.Parse(dgvPopisTrenera.CurrentRow.Cells[0].Value.ToString()),
-                        korisnik_id = 1,
+                        korisnik_id = korisnikID,
                         datum = datum,
                         vrijeme_od = vrijemeOd,
                         duljina_rezervacije = duljinaRezervacije,
