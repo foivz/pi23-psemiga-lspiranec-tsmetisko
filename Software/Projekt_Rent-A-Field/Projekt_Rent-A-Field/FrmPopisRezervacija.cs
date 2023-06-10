@@ -37,7 +37,7 @@ namespace Projekt_Rent_A_Field
                             from t in context.Treners
                             where rt.korisnik_id == 1
                             where rt.trener_id == t.trener_id
-                            select new { t.ime_prezime, rt.datum, rt.vrijeme_od, rt.duljina_rezervacije, rt.placeno, rt.cijena };
+                            select new { rt.rezervacija_trenera_id, t.ime_prezime, rt.datum, rt.vrijeme_od, rt.duljina_rezervacije, rt.placeno, rt.cijena };
 
                 dgvRezervacijeTrenera.DataSource = query.ToList();
             }
@@ -51,7 +51,7 @@ namespace Projekt_Rent_A_Field
                             from so in context.Sportska_oprema
                             where ro.korisnik_id == 1
                             where ro.sportska_oprema_id == so.sportska_oprema_id
-                            select new { so.ime, ro.datum, ro.vrijeme_od, ro.duljina_rezervacije, ro.placeno, ro.cijena };
+                            select new { ro.rezervacija_sportske_opreme_id, so.ime, ro.datum, ro.vrijeme_od, ro.duljina_rezervacije, ro.placeno, ro.cijena };
 
                 dgvRezervacijeOpreme.DataSource = query.ToList();
             }
@@ -65,7 +65,7 @@ namespace Projekt_Rent_A_Field
                             from sp in context.Sportski_prostor
                             where rp.korisnik_id == 1
                             where rp.sportski_prostor_id == sp.sportski_prostor_id
-                            select new { sp.naziv, sp.adresa, rp.datum, rp.vrijeme_od, rp.duljina_rezervacije, rp.placeno, rp.cijena };
+                            select new { rp.rezervacija_prostora_id, sp.naziv, sp.adresa, rp.datum, rp.vrijeme_od, rp.duljina_rezervacije, rp.placeno, rp.cijena };
 
                 dgvRezervacijeProstora.DataSource = query.ToList();
             }
@@ -89,6 +89,30 @@ namespace Projekt_Rent_A_Field
         {
             RezervacijaSportskeOpremeFrm rezervirajOpremu = new RezervacijaSportskeOpremeFrm();
             rezervirajOpremu.ShowDialog();
+            Osvjezi();
+        }
+
+        private void btnPlatiProstor_Click(object sender, EventArgs e)
+        {
+            int rezID = int.Parse(dgvRezervacijeProstora.CurrentRow.Cells[0].Value.ToString());
+            PlacanjeProstoraOnline platiProstor = new PlacanjeProstoraOnline(rezID);
+            platiProstor.ShowDialog();
+            Osvjezi();
+        }
+
+        private void btnPlatiTrenera_Click(object sender, EventArgs e)
+        {
+            int rezID = int.Parse(dgvRezervacijeTrenera.CurrentRow.Cells[0].Value.ToString());
+            PlacanjeTreneraOnline platiTrenera = new PlacanjeTreneraOnline(rezID);
+            platiTrenera.ShowDialog();
+            Osvjezi();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int rezID = int.Parse(dgvRezervacijeOpreme.CurrentRow.Cells[0].Value.ToString());
+            PlacanjeOpremeOnline platiOpremu = new PlacanjeOpremeOnline(rezID);
+            platiOpremu.ShowDialog();
             Osvjezi();
         }
     }

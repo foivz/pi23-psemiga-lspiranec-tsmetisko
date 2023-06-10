@@ -168,6 +168,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PI2306_DB.edmx</DependentUpon>
     </Compile>
+    <Compile Include="PlacanjeOpremeOnline.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlacanjeOpremeOnline.Designer.cs">
+      <DependentUpon>PlacanjeOpremeOnline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlacanjeProstoraOnline.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlacanjeProstoraOnline.Designer.cs">
+      <DependentUpon>PlacanjeProstoraOnline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlacanjeTreneraOnline.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlacanjeTreneraOnline.Designer.cs">
+      <DependentUpon>PlacanjeTreneraOnline.cs</DependentUpon>
+    </Compile>
     <Compile Include="PojedinacanTreningProgram.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -322,6 +340,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ObrazacZaPrigovoreFrm.resx">
       <DependentUpon>ObrazacZaPrigovoreFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlacanjeOpremeOnline.resx">
+      <DependentUpon>PlacanjeOpremeOnline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlacanjeProstoraOnline.resx">
+      <DependentUpon>PlacanjeProstoraOnline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlacanjeTreneraOnline.resx">
+      <DependentUpon>PlacanjeTreneraOnline.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PojedinacanTreningProgram.resx">
       <DependentUpon>PojedinacanTreningProgram.cs</DependentUpon>

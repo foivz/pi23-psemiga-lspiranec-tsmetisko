@@ -167,6 +167,7 @@
             this.btnPlatiProstor.TabIndex = 32;
             this.btnPlatiProstor.Text = "Plati rezervaciju sportskog prostora";
             this.btnPlatiProstor.UseVisualStyleBackColor = false;
+            this.btnPlatiProstor.Click += new System.EventHandler(this.btnPlatiProstor_Click);
             // 
             // label3
             // 
@@ -211,6 +212,7 @@
             this.button1.TabIndex = 28;
             this.button1.Text = "Plati rezervaciju sportske opreme";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dgvRezervacijeOpreme
             // 
@@ -242,6 +244,7 @@
             this.btnPlatiTrenera.TabIndex = 25;
             this.btnPlatiTrenera.Text = "Plati rezervaciju trenera";
             this.btnPlatiTrenera.UseVisualStyleBackColor = false;
+            this.btnPlatiTrenera.Click += new System.EventHandler(this.btnPlatiTrenera_Click);
             // 
             // dgvRezervacijeTrenera
             // 
