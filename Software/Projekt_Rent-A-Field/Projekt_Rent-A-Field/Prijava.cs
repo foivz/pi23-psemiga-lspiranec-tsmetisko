@@ -42,8 +42,17 @@ namespace Projekt_Rent_A_Field
             if (pronaden)
             {
                 MessageBox.Show("uspjesno");
-                Naslovna naslovna = new Naslovna(korisnikID, uloga);
-                naslovna.Show();
+                if (uloga==2)
+                {
+                    Naslovna naslovna = new Naslovna(korisnikID, uloga);
+                    naslovna.Show();
+                }
+                else
+                {
+                    NaslovnaZaposlenik naslovnaZ = new NaslovnaZaposlenik();
+                    naslovnaZ.Show();
+                }
+                
                 //Close();
             }
             else
