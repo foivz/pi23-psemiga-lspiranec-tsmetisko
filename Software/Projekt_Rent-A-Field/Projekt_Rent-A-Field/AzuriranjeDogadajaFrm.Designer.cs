@@ -155,6 +155,7 @@
             this.btnOdustani.TabIndex = 46;
             this.btnOdustani.Text = "Odustani";
             this.btnOdustani.UseVisualStyleBackColor = true;
+            this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
             // 
             // btnSpremi
             // 
@@ -164,6 +165,7 @@
             this.btnSpremi.TabIndex = 45;
             this.btnSpremi.Text = "Azuriraj dogadaj";
             this.btnSpremi.UseVisualStyleBackColor = true;
+            this.btnSpremi.Click += new System.EventHandler(this.btnSpremi_Click);
             // 
             // label2
             // 
@@ -209,6 +211,7 @@
             this.Controls.Add(this.label1);
             this.Name = "AzuriranjeDogadajaFrm";
             this.Text = "AzuriranjeDogadajaFrm";
+            this.Load += new System.EventHandler(this.AzuriranjeDogadajaFrm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
