@@ -85,12 +85,9 @@
           <Property Name="placeno" Type="int" />
           <Property Name="cijena" Type="float" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'PI2306_DB.dbo.Rezultat' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Rezultat">
           <Key>
             <PropertyRef Name="rezultat_id" />
-            <PropertyRef Name="rezervacija_prostora_id" />
           </Key>
           <Property Name="rezultat_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="sport" Type="varchar" MaxLength="50" />
@@ -305,19 +302,12 @@ warning 6002: The table/view 'PI2306_DB.dbo.Rezultat' does not have a primary ke
           <EntitySet Name="Rezervacija_opreme" EntityType="Self.Rezervacija_opreme" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Rezervacija_prostora" EntityType="Self.Rezervacija_prostora" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Rezervacija_trenera" EntityType="Self.Rezervacija_trenera" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Rezultat" EntityType="Self.Rezultat" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Sportska_oprema" EntityType="Self.Sportska_oprema" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Sportski_prostor" EntityType="Self.Sportski_prostor" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Trener" EntityType="Self.Trener" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Trening_program" EntityType="Self.Trening_program" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Uloga" EntityType="Self.Uloga" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Rezultat" EntityType="Self.Rezultat" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [Rezultat].[rezultat_id] AS [rezultat_id], 
-    [Rezultat].[sport] AS [sport], 
-    [Rezultat].[rezultat] AS [rezultat], 
-    [Rezultat].[rezervacija_prostora_id] AS [rezervacija_prostora_id]
-    FROM [dbo].[Rezultat] AS [Rezultat]</DefiningQuery>
-          </EntitySet>
           <AssociationSet Name="FK_Korisnik_Uloga" Association="Self.FK_Korisnik_Uloga">
             <End Role="Uloga" EntitySet="Uloga" />
             <End Role="Korisnik" EntitySet="Korisnik" />
@@ -375,6 +365,73 @@ warning 6002: The table/view 'PI2306_DB.dbo.Rezultat' does not have a primary ke
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="PI2306_DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="PI2306_DBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Dogadajs" EntityType="PI2306_DBModel.Dogadaj" />
+          <EntitySet Name="Korisniks" EntityType="PI2306_DBModel.Korisnik" />
+          <EntitySet Name="Povratna_informacija_obrazac" EntityType="PI2306_DBModel.Povratna_informacija_obrazac" />
+          <EntitySet Name="Prihvati_prigovor" EntityType="PI2306_DBModel.Prihvati_prigovor" />
+          <EntitySet Name="Rezervacija_opreme" EntityType="PI2306_DBModel.Rezervacija_opreme" />
+          <EntitySet Name="Rezervacija_prostora" EntityType="PI2306_DBModel.Rezervacija_prostora" />
+          <EntitySet Name="Rezervacija_trenera" EntityType="PI2306_DBModel.Rezervacija_trenera" />
+          <EntitySet Name="Rezultats" EntityType="PI2306_DBModel.Rezultat" />
+          <EntitySet Name="Sportska_oprema" EntityType="PI2306_DBModel.Sportska_oprema" />
+          <EntitySet Name="Sportski_prostor" EntityType="PI2306_DBModel.Sportski_prostor" />
+          <EntitySet Name="Treners" EntityType="PI2306_DBModel.Trener" />
+          <EntitySet Name="Trening_program" EntityType="PI2306_DBModel.Trening_program" />
+          <EntitySet Name="Ulogas" EntityType="PI2306_DBModel.Uloga" />
+          <AssociationSet Name="FK_Rezervacija_prostora_Dogadaj" Association="PI2306_DBModel.FK_Rezervacija_prostora_Dogadaj">
+            <End Role="Dogadaj" EntitySet="Dogadajs" />
+            <End Role="Rezervacija_prostora" EntitySet="Rezervacija_prostora" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Korisnik_Uloga" Association="PI2306_DBModel.FK_Korisnik_Uloga">
+            <End Role="Uloga" EntitySet="Ulogas" />
+            <End Role="Korisnik" EntitySet="Korisniks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Povratna_informacija_obrazac_Korisnik" Association="PI2306_DBModel.FK_Povratna_informacija_obrazac_Korisnik">
+            <End Role="Korisnik" EntitySet="Korisniks" />
+            <End Role="Povratna_informacija_obrazac" EntitySet="Povratna_informacija_obrazac" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Prihvati_prigovor_Korisnik" Association="PI2306_DBModel.FK_Prihvati_prigovor_Korisnik">
+            <End Role="Korisnik" EntitySet="Korisniks" />
+            <End Role="Prihvati_prigovor" EntitySet="Prihvati_prigovor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Rezervacija_opreme_Korisnik" Association="PI2306_DBModel.FK_Rezervacija_opreme_Korisnik">
+            <End Role="Korisnik" EntitySet="Korisniks" />
+            <End Role="Rezervacija_opreme" EntitySet="Rezervacija_opreme" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Rezervacija_prostora_Korisnik" Association="PI2306_DBModel.FK_Rezervacija_prostora_Korisnik">
+            <End Role="Korisnik" EntitySet="Korisniks" />
+            <End Role="Rezervacija_prostora" EntitySet="Rezervacija_prostora" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Rezervacija_trenera_Korisnik" Association="PI2306_DBModel.FK_Rezervacija_trenera_Korisnik">
+            <End Role="Korisnik" EntitySet="Korisniks" />
+            <End Role="Rezervacija_trenera" EntitySet="Rezervacija_trenera" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Trening_program_Korisnik" Association="PI2306_DBModel.FK_Trening_program_Korisnik">
+            <End Role="Korisnik" EntitySet="Korisniks" />
+            <End Role="Trening_program" EntitySet="Trening_program" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Prihvati_prigovor_Povratna_informacija_obrazac" Association="PI2306_DBModel.FK_Prihvati_prigovor_Povratna_informacija_obrazac">
+            <End Role="Povratna_informacija_obrazac" EntitySet="Povratna_informacija_obrazac" />
+            <End Role="Prihvati_prigovor" EntitySet="Prihvati_prigovor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Rezervacija_opreme_Sportska_oprema" Association="PI2306_DBModel.FK_Rezervacija_opreme_Sportska_oprema">
+            <End Role="Sportska_oprema" EntitySet="Sportska_oprema" />
+            <End Role="Rezervacija_opreme" EntitySet="Rezervacija_opreme" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Rezervacija_prostora_Sportski_prostor" Association="PI2306_DBModel.FK_Rezervacija_prostora_Sportski_prostor">
+            <End Role="Sportski_prostor" EntitySet="Sportski_prostor" />
+            <End Role="Rezervacija_prostora" EntitySet="Rezervacija_prostora" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Rezultat_Rezervacija_prostora" Association="PI2306_DBModel.FK_Rezultat_Rezervacija_prostora">
+            <End Role="Rezervacija_prostora" EntitySet="Rezervacija_prostora" />
+            <End Role="Rezultat" EntitySet="Rezultats" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Rezervacija_trenera_Trener" Association="PI2306_DBModel.FK_Rezervacija_trenera_Trener">
+            <End Role="Trener" EntitySet="Treners" />
+            <End Role="Rezervacija_trenera" EntitySet="Rezervacija_trenera" />
+          </AssociationSet>
+        </EntityContainer>
         <EntityType Name="Dogadaj">
           <Key>
             <PropertyRef Name="dogadaj_id" />
@@ -390,19 +447,19 @@ warning 6002: The table/view 'PI2306_DB.dbo.Rezultat' does not have a primary ke
             <PropertyRef Name="korisnik_id" />
           </Key>
           <Property Name="korisnik_id" Type="Int32" Nullable="false" />
-          <Property Name="ime_prezime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="broj_mobitela" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="korisnicko_ime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="lozinka" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ime_prezime" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="broj_mobitela" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="korisnicko_ime" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="lozinka" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="uloga_id" Type="Int32" />
-          <NavigationProperty Name="Uloga" Relationship="Self.FK_Korisnik_Uloga" FromRole="Korisnik" ToRole="Uloga" />
-          <NavigationProperty Name="Povratna_informacija_obrazac" Relationship="Self.FK_Povratna_informacija_obrazac_Korisnik" FromRole="Korisnik" ToRole="Povratna_informacija_obrazac" />
-          <NavigationProperty Name="Prihvati_prigovor" Relationship="Self.FK_Prihvati_prigovor_Korisnik" FromRole="Korisnik" ToRole="Prihvati_prigovor" />
-          <NavigationProperty Name="Rezervacija_opreme" Relationship="Self.FK_Rezervacija_opreme_Korisnik" FromRole="Korisnik" ToRole="Rezervacija_opreme" />
-          <NavigationProperty Name="Rezervacija_trenera" Relationship="Self.FK_Rezervacija_trenera_Korisnik" FromRole="Korisnik" ToRole="Rezervacija_trenera" />
-          <NavigationProperty Name="Trening_program" Relationship="Self.FK_Trening_program_Korisnik" FromRole="Korisnik" ToRole="Trening_program" />
+          <NavigationProperty Name="Uloga" Relationship="PI2306_DBModel.FK_Korisnik_Uloga" FromRole="Korisnik" ToRole="Uloga" />
+          <NavigationProperty Name="Povratna_informacija_obrazac" Relationship="PI2306_DBModel.FK_Povratna_informacija_obrazac_Korisnik" FromRole="Korisnik" ToRole="Povratna_informacija_obrazac" />
+          <NavigationProperty Name="Prihvati_prigovor" Relationship="PI2306_DBModel.FK_Prihvati_prigovor_Korisnik" FromRole="Korisnik" ToRole="Prihvati_prigovor" />
+          <NavigationProperty Name="Rezervacija_opreme" Relationship="PI2306_DBModel.FK_Rezervacija_opreme_Korisnik" FromRole="Korisnik" ToRole="Rezervacija_opreme" />
           <NavigationProperty Name="Rezervacija_prostora" Relationship="PI2306_DBModel.FK_Rezervacija_prostora_Korisnik" FromRole="Korisnik" ToRole="Rezervacija_prostora" />
+          <NavigationProperty Name="Rezervacija_trenera" Relationship="PI2306_DBModel.FK_Rezervacija_trenera_Korisnik" FromRole="Korisnik" ToRole="Rezervacija_trenera" />
+          <NavigationProperty Name="Trening_program" Relationship="PI2306_DBModel.FK_Trening_program_Korisnik" FromRole="Korisnik" ToRole="Trening_program" />
         </EntityType>
         <EntityType Name="Povratna_informacija_obrazac">
           <Key>
@@ -412,8 +469,8 @@ warning 6002: The table/view 'PI2306_DB.dbo.Rezultat' does not have a primary ke
           <Property Name="tekst" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="datum" Type="DateTime" Precision="0" />
           <Property Name="korisnik_id" Type="Int32" />
-          <NavigationProperty Name="Korisnik" Relationship="Self.FK_Povratna_informacija_obrazac_Korisnik" FromRole="Povratna_informacija_obrazac" ToRole="Korisnik" />
-          <NavigationProperty Name="Prihvati_prigovor" Relationship="Self.FK_Prihvati_prigovor_Povratna_informacija_obrazac" FromRole="Povratna_informacija_obrazac" ToRole="Prihvati_prigovor" />
+          <NavigationProperty Name="Korisnik" Relationship="PI2306_DBModel.FK_Povratna_informacija_obrazac_Korisnik" FromRole="Povratna_informacija_obrazac" ToRole="Korisnik" />
+          <NavigationProperty Name="Prihvati_prigovor" Relationship="PI2306_DBModel.FK_Prihvati_prigovor_Povratna_informacija_obrazac" FromRole="Povratna_informacija_obrazac" ToRole="Prihvati_prigovor" />
         </EntityType>
         <EntityType Name="Prihvati_prigovor">
           <Key>
@@ -424,8 +481,8 @@ warning 6002: The table/view 'PI2306_DB.dbo.Rezultat' does not have a primary ke
           <Property Name="pi_obrazac_id" Type="Int32" />
           <Property Name="prihvaceno" Type="Int32" />
           <Property Name="komentar" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Korisnik" Relationship="Self.FK_Prihvati_prigovor_Korisnik" FromRole="Prihvati_prigovor" ToRole="Korisnik" />
-          <NavigationProperty Name="Povratna_informacija_obrazac" Relationship="Self.FK_Prihvati_prigovor_Povratna_informacija_obrazac" FromRole="Prihvati_prigovor" ToRole="Povratna_informacija_obrazac" />
+          <NavigationProperty Name="Korisnik" Relationship="PI2306_DBModel.FK_Prihvati_prigovor_Korisnik" FromRole="Prihvati_prigovor" ToRole="Korisnik" />
+          <NavigationProperty Name="Povratna_informacija_obrazac" Relationship="PI2306_DBModel.FK_Prihvati_prigovor_Povratna_informacija_obrazac" FromRole="Prihvati_prigovor" ToRole="Povratna_informacija_obrazac" />
         </EntityType>
         <EntityType Name="Rezervacija_opreme">
           <Key>
@@ -439,8 +496,26 @@ warning 6002: The table/view 'PI2306_DB.dbo.Rezultat' does not have a primary ke
           <Property Name="duljina_rezervacije" Type="Int32" />
           <Property Name="placeno" Type="Int32" />
           <Property Name="cijena" Type="Double" />
-          <NavigationProperty Name="Korisnik" Relationship="Self.FK_Rezervacija_opreme_Korisnik" FromRole="Rezervacija_opreme" ToRole="Korisnik" />
-          <NavigationProperty Name="Sportska_oprema" Relationship="Self.FK_Rezervacija_opreme_Sportska_oprema" FromRole="Rezervacija_opreme" ToRole="Sportska_oprema" />
+          <NavigationProperty Name="Korisnik" Relationship="PI2306_DBModel.FK_Rezervacija_opreme_Korisnik" FromRole="Rezervacija_opreme" ToRole="Korisnik" />
+          <NavigationProperty Name="Sportska_oprema" Relationship="PI2306_DBModel.FK_Rezervacija_opreme_Sportska_oprema" FromRole="Rezervacija_opreme" ToRole="Sportska_oprema" />
+        </EntityType>
+        <EntityType Name="Rezervacija_prostora">
+          <Key>
+            <PropertyRef Name="rezervacija_prostora_id" />
+          </Key>
+          <Property Name="rezervacija_prostora_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sportski_prostor_id" Type="Int32" />
+          <Property Name="korisnik_id" Type="Int32" />
+          <Property Name="datum" Type="DateTime" Precision="0" />
+          <Property Name="vrijeme_od" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="duljina_rezervacije" Type="Int32" />
+          <Property Name="placeno" Type="Int32" />
+          <Property Name="cijena" Type="Double" />
+          <Property Name="dogadaj_id" Type="Int32" />
+          <NavigationProperty Name="Dogadaj" Relationship="PI2306_DBModel.FK_Rezervacija_prostora_Dogadaj" FromRole="Rezervacija_prostora" ToRole="Dogadaj" />
+          <NavigationProperty Name="Korisnik" Relationship="PI2306_DBModel.FK_Rezervacija_prostora_Korisnik" FromRole="Rezervacija_prostora" ToRole="Korisnik" />
+          <NavigationProperty Name="Sportski_prostor" Relationship="PI2306_DBModel.FK_Rezervacija_prostora_Sportski_prostor" FromRole="Rezervacija_prostora" ToRole="Sportski_prostor" />
+          <NavigationProperty Name="Rezultats" Relationship="PI2306_DBModel.FK_Rezultat_Rezervacija_prostora" FromRole="Rezervacija_prostora" ToRole="Rezultat" />
         </EntityType>
         <EntityType Name="Rezervacija_trenera">
           <Key>
@@ -454,8 +529,18 @@ warning 6002: The table/view 'PI2306_DB.dbo.Rezultat' does not have a primary ke
           <Property Name="duljina_rezervacije" Type="Int32" />
           <Property Name="placeno" Type="Int32" />
           <Property Name="cijena" Type="Double" />
-          <NavigationProperty Name="Korisnik" Relationship="Self.FK_Rezervacija_trenera_Korisnik" FromRole="Rezervacija_trenera" ToRole="Korisnik" />
-          <NavigationProperty Name="Trener" Relationship="Self.FK_Rezervacija_trenera_Trener" FromRole="Rezervacija_trenera" ToRole="Trener" />
+          <NavigationProperty Name="Korisnik" Relationship="PI2306_DBModel.FK_Rezervacija_trenera_Korisnik" FromRole="Rezervacija_trenera" ToRole="Korisnik" />
+          <NavigationProperty Name="Trener" Relationship="PI2306_DBModel.FK_Rezervacija_trenera_Trener" FromRole="Rezervacija_trenera" ToRole="Trener" />
+        </EntityType>
+        <EntityType Name="Rezultat">
+          <Key>
+            <PropertyRef Name="rezultat_id" />
+          </Key>
+          <Property Name="rezultat_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sport" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="rezultat1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="rezervacija_prostora_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Rezervacija_prostora" Relationship="PI2306_DBModel.FK_Rezultat_Rezervacija_prostora" FromRole="Rezultat" ToRole="Rezervacija_prostora" />
         </EntityType>
         <EntityType Name="Sportska_oprema">
           <Key>
@@ -464,7 +549,7 @@ warning 6002: The table/view 'PI2306_DB.dbo.Rezultat' does not have a primary ke
           <Property Name="sportska_oprema_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="cijena" Type="Double" />
-          <NavigationProperty Name="Rezervacija_opreme" Relationship="Self.FK_Rezervacija_opreme_Sportska_oprema" FromRole="Sportska_oprema" ToRole="Rezervacija_opreme" />
+          <NavigationProperty Name="Rezervacija_opreme" Relationship="PI2306_DBModel.FK_Rezervacija_opreme_Sportska_oprema" FromRole="Sportska_oprema" ToRole="Rezervacija_opreme" />
         </EntityType>
         <EntityType Name="Sportski_prostor">
           <Key>
@@ -485,7 +570,7 @@ warning 6002: The table/view 'PI2306_DB.dbo.Rezultat' does not have a primary ke
           <Property Name="datum_rodenja" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="podrucje_interesa" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="cijena_po_satu" Type="Double" />
-          <NavigationProperty Name="Rezervacija_trenera" Relationship="Self.FK_Rezervacija_trenera_Trener" FromRole="Trener" ToRole="Rezervacija_trenera" />
+          <NavigationProperty Name="Rezervacija_trenera" Relationship="PI2306_DBModel.FK_Rezervacija_trenera_Trener" FromRole="Trener" ToRole="Rezervacija_trenera" />
         </EntityType>
         <EntityType Name="Trening_program">
           <Key>
@@ -496,7 +581,7 @@ warning 6002: The table/view 'PI2306_DB.dbo.Rezultat' does not have a primary ke
           <Property Name="naziv" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="opis" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="tip_programa" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Korisnik" Relationship="Self.FK_Trening_program_Korisnik" FromRole="Trening_program" ToRole="Korisnik" />
+          <NavigationProperty Name="Korisnik" Relationship="PI2306_DBModel.FK_Trening_program_Korisnik" FromRole="Trening_program" ToRole="Korisnik" />
         </EntityType>
         <EntityType Name="Uloga">
           <Key>
@@ -504,211 +589,7 @@ warning 6002: The table/view 'PI2306_DB.dbo.Rezultat' does not have a primary ke
           </Key>
           <Property Name="uloga_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="naziv" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Korisniks" Relationship="Self.FK_Korisnik_Uloga" FromRole="Uloga" ToRole="Korisnik" />
-        </EntityType>
-        <Association Name="FK_Korisnik_Uloga">
-          <End Role="Uloga" Type="Self.Uloga" Multiplicity="0..1" />
-          <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Uloga">
-              <PropertyRef Name="uloga_id" />
-            </Principal>
-            <Dependent Role="Korisnik">
-              <PropertyRef Name="uloga_id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Povratna_informacija_obrazac_Korisnik">
-          <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="0..1" />
-          <End Role="Povratna_informacija_obrazac" Type="Self.Povratna_informacija_obrazac" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Korisnik">
-              <PropertyRef Name="korisnik_id" />
-            </Principal>
-            <Dependent Role="Povratna_informacija_obrazac">
-              <PropertyRef Name="korisnik_id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Prihvati_prigovor_Korisnik">
-          <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="0..1" />
-          <End Role="Prihvati_prigovor" Type="Self.Prihvati_prigovor" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Korisnik">
-              <PropertyRef Name="korisnik_id" />
-            </Principal>
-            <Dependent Role="Prihvati_prigovor">
-              <PropertyRef Name="korisnik_id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Rezervacija_opreme_Korisnik">
-          <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="0..1" />
-          <End Role="Rezervacija_opreme" Type="Self.Rezervacija_opreme" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Korisnik">
-              <PropertyRef Name="korisnik_id" />
-            </Principal>
-            <Dependent Role="Rezervacija_opreme">
-              <PropertyRef Name="korisnik_id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Rezervacija_trenera_Korisnik">
-          <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="0..1" />
-          <End Role="Rezervacija_trenera" Type="Self.Rezervacija_trenera" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Korisnik">
-              <PropertyRef Name="korisnik_id" />
-            </Principal>
-            <Dependent Role="Rezervacija_trenera">
-              <PropertyRef Name="korisnik_id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Trening_program_Korisnik">
-          <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="0..1" />
-          <End Role="Trening_program" Type="Self.Trening_program" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Korisnik">
-              <PropertyRef Name="korisnik_id" />
-            </Principal>
-            <Dependent Role="Trening_program">
-              <PropertyRef Name="korisnik_id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Prihvati_prigovor_Povratna_informacija_obrazac">
-          <End Role="Povratna_informacija_obrazac" Type="Self.Povratna_informacija_obrazac" Multiplicity="0..1" />
-          <End Role="Prihvati_prigovor" Type="Self.Prihvati_prigovor" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Povratna_informacija_obrazac">
-              <PropertyRef Name="pi_obrazac_id" />
-            </Principal>
-            <Dependent Role="Prihvati_prigovor">
-              <PropertyRef Name="pi_obrazac_id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Rezervacija_opreme_Sportska_oprema">
-          <End Role="Sportska_oprema" Type="Self.Sportska_oprema" Multiplicity="0..1" />
-          <End Role="Rezervacija_opreme" Type="Self.Rezervacija_opreme" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Sportska_oprema">
-              <PropertyRef Name="sportska_oprema_id" />
-            </Principal>
-            <Dependent Role="Rezervacija_opreme">
-              <PropertyRef Name="sportska_oprema_id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Rezervacija_trenera_Trener">
-          <End Role="Trener" Type="Self.Trener" Multiplicity="0..1" />
-          <End Role="Rezervacija_trenera" Type="Self.Rezervacija_trenera" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Trener">
-              <PropertyRef Name="trener_id" />
-            </Principal>
-            <Dependent Role="Rezervacija_trenera">
-              <PropertyRef Name="trener_id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityContainer Name="PI2306_DBEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Dogadajs" EntityType="Self.Dogadaj" />
-          <EntitySet Name="Korisniks" EntityType="Self.Korisnik" />
-          <EntitySet Name="Povratna_informacija_obrazac" EntityType="Self.Povratna_informacija_obrazac" />
-          <EntitySet Name="Prihvati_prigovor" EntityType="Self.Prihvati_prigovor" />
-          <EntitySet Name="Rezervacija_opreme" EntityType="Self.Rezervacija_opreme" />
-          <EntitySet Name="Rezervacija_trenera" EntityType="Self.Rezervacija_trenera" />
-          <EntitySet Name="Sportska_oprema" EntityType="Self.Sportska_oprema" />
-          <EntitySet Name="Sportski_prostor" EntityType="Self.Sportski_prostor" />
-          <EntitySet Name="Treners" EntityType="Self.Trener" />
-          <EntitySet Name="Trening_program" EntityType="Self.Trening_program" />
-          <EntitySet Name="Ulogas" EntityType="Self.Uloga" />
-          <AssociationSet Name="FK_Korisnik_Uloga" Association="Self.FK_Korisnik_Uloga">
-            <End Role="Uloga" EntitySet="Ulogas" />
-            <End Role="Korisnik" EntitySet="Korisniks" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Povratna_informacija_obrazac_Korisnik" Association="Self.FK_Povratna_informacija_obrazac_Korisnik">
-            <End Role="Korisnik" EntitySet="Korisniks" />
-            <End Role="Povratna_informacija_obrazac" EntitySet="Povratna_informacija_obrazac" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Prihvati_prigovor_Korisnik" Association="Self.FK_Prihvati_prigovor_Korisnik">
-            <End Role="Korisnik" EntitySet="Korisniks" />
-            <End Role="Prihvati_prigovor" EntitySet="Prihvati_prigovor" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Rezervacija_opreme_Korisnik" Association="Self.FK_Rezervacija_opreme_Korisnik">
-            <End Role="Korisnik" EntitySet="Korisniks" />
-            <End Role="Rezervacija_opreme" EntitySet="Rezervacija_opreme" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Rezervacija_trenera_Korisnik" Association="Self.FK_Rezervacija_trenera_Korisnik">
-            <End Role="Korisnik" EntitySet="Korisniks" />
-            <End Role="Rezervacija_trenera" EntitySet="Rezervacija_trenera" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Trening_program_Korisnik" Association="Self.FK_Trening_program_Korisnik">
-            <End Role="Korisnik" EntitySet="Korisniks" />
-            <End Role="Trening_program" EntitySet="Trening_program" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Prihvati_prigovor_Povratna_informacija_obrazac" Association="Self.FK_Prihvati_prigovor_Povratna_informacija_obrazac">
-            <End Role="Povratna_informacija_obrazac" EntitySet="Povratna_informacija_obrazac" />
-            <End Role="Prihvati_prigovor" EntitySet="Prihvati_prigovor" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Rezervacija_opreme_Sportska_oprema" Association="Self.FK_Rezervacija_opreme_Sportska_oprema">
-            <End Role="Sportska_oprema" EntitySet="Sportska_oprema" />
-            <End Role="Rezervacija_opreme" EntitySet="Rezervacija_opreme" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Rezervacija_trenera_Trener" Association="Self.FK_Rezervacija_trenera_Trener">
-            <End Role="Trener" EntitySet="Treners" />
-            <End Role="Rezervacija_trenera" EntitySet="Rezervacija_trenera" />
-          </AssociationSet>
-          <EntitySet Name="Rezultats" EntityType="PI2306_DBModel.Rezultat" />
-          <EntitySet Name="Rezervacija_prostora" EntityType="PI2306_DBModel.Rezervacija_prostora" />
-          <AssociationSet Name="FK_Rezervacija_prostora_Dogadaj" Association="PI2306_DBModel.FK_Rezervacija_prostora_Dogadaj">
-            <End Role="Dogadaj" EntitySet="Dogadajs" />
-            <End Role="Rezervacija_prostora" EntitySet="Rezervacija_prostora" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Rezervacija_prostora_Korisnik" Association="PI2306_DBModel.FK_Rezervacija_prostora_Korisnik">
-            <End Role="Korisnik" EntitySet="Korisniks" />
-            <End Role="Rezervacija_prostora" EntitySet="Rezervacija_prostora" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Rezervacija_prostora_Sportski_prostor" Association="PI2306_DBModel.FK_Rezervacija_prostora_Sportski_prostor">
-            <End Role="Sportski_prostor" EntitySet="Sportski_prostor" />
-            <End Role="Rezervacija_prostora" EntitySet="Rezervacija_prostora" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Rezultat_Rezervacija_prostora" Association="PI2306_DBModel.FK_Rezultat_Rezervacija_prostora">
-            <End Role="Rezervacija_prostora" EntitySet="Rezervacija_prostora" />
-            <End Role="Rezultat" EntitySet="Rezultats" />
-          </AssociationSet>
-        </EntityContainer>
-        <EntityType Name="Rezultat">
-          <Key>
-            <PropertyRef Name="rezultat_id" />
-            <PropertyRef Name="rezervacija_prostora_id" />
-          </Key>
-          <Property Name="rezultat_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="sport" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="rezultat1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="rezervacija_prostora_id" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Rezervacija_prostora" Relationship="PI2306_DBModel.FK_Rezultat_Rezervacija_prostora" FromRole="Rezultat" ToRole="Rezervacija_prostora" />
-        </EntityType>
-        <EntityType Name="Rezervacija_prostora">
-          <Key>
-            <PropertyRef Name="rezervacija_prostora_id" />
-          </Key>
-          <Property Name="rezervacija_prostora_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="sportski_prostor_id" Type="Int32" />
-          <Property Name="korisnik_id" Type="Int32" />
-          <Property Name="datum" Type="DateTime" Precision="0" />
-          <Property Name="vrijeme_od" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="duljina_rezervacije" Type="Int32" />
-          <Property Name="placeno" Type="Int32" />
-          <Property Name="cijena" Type="Double" />
-          <Property Name="dogadaj_id" Type="Int32" />
-          <NavigationProperty Name="Dogadaj" Relationship="PI2306_DBModel.FK_Rezervacija_prostora_Dogadaj" FromRole="Rezervacija_prostora" ToRole="Dogadaj" />
-          <NavigationProperty Name="Korisnik" Relationship="PI2306_DBModel.FK_Rezervacija_prostora_Korisnik" FromRole="Rezervacija_prostora" ToRole="Korisnik" />
-          <NavigationProperty Name="Sportski_prostor" Relationship="PI2306_DBModel.FK_Rezervacija_prostora_Sportski_prostor" FromRole="Rezervacija_prostora" ToRole="Sportski_prostor" />
-          <NavigationProperty Name="Rezultats" Relationship="PI2306_DBModel.FK_Rezultat_Rezervacija_prostora" FromRole="Rezervacija_prostora" ToRole="Rezultat" />
+          <NavigationProperty Name="Korisniks" Relationship="PI2306_DBModel.FK_Korisnik_Uloga" FromRole="Uloga" ToRole="Korisnik" />
         </EntityType>
         <Association Name="FK_Rezervacija_prostora_Dogadaj">
           <End Type="PI2306_DBModel.Dogadaj" Role="Dogadaj" Multiplicity="0..1" />
@@ -722,6 +603,54 @@ warning 6002: The table/view 'PI2306_DB.dbo.Rezultat' does not have a primary ke
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Korisnik_Uloga">
+          <End Type="PI2306_DBModel.Uloga" Role="Uloga" Multiplicity="0..1" />
+          <End Type="PI2306_DBModel.Korisnik" Role="Korisnik" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Uloga">
+              <PropertyRef Name="uloga_id" />
+            </Principal>
+            <Dependent Role="Korisnik">
+              <PropertyRef Name="uloga_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Povratna_informacija_obrazac_Korisnik">
+          <End Type="PI2306_DBModel.Korisnik" Role="Korisnik" Multiplicity="0..1" />
+          <End Type="PI2306_DBModel.Povratna_informacija_obrazac" Role="Povratna_informacija_obrazac" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Korisnik">
+              <PropertyRef Name="korisnik_id" />
+            </Principal>
+            <Dependent Role="Povratna_informacija_obrazac">
+              <PropertyRef Name="korisnik_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Prihvati_prigovor_Korisnik">
+          <End Type="PI2306_DBModel.Korisnik" Role="Korisnik" Multiplicity="0..1" />
+          <End Type="PI2306_DBModel.Prihvati_prigovor" Role="Prihvati_prigovor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Korisnik">
+              <PropertyRef Name="korisnik_id" />
+            </Principal>
+            <Dependent Role="Prihvati_prigovor">
+              <PropertyRef Name="korisnik_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Rezervacija_opreme_Korisnik">
+          <End Type="PI2306_DBModel.Korisnik" Role="Korisnik" Multiplicity="0..1" />
+          <End Type="PI2306_DBModel.Rezervacija_opreme" Role="Rezervacija_opreme" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Korisnik">
+              <PropertyRef Name="korisnik_id" />
+            </Principal>
+            <Dependent Role="Rezervacija_opreme">
+              <PropertyRef Name="korisnik_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Rezervacija_prostora_Korisnik">
           <End Type="PI2306_DBModel.Korisnik" Role="Korisnik" Multiplicity="0..1" />
           <End Type="PI2306_DBModel.Rezervacija_prostora" Role="Rezervacija_prostora" Multiplicity="*" />
@@ -731,6 +660,54 @@ warning 6002: The table/view 'PI2306_DB.dbo.Rezultat' does not have a primary ke
             </Principal>
             <Dependent Role="Rezervacija_prostora">
               <PropertyRef Name="korisnik_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Rezervacija_trenera_Korisnik">
+          <End Type="PI2306_DBModel.Korisnik" Role="Korisnik" Multiplicity="0..1" />
+          <End Type="PI2306_DBModel.Rezervacija_trenera" Role="Rezervacija_trenera" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Korisnik">
+              <PropertyRef Name="korisnik_id" />
+            </Principal>
+            <Dependent Role="Rezervacija_trenera">
+              <PropertyRef Name="korisnik_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Trening_program_Korisnik">
+          <End Type="PI2306_DBModel.Korisnik" Role="Korisnik" Multiplicity="0..1" />
+          <End Type="PI2306_DBModel.Trening_program" Role="Trening_program" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Korisnik">
+              <PropertyRef Name="korisnik_id" />
+            </Principal>
+            <Dependent Role="Trening_program">
+              <PropertyRef Name="korisnik_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Prihvati_prigovor_Povratna_informacija_obrazac">
+          <End Type="PI2306_DBModel.Povratna_informacija_obrazac" Role="Povratna_informacija_obrazac" Multiplicity="0..1" />
+          <End Type="PI2306_DBModel.Prihvati_prigovor" Role="Prihvati_prigovor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Povratna_informacija_obrazac">
+              <PropertyRef Name="pi_obrazac_id" />
+            </Principal>
+            <Dependent Role="Prihvati_prigovor">
+              <PropertyRef Name="pi_obrazac_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Rezervacija_opreme_Sportska_oprema">
+          <End Type="PI2306_DBModel.Sportska_oprema" Role="Sportska_oprema" Multiplicity="0..1" />
+          <End Type="PI2306_DBModel.Rezervacija_opreme" Role="Rezervacija_opreme" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sportska_oprema">
+              <PropertyRef Name="sportska_oprema_id" />
+            </Principal>
+            <Dependent Role="Rezervacija_opreme">
+              <PropertyRef Name="sportska_oprema_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -758,7 +735,19 @@ warning 6002: The table/view 'PI2306_DB.dbo.Rezultat' does not have a primary ke
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        <Association Name="FK_Rezervacija_trenera_Trener">
+          <End Type="PI2306_DBModel.Trener" Role="Trener" Multiplicity="0..1" />
+          <End Type="PI2306_DBModel.Rezervacija_trenera" Role="Rezervacija_trenera" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trener">
+              <PropertyRef Name="trener_id" />
+            </Principal>
+            <Dependent Role="Rezervacija_trenera">
+              <PropertyRef Name="trener_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -767,131 +756,58 @@ warning 6002: The table/view 'PI2306_DB.dbo.Rezultat' does not have a primary ke
           <EntitySetMapping Name="Dogadajs">
             <EntityTypeMapping TypeName="PI2306_DBModel.Dogadaj">
               <MappingFragment StoreEntitySet="Dogadaj">
-                <ScalarProperty Name="dogadaj_id" ColumnName="dogadaj_id" />
-                <ScalarProperty Name="naziv" ColumnName="naziv" />
-                <ScalarProperty Name="opis" ColumnName="opis" />
                 <ScalarProperty Name="max_broj_sudionika" ColumnName="max_broj_sudionika" />
+                <ScalarProperty Name="opis" ColumnName="opis" />
+                <ScalarProperty Name="naziv" ColumnName="naziv" />
+                <ScalarProperty Name="dogadaj_id" ColumnName="dogadaj_id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Korisniks">
             <EntityTypeMapping TypeName="PI2306_DBModel.Korisnik">
               <MappingFragment StoreEntitySet="Korisnik">
-                <ScalarProperty Name="korisnik_id" ColumnName="korisnik_id" />
-                <ScalarProperty Name="ime_prezime" ColumnName="ime_prezime" />
-                <ScalarProperty Name="email" ColumnName="email" />
-                <ScalarProperty Name="broj_mobitela" ColumnName="broj_mobitela" />
-                <ScalarProperty Name="korisnicko_ime" ColumnName="korisnicko_ime" />
-                <ScalarProperty Name="lozinka" ColumnName="lozinka" />
                 <ScalarProperty Name="uloga_id" ColumnName="uloga_id" />
+                <ScalarProperty Name="lozinka" ColumnName="lozinka" />
+                <ScalarProperty Name="korisnicko_ime" ColumnName="korisnicko_ime" />
+                <ScalarProperty Name="broj_mobitela" ColumnName="broj_mobitela" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="ime_prezime" ColumnName="ime_prezime" />
+                <ScalarProperty Name="korisnik_id" ColumnName="korisnik_id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Povratna_informacija_obrazac">
             <EntityTypeMapping TypeName="PI2306_DBModel.Povratna_informacija_obrazac">
               <MappingFragment StoreEntitySet="Povratna_informacija_obrazac">
-                <ScalarProperty Name="pi_obrazac_id" ColumnName="pi_obrazac_id" />
-                <ScalarProperty Name="tekst" ColumnName="tekst" />
-                <ScalarProperty Name="datum" ColumnName="datum" />
                 <ScalarProperty Name="korisnik_id" ColumnName="korisnik_id" />
+                <ScalarProperty Name="datum" ColumnName="datum" />
+                <ScalarProperty Name="tekst" ColumnName="tekst" />
+                <ScalarProperty Name="pi_obrazac_id" ColumnName="pi_obrazac_id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Prihvati_prigovor">
             <EntityTypeMapping TypeName="PI2306_DBModel.Prihvati_prigovor">
               <MappingFragment StoreEntitySet="Prihvati_prigovor">
-                <ScalarProperty Name="prihvati_prigovor_id" ColumnName="prihvati_prigovor_id" />
-                <ScalarProperty Name="korisnik_id" ColumnName="korisnik_id" />
-                <ScalarProperty Name="pi_obrazac_id" ColumnName="pi_obrazac_id" />
-                <ScalarProperty Name="prihvaceno" ColumnName="prihvaceno" />
                 <ScalarProperty Name="komentar" ColumnName="komentar" />
+                <ScalarProperty Name="prihvaceno" ColumnName="prihvaceno" />
+                <ScalarProperty Name="pi_obrazac_id" ColumnName="pi_obrazac_id" />
+                <ScalarProperty Name="korisnik_id" ColumnName="korisnik_id" />
+                <ScalarProperty Name="prihvati_prigovor_id" ColumnName="prihvati_prigovor_id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Rezervacija_opreme">
             <EntityTypeMapping TypeName="PI2306_DBModel.Rezervacija_opreme">
               <MappingFragment StoreEntitySet="Rezervacija_opreme">
+                <ScalarProperty Name="cijena" ColumnName="cijena" />
+                <ScalarProperty Name="placeno" ColumnName="placeno" />
+                <ScalarProperty Name="duljina_rezervacije" ColumnName="duljina_rezervacije" />
+                <ScalarProperty Name="vrijeme_od" ColumnName="vrijeme_od" />
+                <ScalarProperty Name="datum" ColumnName="datum" />
+                <ScalarProperty Name="korisnik_id" ColumnName="korisnik_id" />
+                <ScalarProperty Name="sportska_oprema_id" ColumnName="sportska_oprema_id" />
                 <ScalarProperty Name="rezervacija_sportske_opreme_id" ColumnName="rezervacija_sportske_opreme_id" />
-                <ScalarProperty Name="sportska_oprema_id" ColumnName="sportska_oprema_id" />
-                <ScalarProperty Name="korisnik_id" ColumnName="korisnik_id" />
-                <ScalarProperty Name="datum" ColumnName="datum" />
-                <ScalarProperty Name="vrijeme_od" ColumnName="vrijeme_od" />
-                <ScalarProperty Name="duljina_rezervacije" ColumnName="duljina_rezervacije" />
-                <ScalarProperty Name="placeno" ColumnName="placeno" />
-                <ScalarProperty Name="cijena" ColumnName="cijena" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Rezervacija_trenera">
-            <EntityTypeMapping TypeName="PI2306_DBModel.Rezervacija_trenera">
-              <MappingFragment StoreEntitySet="Rezervacija_trenera">
-                <ScalarProperty Name="rezervacija_trenera_id" ColumnName="rezervacija_trenera_id" />
-                <ScalarProperty Name="trener_id" ColumnName="trener_id" />
-                <ScalarProperty Name="korisnik_id" ColumnName="korisnik_id" />
-                <ScalarProperty Name="datum" ColumnName="datum" />
-                <ScalarProperty Name="vrijeme_od" ColumnName="vrijeme_od" />
-                <ScalarProperty Name="duljina_rezervacije" ColumnName="duljina_rezervacije" />
-                <ScalarProperty Name="placeno" ColumnName="placeno" />
-                <ScalarProperty Name="cijena" ColumnName="cijena" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Sportska_oprema">
-            <EntityTypeMapping TypeName="PI2306_DBModel.Sportska_oprema">
-              <MappingFragment StoreEntitySet="Sportska_oprema">
-                <ScalarProperty Name="sportska_oprema_id" ColumnName="sportska_oprema_id" />
-                <ScalarProperty Name="ime" ColumnName="ime" />
-                <ScalarProperty Name="cijena" ColumnName="cijena" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Sportski_prostor">
-            <EntityTypeMapping TypeName="PI2306_DBModel.Sportski_prostor">
-              <MappingFragment StoreEntitySet="Sportski_prostor">
-                <ScalarProperty Name="sportski_prostor_id" ColumnName="sportski_prostor_id" />
-                <ScalarProperty Name="naziv" ColumnName="naziv" />
-                <ScalarProperty Name="adresa" ColumnName="adresa" />
-                <ScalarProperty Name="cijena" ColumnName="cijena" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Treners">
-            <EntityTypeMapping TypeName="PI2306_DBModel.Trener">
-              <MappingFragment StoreEntitySet="Trener">
-                <ScalarProperty Name="trener_id" ColumnName="trener_id" />
-                <ScalarProperty Name="ime_prezime" ColumnName="ime_prezime" />
-                <ScalarProperty Name="datum_rodenja" ColumnName="datum_rodenja" />
-                <ScalarProperty Name="podrucje_interesa" ColumnName="podrucje_interesa" />
-                <ScalarProperty Name="cijena_po_satu" ColumnName="cijena_po_satu" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Trening_program">
-            <EntityTypeMapping TypeName="PI2306_DBModel.Trening_program">
-              <MappingFragment StoreEntitySet="Trening_program">
-                <ScalarProperty Name="trening_program_id" ColumnName="trening_program_id" />
-                <ScalarProperty Name="korisnik_id" ColumnName="korisnik_id" />
-                <ScalarProperty Name="naziv" ColumnName="naziv" />
-                <ScalarProperty Name="opis" ColumnName="opis" />
-                <ScalarProperty Name="tip_programa" ColumnName="tip_programa" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Ulogas">
-            <EntityTypeMapping TypeName="PI2306_DBModel.Uloga">
-              <MappingFragment StoreEntitySet="Uloga">
-                <ScalarProperty Name="uloga_id" ColumnName="uloga_id" />
-                <ScalarProperty Name="naziv" ColumnName="naziv" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Rezultats">
-            <EntityTypeMapping TypeName="PI2306_DBModel.Rezultat">
-              <MappingFragment StoreEntitySet="Rezultat">
-                <ScalarProperty Name="rezervacija_prostora_id" ColumnName="rezervacija_prostora_id" />
-                <ScalarProperty Name="rezultat1" ColumnName="rezultat" />
-                <ScalarProperty Name="sport" ColumnName="sport" />
-                <ScalarProperty Name="rezultat_id" ColumnName="rezultat_id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -907,6 +823,79 @@ warning 6002: The table/view 'PI2306_DB.dbo.Rezultat' does not have a primary ke
                 <ScalarProperty Name="korisnik_id" ColumnName="korisnik_id" />
                 <ScalarProperty Name="sportski_prostor_id" ColumnName="sportski_prostor_id" />
                 <ScalarProperty Name="rezervacija_prostora_id" ColumnName="rezervacija_prostora_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Rezervacija_trenera">
+            <EntityTypeMapping TypeName="PI2306_DBModel.Rezervacija_trenera">
+              <MappingFragment StoreEntitySet="Rezervacija_trenera">
+                <ScalarProperty Name="cijena" ColumnName="cijena" />
+                <ScalarProperty Name="placeno" ColumnName="placeno" />
+                <ScalarProperty Name="duljina_rezervacije" ColumnName="duljina_rezervacije" />
+                <ScalarProperty Name="vrijeme_od" ColumnName="vrijeme_od" />
+                <ScalarProperty Name="datum" ColumnName="datum" />
+                <ScalarProperty Name="korisnik_id" ColumnName="korisnik_id" />
+                <ScalarProperty Name="trener_id" ColumnName="trener_id" />
+                <ScalarProperty Name="rezervacija_trenera_id" ColumnName="rezervacija_trenera_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Rezultats">
+            <EntityTypeMapping TypeName="PI2306_DBModel.Rezultat">
+              <MappingFragment StoreEntitySet="Rezultat">
+                <ScalarProperty Name="rezervacija_prostora_id" ColumnName="rezervacija_prostora_id" />
+                <ScalarProperty Name="rezultat1" ColumnName="rezultat" />
+                <ScalarProperty Name="sport" ColumnName="sport" />
+                <ScalarProperty Name="rezultat_id" ColumnName="rezultat_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sportska_oprema">
+            <EntityTypeMapping TypeName="PI2306_DBModel.Sportska_oprema">
+              <MappingFragment StoreEntitySet="Sportska_oprema">
+                <ScalarProperty Name="cijena" ColumnName="cijena" />
+                <ScalarProperty Name="ime" ColumnName="ime" />
+                <ScalarProperty Name="sportska_oprema_id" ColumnName="sportska_oprema_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sportski_prostor">
+            <EntityTypeMapping TypeName="PI2306_DBModel.Sportski_prostor">
+              <MappingFragment StoreEntitySet="Sportski_prostor">
+                <ScalarProperty Name="cijena" ColumnName="cijena" />
+                <ScalarProperty Name="adresa" ColumnName="adresa" />
+                <ScalarProperty Name="naziv" ColumnName="naziv" />
+                <ScalarProperty Name="sportski_prostor_id" ColumnName="sportski_prostor_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Treners">
+            <EntityTypeMapping TypeName="PI2306_DBModel.Trener">
+              <MappingFragment StoreEntitySet="Trener">
+                <ScalarProperty Name="cijena_po_satu" ColumnName="cijena_po_satu" />
+                <ScalarProperty Name="podrucje_interesa" ColumnName="podrucje_interesa" />
+                <ScalarProperty Name="datum_rodenja" ColumnName="datum_rodenja" />
+                <ScalarProperty Name="ime_prezime" ColumnName="ime_prezime" />
+                <ScalarProperty Name="trener_id" ColumnName="trener_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Trening_program">
+            <EntityTypeMapping TypeName="PI2306_DBModel.Trening_program">
+              <MappingFragment StoreEntitySet="Trening_program">
+                <ScalarProperty Name="tip_programa" ColumnName="tip_programa" />
+                <ScalarProperty Name="opis" ColumnName="opis" />
+                <ScalarProperty Name="naziv" ColumnName="naziv" />
+                <ScalarProperty Name="korisnik_id" ColumnName="korisnik_id" />
+                <ScalarProperty Name="trening_program_id" ColumnName="trening_program_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ulogas">
+            <EntityTypeMapping TypeName="PI2306_DBModel.Uloga">
+              <MappingFragment StoreEntitySet="Uloga">
+                <ScalarProperty Name="naziv" ColumnName="naziv" />
+                <ScalarProperty Name="uloga_id" ColumnName="uloga_id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

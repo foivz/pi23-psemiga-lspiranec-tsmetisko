@@ -70,6 +70,7 @@
             this.dataGridViewEvidentirajRezultat.Name = "dataGridViewEvidentirajRezultat";
             this.dataGridViewEvidentirajRezultat.Size = new System.Drawing.Size(360, 237);
             this.dataGridViewEvidentirajRezultat.TabIndex = 4;
+            this.dataGridViewEvidentirajRezultat.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dataGridViewEvidentirajRezultat_RowStateChanged);
             // 
             // EvidencijaTerminaFrm
             // 

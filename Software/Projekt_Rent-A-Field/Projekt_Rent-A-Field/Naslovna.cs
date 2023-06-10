@@ -57,5 +57,12 @@ namespace Projekt_Rent_A_Field
             PreglediTerena pt = new PreglediTerena();
             pt.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            EvidencijaTerminaFrm forma = new EvidencijaTerminaFrm();
+            forma.ShowDialog();
+
+        }
     }
 }

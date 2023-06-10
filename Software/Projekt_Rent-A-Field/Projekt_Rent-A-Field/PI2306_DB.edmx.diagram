@@ -5,32 +5,32 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="42545f95a67b4549b696b651bb5e6bc2" Name="Diagram1">
-        <EntityTypeShape EntityType="PI2306_DBModel.Dogadaj" Width="1.5" PointX="6" PointY="14.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="PI2306_DBModel.Korisnik" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="PI2306_DBModel.Povratna_informacija_obrazac" Width="1.5" PointX="5.25" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PI2306_DBModel.Prihvati_prigovor" Width="1.5" PointX="7.5" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PI2306_DBModel.Rezervacija_opreme" Width="1.5" PointX="5.25" PointY="10.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PI2306_DBModel.Rezervacija_trenera" Width="1.5" PointX="8.25" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PI2306_DBModel.Sportska_oprema" Width="1.5" PointX="3" PointY="13.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="PI2306_DBModel.Sportski_prostor" Width="1.5" PointX="6" PointY="25.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="PI2306_DBModel.Trener" Width="1.5" PointX="6" PointY="4.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="PI2306_DBModel.Trening_program" Width="1.5" PointX="5.25" PointY="22.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="PI2306_DBModel.Uloga" Width="1.5" PointX="0.75" PointY="9.5" IsExpanded="true" />
-        <AssociationConnector Association="PI2306_DBModel.FK_Korisnik_Uloga" ManuallyRouted="false" />
-        <AssociationConnector Association="PI2306_DBModel.FK_Povratna_informacija_obrazac_Korisnik" ManuallyRouted="false" />
-        <AssociationConnector Association="PI2306_DBModel.FK_Prihvati_prigovor_Korisnik" ManuallyRouted="false" />
-        <AssociationConnector Association="PI2306_DBModel.FK_Rezervacija_opreme_Korisnik" ManuallyRouted="false" />
-        <AssociationConnector Association="PI2306_DBModel.FK_Rezervacija_trenera_Korisnik" ManuallyRouted="false" />
-        <AssociationConnector Association="PI2306_DBModel.FK_Trening_program_Korisnik" ManuallyRouted="false" />
-        <AssociationConnector Association="PI2306_DBModel.FK_Prihvati_prigovor_Povratna_informacija_obrazac" ManuallyRouted="false" />
-        <AssociationConnector Association="PI2306_DBModel.FK_Rezervacija_opreme_Sportska_oprema" ManuallyRouted="false" />
-        <AssociationConnector Association="PI2306_DBModel.FK_Rezervacija_trenera_Trener" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="PI2306_DBModel.Rezultat" Width="1.5" PointX="10.5" PointY="13.25" />
-        <EntityTypeShape EntityType="PI2306_DBModel.Rezervacija_prostora" Width="1.5" PointX="8.25" PointY="16.375" />
+        <EntityTypeShape EntityType="PI2306_DBModel.Dogadaj" Width="1.5" PointX="8" PointY="13.75" />
+        <EntityTypeShape EntityType="PI2306_DBModel.Korisnik" Width="1.5" PointX="3" PointY="8.25" />
+        <EntityTypeShape EntityType="PI2306_DBModel.Povratna_informacija_obrazac" Width="1.5" PointX="5.25" PointY="11.25" />
+        <EntityTypeShape EntityType="PI2306_DBModel.Prihvati_prigovor" Width="1.5" PointX="7.5" PointY="9.75" />
+        <EntityTypeShape EntityType="PI2306_DBModel.Rezervacija_opreme" Width="1.5" PointX="8.25" PointY="5.625" />
+        <EntityTypeShape EntityType="PI2306_DBModel.Rezervacija_prostora" Width="1.5" PointX="10.25" PointY="9.375" />
+        <EntityTypeShape EntityType="PI2306_DBModel.Rezervacija_trenera" Width="1.5" PointX="5.25" PointY="6.625" />
+        <EntityTypeShape EntityType="PI2306_DBModel.Rezultat" Width="1.5" PointX="12.5" PointY="10.125" />
+        <EntityTypeShape EntityType="PI2306_DBModel.Sportska_oprema" Width="1.5" PointX="6" PointY="3.25" />
+        <EntityTypeShape EntityType="PI2306_DBModel.Sportski_prostor" Width="1.5" PointX="8" PointY="16.5" />
+        <EntityTypeShape EntityType="PI2306_DBModel.Trener" Width="1.5" PointX="3" PointY="5" />
+        <EntityTypeShape EntityType="PI2306_DBModel.Trening_program" Width="1.5" PointX="5.25" PointY="22.125" />
+        <EntityTypeShape EntityType="PI2306_DBModel.Uloga" Width="1.5" PointX="0.75" PointY="9.375" />
         <AssociationConnector Association="PI2306_DBModel.FK_Rezervacija_prostora_Dogadaj" />
+        <AssociationConnector Association="PI2306_DBModel.FK_Korisnik_Uloga" />
+        <AssociationConnector Association="PI2306_DBModel.FK_Povratna_informacija_obrazac_Korisnik" />
+        <AssociationConnector Association="PI2306_DBModel.FK_Prihvati_prigovor_Korisnik" />
+        <AssociationConnector Association="PI2306_DBModel.FK_Rezervacija_opreme_Korisnik" />
         <AssociationConnector Association="PI2306_DBModel.FK_Rezervacija_prostora_Korisnik" />
+        <AssociationConnector Association="PI2306_DBModel.FK_Rezervacija_trenera_Korisnik" />
+        <AssociationConnector Association="PI2306_DBModel.FK_Trening_program_Korisnik" />
+        <AssociationConnector Association="PI2306_DBModel.FK_Prihvati_prigovor_Povratna_informacija_obrazac" />
+        <AssociationConnector Association="PI2306_DBModel.FK_Rezervacija_opreme_Sportska_oprema" />
         <AssociationConnector Association="PI2306_DBModel.FK_Rezervacija_prostora_Sportski_prostor" />
         <AssociationConnector Association="PI2306_DBModel.FK_Rezultat_Rezervacija_prostora" />
+        <AssociationConnector Association="PI2306_DBModel.FK_Rezervacija_trenera_Trener" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

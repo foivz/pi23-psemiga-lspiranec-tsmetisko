@@ -20,9 +20,9 @@ namespace Projekt_Rent_A_Field
             this.Povratna_informacija_obrazac = new HashSet<Povratna_informacija_obrazac>();
             this.Prihvati_prigovor = new HashSet<Prihvati_prigovor>();
             this.Rezervacija_opreme = new HashSet<Rezervacija_opreme>();
+            this.Rezervacija_prostora = new HashSet<Rezervacija_prostora>();
             this.Rezervacija_trenera = new HashSet<Rezervacija_trenera>();
             this.Trening_program = new HashSet<Trening_program>();
-            this.Rezervacija_prostora = new HashSet<Rezervacija_prostora>();
         }
     
         public int korisnik_id { get; set; }
@@ -41,10 +41,10 @@ namespace Projekt_Rent_A_Field
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Rezervacija_opreme> Rezervacija_opreme { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Rezervacija_prostora> Rezervacija_prostora { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Rezervacija_trenera> Rezervacija_trenera { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Trening_program> Trening_program { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Rezervacija_prostora> Rezervacija_prostora { get; set; }
     }
 }
