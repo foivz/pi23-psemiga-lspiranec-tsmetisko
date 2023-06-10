@@ -100,10 +100,11 @@ namespace Projekt_Rent_A_Field
 
 
         private void btnDodaj_Click(object sender, EventArgs e)
-        {
+        { 
             KreiranjeDogadajaFrm form = new KreiranjeDogadajaFrm();
             form.ShowDialog();
             PrikaziSve();
+
         }
 
         private void btnDatum_Click(object sender, EventArgs e)
@@ -113,7 +114,9 @@ namespace Projekt_Rent_A_Field
 
         private void btnPoProstoru_Click(object sender, EventArgs e)
         {
+
             PrikaziPoProstoru();
+
         }
 
         private void btnPrikaziSve_Click(object sender, EventArgs e)

@@ -48,6 +48,7 @@
             this.btnAzuriraj.TabIndex = 27;
             this.btnAzuriraj.Text = "Azuriraj";
             this.btnAzuriraj.UseVisualStyleBackColor = true;
+            this.btnAzuriraj.Click += new System.EventHandler(this.btnAzuriraj_Click);
             // 
             // btnIzbrisi
             // 
@@ -57,6 +58,7 @@
             this.btnIzbrisi.TabIndex = 26;
             this.btnIzbrisi.Text = "Izbrisi";
             this.btnIzbrisi.UseVisualStyleBackColor = true;
+            this.btnIzbrisi.Click += new System.EventHandler(this.btnIzbrisi_Click);
             // 
             // btnDodaj
             // 
@@ -66,6 +68,7 @@
             this.btnDodaj.TabIndex = 25;
             this.btnDodaj.Text = "Dodaj";
             this.btnDodaj.UseVisualStyleBackColor = true;
+            this.btnDodaj.Click += new System.EventHandler(this.btnDodaj_Click);
             // 
             // btnPoProstoru
             // 
@@ -75,6 +78,7 @@
             this.btnPoProstoru.TabIndex = 24;
             this.btnPoProstoru.Text = "Prikazi po prostoru";
             this.btnPoProstoru.UseVisualStyleBackColor = true;
+            this.btnPoProstoru.Click += new System.EventHandler(this.btnPoProstoru_Click);
             // 
             // cmbProstor
             // 
@@ -92,6 +96,7 @@
             this.btnDatum.TabIndex = 22;
             this.btnDatum.Text = "Prikazi po datumu";
             this.btnDatum.UseVisualStyleBackColor = true;
+            this.btnDatum.Click += new System.EventHandler(this.btnDatum_Click);
             // 
             // btnPrikaziSve
             // 
@@ -101,6 +106,7 @@
             this.btnPrikaziSve.TabIndex = 21;
             this.btnPrikaziSve.Text = "Prikazi sve";
             this.btnPrikaziSve.UseVisualStyleBackColor = true;
+            this.btnPrikaziSve.Click += new System.EventHandler(this.btnPrikaziSve_Click);
             // 
             // dgvRezervacija
             // 
