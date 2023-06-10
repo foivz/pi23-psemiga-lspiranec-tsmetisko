@@ -115,5 +115,91 @@ namespace Projekt_Rent_A_Field
             platiOpremu.ShowDialog();
             Osvjezi();
         }
+
+        private void btnObrisiProstor_Click(object sender, EventArgs e)
+        {
+            int odabraniProstor = (int)dgvRezervacijeProstora.CurrentRow.Cells[0].Value;
+            DateTime trenutnoVrijeme = DateTime.Today;
+
+            //if (odabraniProstor != null)
+            //{
+                using (var context = new PI2306_DBEntities())
+                {
+                    var query = from rp in context.Rezervacija_prostora
+                                where rp.rezervacija_prostora_id == odabraniProstor
+                                select rp;
+                Rezervacija_prostora prostor = query.FirstOrDefault();
+
+                    context.Rezervacija_prostora.Attach(prostor);
+                    if (prostor.datum > trenutnoVrijeme || prostor.placeno == 1)
+                    {
+                        context.Rezervacija_prostora.Remove(prostor);
+                        context.SaveChanges();
+                        MessageBox.Show("Uspješno obrisana rezervacija");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Rezervaciju možete otkazati najkasnije dan prije početka termina ili ukoliko je ona plaćena.");
+                    }
+                }
+            //}
+            Osvjezi();
+        }
+
+        private void btnObrisiTrenera_Click(object sender, EventArgs e)
+        {
+            int odabraniTrener = (int)dgvRezervacijeTrenera.CurrentRow.Cells[0].Value;
+            DateTime trenutnoVrijeme = DateTime.Today;
+
+            using (var context = new PI2306_DBEntities())
+            {
+                var query = from rt in context.Rezervacija_trenera
+                            where rt.rezervacija_trenera_id == odabraniTrener
+                            select rt;
+                Rezervacija_trenera trener = query.FirstOrDefault();
+
+                context.Rezervacija_trenera.Attach(trener);
+                if (trener.datum > trenutnoVrijeme || trener.placeno == 1)
+                {
+                    context.Rezervacija_trenera.Remove(trener);
+                    context.SaveChanges();
+                    MessageBox.Show("Uspješno obrisana rezervacija");
+                }
+                else
+                {
+                    MessageBox.Show("Rezervaciju možete otkazati najkasnije dan prije početka termina ili ukoliko je ona plaćena.");
+                }
+            }
+
+            Osvjezi();
+        }
+
+        private void btnObrisiOpremu_Click(object sender, EventArgs e)
+        {
+            int odabranaOprema = (int)dgvRezervacijeOpreme.CurrentRow.Cells[0].Value;
+            DateTime trenutnoVrijeme = DateTime.Today;
+
+            using (var context = new PI2306_DBEntities())
+            {
+                var query = from ro in context.Rezervacija_opreme
+                            where ro.rezervacija_sportske_opreme_id == odabranaOprema
+                            select ro;
+                Rezervacija_opreme oprema = query.FirstOrDefault();
+
+                context.Rezervacija_opreme.Attach(oprema);
+                if (oprema.datum > trenutnoVrijeme || oprema.placeno == 1)
+                {
+                    context.Rezervacija_opreme.Remove(oprema);
+                    context.SaveChanges();
+                    MessageBox.Show("Uspješno obrisana rezervacija");
+                }
+                else
+                {
+                    MessageBox.Show("Rezervaciju možete otkazati najkasnije dan prije početka termina ili ukoliko je ona plaćena.");
+                }
+            }
+
+            Osvjezi();
+        }
     }
 }

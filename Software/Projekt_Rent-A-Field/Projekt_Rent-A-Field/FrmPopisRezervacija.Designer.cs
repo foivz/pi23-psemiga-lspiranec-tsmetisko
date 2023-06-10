@@ -50,6 +50,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnRezervirajTrenera = new System.Windows.Forms.Button();
             this.btnRezervirajDodatnuSportskuOpremu = new System.Windows.Forms.Button();
+            this.btnObrisiProstor = new System.Windows.Forms.Button();
+            this.btnObrisiTrenera = new System.Windows.Forms.Button();
+            this.btnObrisiOpremu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -161,9 +164,9 @@
             // 
             this.btnPlatiProstor.BackColor = System.Drawing.Color.PowderBlue;
             this.btnPlatiProstor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPlatiProstor.Location = new System.Drawing.Point(1758, 283);
+            this.btnPlatiProstor.Location = new System.Drawing.Point(1758, 262);
             this.btnPlatiProstor.Name = "btnPlatiProstor";
-            this.btnPlatiProstor.Size = new System.Drawing.Size(233, 97);
+            this.btnPlatiProstor.Size = new System.Drawing.Size(189, 61);
             this.btnPlatiProstor.TabIndex = 32;
             this.btnPlatiProstor.Text = "Plati rezervaciju sportskog prostora";
             this.btnPlatiProstor.UseVisualStyleBackColor = false;
@@ -206,9 +209,9 @@
             // 
             this.button1.BackColor = System.Drawing.Color.PowderBlue;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1758, 759);
+            this.button1.Location = new System.Drawing.Point(1758, 744);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(233, 97);
+            this.button1.Size = new System.Drawing.Size(189, 64);
             this.button1.TabIndex = 28;
             this.button1.Text = "Plati rezervaciju sportske opreme";
             this.button1.UseVisualStyleBackColor = false;
@@ -238,9 +241,9 @@
             // 
             this.btnPlatiTrenera.BackColor = System.Drawing.Color.PowderBlue;
             this.btnPlatiTrenera.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPlatiTrenera.Location = new System.Drawing.Point(1758, 522);
+            this.btnPlatiTrenera.Location = new System.Drawing.Point(1758, 499);
             this.btnPlatiTrenera.Name = "btnPlatiTrenera";
-            this.btnPlatiTrenera.Size = new System.Drawing.Size(233, 97);
+            this.btnPlatiTrenera.Size = new System.Drawing.Size(189, 61);
             this.btnPlatiTrenera.TabIndex = 25;
             this.btnPlatiTrenera.Text = "Plati rezervaciju trenera";
             this.btnPlatiTrenera.UseVisualStyleBackColor = false;
@@ -293,12 +296,51 @@
             this.btnRezervirajDodatnuSportskuOpremu.UseVisualStyleBackColor = false;
             this.btnRezervirajDodatnuSportskuOpremu.Click += new System.EventHandler(this.btnRezervirajDodatnuSportskuOpremu_Click);
             // 
+            // btnObrisiProstor
+            // 
+            this.btnObrisiProstor.BackColor = System.Drawing.Color.PowderBlue;
+            this.btnObrisiProstor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnObrisiProstor.Location = new System.Drawing.Point(1758, 346);
+            this.btnObrisiProstor.Name = "btnObrisiProstor";
+            this.btnObrisiProstor.Size = new System.Drawing.Size(189, 61);
+            this.btnObrisiProstor.TabIndex = 42;
+            this.btnObrisiProstor.Text = "Obriši rezervaciju sportskog prostora";
+            this.btnObrisiProstor.UseVisualStyleBackColor = false;
+            this.btnObrisiProstor.Click += new System.EventHandler(this.btnObrisiProstor_Click);
+            // 
+            // btnObrisiTrenera
+            // 
+            this.btnObrisiTrenera.BackColor = System.Drawing.Color.PowderBlue;
+            this.btnObrisiTrenera.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnObrisiTrenera.Location = new System.Drawing.Point(1758, 581);
+            this.btnObrisiTrenera.Name = "btnObrisiTrenera";
+            this.btnObrisiTrenera.Size = new System.Drawing.Size(189, 61);
+            this.btnObrisiTrenera.TabIndex = 43;
+            this.btnObrisiTrenera.Text = "Obriši rezervaciju trenera";
+            this.btnObrisiTrenera.UseVisualStyleBackColor = false;
+            this.btnObrisiTrenera.Click += new System.EventHandler(this.btnObrisiTrenera_Click);
+            // 
+            // btnObrisiOpremu
+            // 
+            this.btnObrisiOpremu.BackColor = System.Drawing.Color.PowderBlue;
+            this.btnObrisiOpremu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnObrisiOpremu.Location = new System.Drawing.Point(1758, 823);
+            this.btnObrisiOpremu.Name = "btnObrisiOpremu";
+            this.btnObrisiOpremu.Size = new System.Drawing.Size(189, 61);
+            this.btnObrisiOpremu.TabIndex = 44;
+            this.btnObrisiOpremu.Text = "Obriši rezervaciju sportske opreme";
+            this.btnObrisiOpremu.UseVisualStyleBackColor = false;
+            this.btnObrisiOpremu.Click += new System.EventHandler(this.btnObrisiOpremu_Click);
+            // 
             // FrmPopisRezervacija
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(2018, 925);
+            this.Controls.Add(this.btnObrisiOpremu);
+            this.Controls.Add(this.btnObrisiTrenera);
+            this.Controls.Add(this.btnObrisiProstor);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.pictureBox2);
@@ -358,5 +400,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnRezervirajTrenera;
         private System.Windows.Forms.Button btnRezervirajDodatnuSportskuOpremu;
+        private System.Windows.Forms.Button btnObrisiProstor;
+        private System.Windows.Forms.Button btnObrisiTrenera;
+        private System.Windows.Forms.Button btnObrisiOpremu;
     }
 }
