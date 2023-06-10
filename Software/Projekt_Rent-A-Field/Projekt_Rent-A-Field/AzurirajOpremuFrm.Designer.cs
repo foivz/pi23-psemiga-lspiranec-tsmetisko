@@ -104,7 +104,8 @@
             // 
             // helpProvider1
             // 
-            this.helpProvider1.HelpNamespace = "C:\\Users\\david\\Desktop\\Novo Dokument programa Microsoft Word.htm";
+            this.helpProvider1.HelpNamespace = "C:\\Users\\david\\source\\repos\\pi23-psemiga-lspiranec-tsmetisko\\Software\\Projekt_Ren" +
+    "t-A-Field\\Resources\\test.htm";
             // 
             // AzurirajOpremuFrm
             // 
