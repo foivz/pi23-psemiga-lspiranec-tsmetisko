@@ -77,6 +77,7 @@
             this.btnOdustani.TabIndex = 20;
             this.btnOdustani.Text = "Odustani";
             this.btnOdustani.UseVisualStyleBackColor = true;
+            this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
             // 
             // btnAzuriraj
             // 
@@ -86,6 +87,7 @@
             this.btnAzuriraj.TabIndex = 19;
             this.btnAzuriraj.Text = "Azuriraj";
             this.btnAzuriraj.UseVisualStyleBackColor = true;
+            this.btnAzuriraj.Click += new System.EventHandler(this.btnAzuriraj_Click);
             // 
             // label2
             // 

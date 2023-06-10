@@ -45,5 +45,11 @@ namespace Projekt_Rent_A_Field
             Close();
             MessageBox.Show("Uspjesno azuriranje!");
         }
+
+        private void btnOdustani_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
+
 }
