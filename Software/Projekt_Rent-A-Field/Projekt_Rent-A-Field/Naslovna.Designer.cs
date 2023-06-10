@@ -36,12 +36,14 @@
             this.button3 = new System.Windows.Forms.Button();
             this.btnPopisTreningPrograma = new System.Windows.Forms.Button();
             this.btnDostupnost = new System.Windows.Forms.Button();
+            this.btnKreirajDogadaj = new System.Windows.Forms.Button();
+            this.btnPregledDogadaja = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonPopisRezervacija
             // 
             this.buttonPopisRezervacija.Location = new System.Drawing.Point(151, 113);
-            this.buttonPopisRezervacija.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonPopisRezervacija.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPopisRezervacija.Name = "buttonPopisRezervacija";
             this.buttonPopisRezervacija.Size = new System.Drawing.Size(293, 24);
             this.buttonPopisRezervacija.TabIndex = 0;
@@ -123,12 +125,34 @@
             this.btnDostupnost.UseVisualStyleBackColor = true;
             this.btnDostupnost.Click += new System.EventHandler(this.btnDostupnost_Click);
             // 
+            // btnKreirajDogadaj
+            // 
+            this.btnKreirajDogadaj.Location = new System.Drawing.Point(151, 346);
+            this.btnKreirajDogadaj.Name = "btnKreirajDogadaj";
+            this.btnKreirajDogadaj.Size = new System.Drawing.Size(292, 23);
+            this.btnKreirajDogadaj.TabIndex = 40;
+            this.btnKreirajDogadaj.Text = "Kreiranje dogadaja";
+            this.btnKreirajDogadaj.UseVisualStyleBackColor = true;
+            this.btnKreirajDogadaj.Click += new System.EventHandler(this.btnKreirajDogadaj_Click);
+            // 
+            // btnPregledDogadaja
+            // 
+            this.btnPregledDogadaja.Location = new System.Drawing.Point(151, 317);
+            this.btnPregledDogadaja.Name = "btnPregledDogadaja";
+            this.btnPregledDogadaja.Size = new System.Drawing.Size(292, 23);
+            this.btnPregledDogadaja.TabIndex = 41;
+            this.btnPregledDogadaja.Text = "Pregled dogadaja";
+            this.btnPregledDogadaja.UseVisualStyleBackColor = true;
+            this.btnPregledDogadaja.Click += new System.EventHandler(this.btnPregledDogadaja_Click);
+            // 
             // Naslovna
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(600, 396);
+            this.Controls.Add(this.btnPregledDogadaja);
+            this.Controls.Add(this.btnKreirajDogadaj);
             this.Controls.Add(this.btnDostupnost);
             this.Controls.Add(this.btnPopisTreningPrograma);
             this.Controls.Add(this.button3);
@@ -137,7 +161,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.buttonPristupCjeniku);
             this.Controls.Add(this.buttonPopisRezervacija);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Naslovna";
             this.Text = "Naslovna";
             this.ResumeLayout(false);
@@ -155,5 +179,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnPopisTreningPrograma;
         private System.Windows.Forms.Button btnDostupnost;
+        private System.Windows.Forms.Button btnKreirajDogadaj;
+        private System.Windows.Forms.Button btnPregledDogadaja;
     }
 }

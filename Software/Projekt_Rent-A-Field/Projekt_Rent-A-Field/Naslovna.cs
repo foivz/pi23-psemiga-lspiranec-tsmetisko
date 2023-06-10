@@ -64,5 +64,17 @@ namespace Projekt_Rent_A_Field
             forma.ShowDialog();
 
         }
+
+        private void btnKreirajDogadaj_Click(object sender, EventArgs e)
+        {
+            KreiranjeDogadajaFrm form = new KreiranjeDogadajaFrm();
+            form.ShowDialog();
+        }
+
+        private void btnPregledDogadaja_Click(object sender, EventArgs e)
+        {
+            PregledDogadajaFrm form = new PregledDogadajaFrm();
+            form.ShowDialog();
+        }
     }
 }
