@@ -126,6 +126,12 @@
     <Compile Include="CjenikFrm.Designer.cs">
       <DependentUpon>CjenikFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EvidencijaTerminaFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EvidencijaTerminaFrm.Designer.cs">
+      <DependentUpon>EvidencijaTerminaFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EvidentirajFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -366,6 +372,12 @@
     <Compile Include="Uloga.cs">
       <DependentUpon>PI2306_DB.tt</DependentUpon>
     </Compile>
+    <Compile Include="UnesiRezultatFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UnesiRezultatFrm.Designer.cs">
+      <DependentUpon>UnesiRezultatFrm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AzurirajOpremuFrm.resx">
       <DependentUpon>AzurirajOpremuFrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -395,6 +407,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DodavanjeSportskogProstoraFrm.resx">
       <DependentUpon>DodavanjeSportskogProstoraFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EvidencijaTerminaFrm.resx">
+      <DependentUpon>EvidencijaTerminaFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EvidentirajFrm.resx">
       <DependentUpon>EvidentirajFrm.cs</DependentUpon>
@@ -497,6 +512,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TreningProgram.resx">
       <DependentUpon>TreningProgram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UnesiRezultatFrm.resx">
+      <DependentUpon>UnesiRezultatFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="PI2306_DB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
