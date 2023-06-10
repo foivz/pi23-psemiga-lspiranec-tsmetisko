@@ -45,5 +45,17 @@ namespace Projekt_Rent_A_Field
             GeneriranjeFrm forma = new GeneriranjeFrm();
             forma.ShowDialog();
         }
+
+        private void btnPopisTreningPrograma_Click(object sender, EventArgs e)
+        {
+            PopisTreningPrograma ptp = new PopisTreningPrograma();
+            ptp.Show();
+        }
+
+        private void btnDostupnost_Click(object sender, EventArgs e)
+        {
+            PreglediTerena pt = new PreglediTerena();
+            pt.Show();
+        }
     }
 }
