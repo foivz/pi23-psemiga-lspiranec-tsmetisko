@@ -213,6 +213,12 @@
     <Compile Include="PregledDogadajaFrm.Designer.cs">
       <DependentUpon>PregledDogadajaFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PregledSportskihProstoraFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PregledSportskihProstoraFrm.Designer.cs">
+      <DependentUpon>PregledSportskihProstoraFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Prihvati_prigovor.cs">
       <DependentUpon>PI2306_DB.tt</DependentUpon>
     </Compile>
@@ -374,6 +380,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PregledDogadajaFrm.resx">
       <DependentUpon>PregledDogadajaFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PregledSportskihProstoraFrm.resx">
+      <DependentUpon>PregledSportskihProstoraFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Prijava.resx">
       <DependentUpon>Prijava.cs</DependentUpon>
