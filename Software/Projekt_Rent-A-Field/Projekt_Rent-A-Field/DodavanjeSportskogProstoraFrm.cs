@@ -17,6 +17,7 @@ namespace Projekt_Rent_A_Field
             InitializeComponent();
         }
 
+
         private void btnDodaj_Click(object sender, EventArgs e)
         {
             using (var context = new PI2306_DBEntities())
