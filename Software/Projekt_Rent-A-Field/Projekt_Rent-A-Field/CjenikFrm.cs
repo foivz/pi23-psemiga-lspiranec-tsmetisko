@@ -21,5 +21,24 @@ namespace Projekt_Rent_A_Field
         {
             this.Close();
         }
+
+        private void OpremaCjenikButton_Click(object sender, EventArgs e)
+        {
+            KorisnikOpremaCjenikFrm forma = new KorisnikOpremaCjenikFrm();
+            forma.ShowDialog();
+        }
+
+        private void ProstorCjenikButton_Click(object sender, EventArgs e)
+        {
+            KorisnikProstorCjenikFrm forma = new KorisnikProstorCjenikFrm();
+            forma.ShowDialog();
+            
+        }
+
+        private void TreneriCjenikButton_Click(object sender, EventArgs e)
+        {
+            KorisnikTreneriCjenikFrm forma = new KorisnikTreneriCjenikFrm();
+            forma.ShowDialog();
+        }
     }
 }
