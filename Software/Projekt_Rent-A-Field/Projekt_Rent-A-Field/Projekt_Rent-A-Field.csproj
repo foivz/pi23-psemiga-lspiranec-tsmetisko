@@ -237,6 +237,12 @@
     <Compile Include="PregledDogadajaFrm.Designer.cs">
       <DependentUpon>PregledDogadajaFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PreglediTerena.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PreglediTerena.Designer.cs">
+      <DependentUpon>PreglediTerena.cs</DependentUpon>
+    </Compile>
     <Compile Include="PregledSportskihProstoraFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -416,6 +422,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PregledDogadajaFrm.resx">
       <DependentUpon>PregledDogadajaFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PreglediTerena.resx">
+      <DependentUpon>PreglediTerena.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PregledSportskihProstoraFrm.resx">
       <DependentUpon>PregledSportskihProstoraFrm.cs</DependentUpon>

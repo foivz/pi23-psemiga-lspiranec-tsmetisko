@@ -76,6 +76,7 @@
             // 
             // button2
             // 
+            this.button2.ForeColor = System.Drawing.Color.Black;
             this.button2.Location = new System.Drawing.Point(366, 343);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(153, 44);
@@ -86,6 +87,7 @@
             // 
             // button1
             // 
+            this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Location = new System.Drawing.Point(168, 343);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(167, 44);
@@ -141,6 +143,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(536, 406);
             this.Controls.Add(this.cmbTip);
             this.Controls.Add(this.label5);
@@ -153,6 +156,7 @@
             this.Controls.Add(this.txtOpis);
             this.Controls.Add(this.txtNaziv);
             this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "TreningProgram";
             this.Text = "TreningProgram";
             this.Load += new System.EventHandler(this.TreningProgram_Load);
