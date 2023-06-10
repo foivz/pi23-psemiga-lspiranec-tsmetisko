@@ -14,17 +14,11 @@ namespace Projekt_Rent_A_Field
     
     public partial class Rezultat
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Rezultat()
-        {
-            this.Rezervacija_prostora = new HashSet<Rezervacija_prostora>();
-        }
-    
         public int rezultat_id { get; set; }
         public string sport { get; set; }
         public string rezultat1 { get; set; }
+        public int rezervacija_prostora_id { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Rezervacija_prostora> Rezervacija_prostora { get; set; }
+        public virtual Rezervacija_prostora Rezervacija_prostora { get; set; }
     }
 }

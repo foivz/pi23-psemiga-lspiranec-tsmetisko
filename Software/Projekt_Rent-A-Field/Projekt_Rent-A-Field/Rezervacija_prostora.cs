@@ -14,6 +14,12 @@ namespace Projekt_Rent_A_Field
     
     public partial class Rezervacija_prostora
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Rezervacija_prostora()
+        {
+            this.Rezultats = new HashSet<Rezultat>();
+        }
+    
         public int rezervacija_prostora_id { get; set; }
         public Nullable<int> sportski_prostor_id { get; set; }
         public Nullable<int> korisnik_id { get; set; }
@@ -23,11 +29,11 @@ namespace Projekt_Rent_A_Field
         public Nullable<int> placeno { get; set; }
         public Nullable<double> cijena { get; set; }
         public Nullable<int> dogadaj_id { get; set; }
-        public Nullable<int> rezultat_id { get; set; }
     
         public virtual Dogadaj Dogadaj { get; set; }
         public virtual Korisnik Korisnik { get; set; }
-        public virtual Rezultat Rezultat { get; set; }
         public virtual Sportski_prostor Sportski_prostor { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Rezultat> Rezultats { get; set; }
     }
 }

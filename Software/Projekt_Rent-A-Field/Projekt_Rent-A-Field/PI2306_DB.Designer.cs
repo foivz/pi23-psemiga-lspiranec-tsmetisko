@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\david\source\repos\pi23-psemiga-lspiranec-tsmetisko\Software\Projekt_Rent-A-Field\Projekt_Rent-A-Field\PI2306_DB.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\tomis\source\repos\pi23-psemiga-lspiranec-tsmetisko\Software\Projekt_Rent-A-Field\Projekt_Rent-A-Field\PI2306_DB.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
