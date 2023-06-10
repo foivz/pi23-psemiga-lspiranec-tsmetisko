@@ -46,5 +46,12 @@ namespace Projekt_Rent_A_Field
             PojedinacanTreningProgram ptp = new PojedinacanTreningProgram(odabrani);
             ptp.Show();
         }
+
+        private void btnVlastiti_Click(object sender, EventArgs e)
+        {
+            TreningProgram tp = new TreningProgram();
+            tp.Show();
+
+        }
     }
 }

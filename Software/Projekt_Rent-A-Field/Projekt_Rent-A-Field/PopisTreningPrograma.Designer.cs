@@ -31,6 +31,7 @@
             this.btnIzadi = new System.Windows.Forms.Button();
             this.btnPrikaziPojedinosti = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnVlastiti = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,12 +65,23 @@
             this.dataGridView1.Size = new System.Drawing.Size(587, 263);
             this.dataGridView1.TabIndex = 3;
             // 
+            // btnVlastiti
+            // 
+            this.btnVlastiti.Location = new System.Drawing.Point(232, 281);
+            this.btnVlastiti.Name = "btnVlastiti";
+            this.btnVlastiti.Size = new System.Drawing.Size(148, 48);
+            this.btnVlastiti.TabIndex = 6;
+            this.btnVlastiti.Text = "Izradi vlastiti";
+            this.btnVlastiti.UseVisualStyleBackColor = true;
+            this.btnVlastiti.Click += new System.EventHandler(this.btnVlastiti_Click);
+            // 
             // PopisTreningPrograma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(611, 357);
+            this.Controls.Add(this.btnVlastiti);
             this.Controls.Add(this.btnIzadi);
             this.Controls.Add(this.btnPrikaziPojedinosti);
             this.Controls.Add(this.dataGridView1);
@@ -86,5 +98,6 @@
         private System.Windows.Forms.Button btnIzadi;
         private System.Windows.Forms.Button btnPrikaziPojedinosti;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnVlastiti;
     }
 }
