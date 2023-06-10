@@ -45,6 +45,7 @@
             this.btnPoProstoru.TabIndex = 15;
             this.btnPoProstoru.Text = "Prikazi po prostoru";
             this.btnPoProstoru.UseVisualStyleBackColor = true;
+            this.btnPoProstoru.Click += new System.EventHandler(this.btnPoProstoru_Click);
             // 
             // cmbProstor
             // 
@@ -62,6 +63,7 @@
             this.btnDatum.TabIndex = 13;
             this.btnDatum.Text = "Prikazi po datumu";
             this.btnDatum.UseVisualStyleBackColor = true;
+            this.btnDatum.Click += new System.EventHandler(this.btnDatum_Click);
             // 
             // btnPrikaziSve
             // 
@@ -71,6 +73,7 @@
             this.btnPrikaziSve.TabIndex = 12;
             this.btnPrikaziSve.Text = "Prikazi sve";
             this.btnPrikaziSve.UseVisualStyleBackColor = true;
+            this.btnPrikaziSve.Click += new System.EventHandler(this.btnPrikaziSve_Click);
             // 
             // dgvRezervacija
             // 

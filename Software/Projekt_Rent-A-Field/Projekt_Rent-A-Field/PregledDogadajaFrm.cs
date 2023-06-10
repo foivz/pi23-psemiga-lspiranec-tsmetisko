@@ -133,19 +133,19 @@ namespace Projekt_Rent_A_Field
             return cmbProstor.DataSource;
         }
 
-        private void btnPrikaziSve_Click(object sender, EventArgs e)
-        {
-            PrikaziSve();
-        }
-
         private void btnDatum_Click(object sender, EventArgs e)
         {
             PrikaziPoDatumu();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnPoProstoru_Click(object sender, EventArgs e)
         {
             PrikaziPoProstoru();
+        }
+
+        private void btnPrikaziSve_Click(object sender, EventArgs e)
+        {
+            PrikaziSve();
         }
     }
 }
