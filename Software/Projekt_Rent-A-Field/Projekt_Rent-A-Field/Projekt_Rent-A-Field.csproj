@@ -135,6 +135,12 @@
     <Compile Include="Korisnik.cs">
       <DependentUpon>PI2306_DB.tt</DependentUpon>
     </Compile>
+    <Compile Include="KreiranjeDogadajaFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KreiranjeDogadajaFrm.Designer.cs">
+      <DependentUpon>KreiranjeDogadajaFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Naslovna.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -331,6 +337,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GeneriranjeQR.resx">
       <DependentUpon>GeneriranjeQR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KreiranjeDogadajaFrm.resx">
+      <DependentUpon>KreiranjeDogadajaFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Naslovna.resx">
       <DependentUpon>Naslovna.cs</DependentUpon>
