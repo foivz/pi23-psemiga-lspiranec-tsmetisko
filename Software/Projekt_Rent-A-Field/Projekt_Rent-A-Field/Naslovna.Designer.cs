@@ -39,7 +39,7 @@
             // 
             // buttonPopisRezervacija
             // 
-            this.buttonPopisRezervacija.Location = new System.Drawing.Point(296, 135);
+            this.buttonPopisRezervacija.Location = new System.Drawing.Point(151, 113);
             this.buttonPopisRezervacija.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPopisRezervacija.Name = "buttonPopisRezervacija";
             this.buttonPopisRezervacija.Size = new System.Drawing.Size(293, 24);
@@ -50,7 +50,7 @@
             // 
             // buttonPristupCjeniku
             // 
-            this.buttonPristupCjeniku.Location = new System.Drawing.Point(297, 251);
+            this.buttonPristupCjeniku.Location = new System.Drawing.Point(152, 229);
             this.buttonPristupCjeniku.Name = "buttonPristupCjeniku";
             this.buttonPristupCjeniku.Size = new System.Drawing.Size(292, 23);
             this.buttonPristupCjeniku.TabIndex = 1;
@@ -74,7 +74,7 @@
             // 
             // buttonKreirajPrigovor
             // 
-            this.buttonKreirajPrigovor.Location = new System.Drawing.Point(297, 164);
+            this.buttonKreirajPrigovor.Location = new System.Drawing.Point(152, 142);
             this.buttonKreirajPrigovor.Name = "buttonKreirajPrigovor";
             this.buttonKreirajPrigovor.Size = new System.Drawing.Size(292, 23);
             this.buttonKreirajPrigovor.TabIndex = 35;
@@ -84,7 +84,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(297, 193);
+            this.button2.Location = new System.Drawing.Point(152, 171);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(292, 23);
             this.button2.TabIndex = 36;
@@ -93,16 +93,17 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(297, 222);
+            this.button3.Location = new System.Drawing.Point(152, 200);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(292, 23);
             this.button3.TabIndex = 37;
             this.button3.Text = "Generiraj tim";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // buttonSortiranjePrigovora
             // 
-            this.buttonSortiranjePrigovora.Location = new System.Drawing.Point(12, 136);
+            this.buttonSortiranjePrigovora.Location = new System.Drawing.Point(12, 331);
             this.buttonSortiranjePrigovora.Name = "buttonSortiranjePrigovora";
             this.buttonSortiranjePrigovora.Size = new System.Drawing.Size(112, 23);
             this.buttonSortiranjePrigovora.TabIndex = 38;

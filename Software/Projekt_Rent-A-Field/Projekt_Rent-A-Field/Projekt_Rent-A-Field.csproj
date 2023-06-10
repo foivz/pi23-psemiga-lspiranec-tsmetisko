@@ -120,6 +120,12 @@
     <Compile Include="FrmPopisRezervacija.Designer.cs">
       <DependentUpon>FrmPopisRezervacija.cs</DependentUpon>
     </Compile>
+    <Compile Include="GeneriranjeFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneriranjeFrm.Designer.cs">
+      <DependentUpon>GeneriranjeFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GeneriranjeQR.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -301,6 +307,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPopisRezervacija.resx">
       <DependentUpon>FrmPopisRezervacija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneriranjeFrm.resx">
+      <DependentUpon>GeneriranjeFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GeneriranjeQR.resx">
       <DependentUpon>GeneriranjeQR.cs</DependentUpon>
