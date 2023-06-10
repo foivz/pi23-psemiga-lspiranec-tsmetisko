@@ -52,6 +52,7 @@
             this.ZatvoriCjenikButton.TabIndex = 10;
             this.ZatvoriCjenikButton.Text = "Zatvori";
             this.ZatvoriCjenikButton.UseVisualStyleBackColor = true;
+            this.ZatvoriCjenikButton.Click += new System.EventHandler(this.ZatvoriCjenikButton_Click);
             // 
             // ProstorCjenikButton
             // 
@@ -73,7 +74,7 @@
             this.OpremaCjenikButton.UseVisualStyleBackColor = true;
             this.OpremaCjenikButton.Click += new System.EventHandler(this.OpremaCjenikButton_Click);
             // 
-            // CjenikZaposlenik
+            // CjenikZaposlenikFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -83,7 +84,7 @@
             this.Controls.Add(this.ZatvoriCjenikButton);
             this.Controls.Add(this.ProstorCjenikButton);
             this.Controls.Add(this.OpremaCjenikButton);
-            this.Name = "CjenikZaposlenik";
+            this.Name = "CjenikZaposlenikFrm";
             this.Text = "Cjenik zaposlenik";
             this.ResumeLayout(false);
 

@@ -34,5 +34,10 @@ namespace Projekt_Rent_A_Field
             TreneriCjenikFrm forma = new TreneriCjenikFrm();
             forma.ShowDialog();
         }
+
+        private void ZatvoriCjenikButton_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
