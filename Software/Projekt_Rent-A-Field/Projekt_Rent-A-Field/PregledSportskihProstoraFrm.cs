@@ -62,7 +62,7 @@ namespace Projekt_Rent_A_Field
         private void btnAzuriraj_Click(object sender, EventArgs e)
         {
             Sportski_prostor odabrani = dgvSportskiProstori.CurrentRow.DataBoundItem as Sportski_prostor;
-            AzuriranjeSportskihProstoraFrm from = new FrmAzuriranjeSportskihProstoraFrm(odabrani);
+            AzuriranjeSportskihProstoraFrm from = new AzuriranjeSportskihProstoraFrm(odabrani);
             from.ShowDialog();
             Osvjezi();
         }
