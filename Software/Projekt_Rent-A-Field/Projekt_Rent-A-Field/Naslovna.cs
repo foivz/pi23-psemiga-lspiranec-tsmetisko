@@ -12,14 +12,19 @@ namespace Projekt_Rent_A_Field
 {
     public partial class Naslovna : Form
     {
-        public Naslovna()
+        int korisnikID;
+        int uloga;
+
+        public Naslovna(int korID, int ulogaKorisnika)
         {
             InitializeComponent();
+            korisnikID = korID;
+            uloga = ulogaKorisnika;
         }
 
         private void buttonPopisRezervacija_Click(object sender, EventArgs e)
         {
-            FrmPopisRezervacija frmPopisRezervacija = new FrmPopisRezervacija();
+            FrmPopisRezervacija frmPopisRezervacija = new FrmPopisRezervacija(korisnikID);
             frmPopisRezervacija.ShowDialog();
         }
 
