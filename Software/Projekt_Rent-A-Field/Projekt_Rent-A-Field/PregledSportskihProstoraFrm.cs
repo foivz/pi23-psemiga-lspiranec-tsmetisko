@@ -33,17 +33,20 @@ namespace Projekt_Rent_A_Field
 
         }
 
+
         private void btnDodaj_Click(object sender, EventArgs e)
         {
             DodavanjeSportskogProstoraFrm dodaj = new DodavanjeSportskogProstoraFrm();
             dodaj.ShowDialog();
-
             Osvjezi();
         }
 
-        private void btnOdustani_Click(object sender, EventArgs e)
+        private void btnAzuriraj_Click(object sender, EventArgs e)
         {
-            Close();
+            Sportski_prostor odabrani = dgvSportskiProstori.CurrentRow.DataBoundItem as Sportski_prostor;
+            AzuriranjeSportskihProstoraFrm from = new AzuriranjeSportskihProstoraFrm(odabrani);
+            from.ShowDialog();
+            Osvjezi();
         }
 
         private void btnObrisi_Click(object sender, EventArgs e)
@@ -59,12 +62,9 @@ namespace Projekt_Rent_A_Field
             Osvjezi();
         }
 
-        private void btnAzuriraj_Click(object sender, EventArgs e)
+        private void btnOdustani_Click(object sender, EventArgs e)
         {
-            Sportski_prostor odabrani = dgvSportskiProstori.CurrentRow.DataBoundItem as Sportski_prostor;
-            AzuriranjeSportskihProstoraFrm from = new AzuriranjeSportskihProstoraFrm(odabrani);
-            from.ShowDialog();
-            Osvjezi();
+            Close();
         }
     }
 }

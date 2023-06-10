@@ -55,6 +55,7 @@
             this.btnOdustani.TabIndex = 10;
             this.btnOdustani.Text = "Odustani";
             this.btnOdustani.UseVisualStyleBackColor = true;
+            this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
             // 
             // btnObrisi
             // 
@@ -64,6 +65,7 @@
             this.btnObrisi.TabIndex = 9;
             this.btnObrisi.Text = "Obrisi";
             this.btnObrisi.UseVisualStyleBackColor = true;
+            this.btnObrisi.Click += new System.EventHandler(this.btnObrisi_Click);
             // 
             // btnAzuriraj
             // 
@@ -73,6 +75,7 @@
             this.btnAzuriraj.TabIndex = 8;
             this.btnAzuriraj.Text = "Azuriraj";
             this.btnAzuriraj.UseVisualStyleBackColor = true;
+            this.btnAzuriraj.Click += new System.EventHandler(this.btnAzuriraj_Click);
             // 
             // btnDodaj
             // 
@@ -82,6 +85,7 @@
             this.btnDodaj.TabIndex = 7;
             this.btnDodaj.Text = "Dodaj";
             this.btnDodaj.UseVisualStyleBackColor = true;
+            this.btnDodaj.Click += new System.EventHandler(this.btnDodaj_Click);
             // 
             // dgvSportskiProstori
             // 

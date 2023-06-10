@@ -16,7 +16,7 @@ namespace Projekt_Rent_A_Field
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PregledDogadajaFrm());
+            Application.Run(new PregledDogadajaZaposlenikForm());
         }
     }
 }
