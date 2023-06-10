@@ -81,6 +81,12 @@
     <Compile Include="AzurirajTreneraFrm.Designer.cs">
       <DependentUpon>AzurirajTreneraFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AzuriranjeDogadajaFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AzuriranjeDogadajaFrm.Designer.cs">
+      <DependentUpon>AzuriranjeDogadajaFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AzuriranjeSportskihProstoraFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -392,6 +398,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AzurirajTreneraFrm.resx">
       <DependentUpon>AzurirajTreneraFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AzuriranjeDogadajaFrm.resx">
+      <DependentUpon>AzuriranjeDogadajaFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AzuriranjeSportskihProstoraFrm.resx">
       <DependentUpon>AzuriranjeSportskihProstoraFrm.cs</DependentUpon>
