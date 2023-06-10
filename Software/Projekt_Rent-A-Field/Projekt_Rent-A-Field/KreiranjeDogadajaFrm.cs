@@ -31,6 +31,7 @@ namespace Projekt_Rent_A_Field
             return comboBox1.DataSource;
         }
 
+        
         private void btnOdustani_Click(object sender, EventArgs e)
         {
             Close();
@@ -71,5 +72,5 @@ namespace Projekt_Rent_A_Field
             }
             Close();
         }
-}
+    }
 }
