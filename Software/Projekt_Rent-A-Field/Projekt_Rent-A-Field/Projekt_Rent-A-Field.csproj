@@ -207,6 +207,12 @@
     <Compile Include="Povratna_informacija_obrazac.cs">
       <DependentUpon>PI2306_DB.tt</DependentUpon>
     </Compile>
+    <Compile Include="PregledDogadajaFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PregledDogadajaFrm.Designer.cs">
+      <DependentUpon>PregledDogadajaFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Prihvati_prigovor.cs">
       <DependentUpon>PI2306_DB.tt</DependentUpon>
     </Compile>
@@ -364,6 +370,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PopisTreningPrograma.resx">
       <DependentUpon>PopisTreningPrograma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PregledDogadajaFrm.resx">
+      <DependentUpon>PregledDogadajaFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Prijava.resx">
       <DependentUpon>Prijava.cs</DependentUpon>
