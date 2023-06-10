@@ -76,21 +76,21 @@ namespace Projekt_Rent_A_Field
 
         private void btnRezervirajProstor_Click(object sender, EventArgs e)
         {
-            RezervacijaSportskogProstoraFrm rezervirajProstor = new RezervacijaSportskogProstoraFrm();
+            RezervacijaSportskogProstoraFrm rezervirajProstor = new RezervacijaSportskogProstoraFrm(korisnikID);
             rezervirajProstor.ShowDialog();
             Osvjezi();
         }
 
         private void btnRezervirajTrenera_Click(object sender, EventArgs e)
         {
-            RezervacijaTreneraFrm rezervirajTrenera = new RezervacijaTreneraFrm();
+            RezervacijaTreneraFrm rezervirajTrenera = new RezervacijaTreneraFrm(korisnikID);
             rezervirajTrenera.ShowDialog();
             Osvjezi();
         }
 
         private void btnRezervirajDodatnuSportskuOpremu_Click(object sender, EventArgs e)
         {
-            RezervacijaSportskeOpremeFrm rezervirajOpremu = new RezervacijaSportskeOpremeFrm();
+            RezervacijaSportskeOpremeFrm rezervirajOpremu = new RezervacijaSportskeOpremeFrm(korisnikID);
             rezervirajOpremu.ShowDialog();
             Osvjezi();
         }
@@ -124,28 +124,26 @@ namespace Projekt_Rent_A_Field
             int odabraniProstor = (int)dgvRezervacijeProstora.CurrentRow.Cells[0].Value;
             DateTime trenutnoVrijeme = DateTime.Today;
 
-            //if (odabraniProstor != null)
-            //{
-                using (var context = new PI2306_DBEntities())
-                {
-                    var query = from rp in context.Rezervacija_prostora
-                                where rp.rezervacija_prostora_id == odabraniProstor
-                                select rp;
+            using (var context = new PI2306_DBEntities())
+            {
+                var query = from rp in context.Rezervacija_prostora
+                            where rp.rezervacija_prostora_id == odabraniProstor
+                            select rp;
                 Rezervacija_prostora prostor = query.FirstOrDefault();
 
-                    context.Rezervacija_prostora.Attach(prostor);
-                    if (prostor.datum > trenutnoVrijeme || prostor.placeno == 1)
-                    {
-                        context.Rezervacija_prostora.Remove(prostor);
-                        context.SaveChanges();
-                        MessageBox.Show("Uspješno obrisana rezervacija");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Rezervaciju možete otkazati najkasnije dan prije početka termina ili ukoliko je ona plaćena.");
-                    }
+                context.Rezervacija_prostora.Attach(prostor);
+                if (prostor.datum > trenutnoVrijeme || prostor.placeno == 1)
+                {
+                    context.Rezervacija_prostora.Remove(prostor);
+                    context.SaveChanges();
+                    MessageBox.Show("Uspješno obrisana rezervacija");
                 }
-            //}
+                else
+                {
+                    MessageBox.Show("Rezervaciju možete otkazati najkasnije dan prije početka termina ili ukoliko je ona plaćena.");
+                }
+            }
+
             Osvjezi();
         }
 
