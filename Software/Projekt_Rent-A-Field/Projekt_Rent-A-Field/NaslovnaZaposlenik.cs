@@ -40,5 +40,17 @@ namespace Projekt_Rent_A_Field
             PreglediTerena pt = new PreglediTerena();
             pt.Show();
         }
+
+        private void btnDogadaji_Click(object sender, EventArgs e)
+        {
+            PregledDogadajaZaposlenikForm form = new PregledDogadajaZaposlenikForm();
+            form.ShowDialog();
+        }
+
+        private void btnSportskiProstori_Click(object sender, EventArgs e)
+        {
+            PregledSportskihProstoraFrm form = new PregledSportskihProstoraFrm();
+            form.ShowDialog();
+        }
     }
 }
