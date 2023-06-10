@@ -12,9 +12,11 @@ namespace Projekt_Rent_A_Field
 {
     public partial class NoviObrazacFrm : Form
     {
-        public NoviObrazacFrm()
+        private int korisnikID;
+        public NoviObrazacFrm(int korisnikID)
         {
             InitializeComponent();
+            this.korisnikID = korisnikID;
         }
 
         private void ButtonOdustaniObrazac_Click(object sender, EventArgs e)
@@ -27,6 +29,7 @@ namespace Projekt_Rent_A_Field
             using (var context = new PI2306_DBEntities())
             {
                 Povratna_informacija_obrazac novi = new Povratna_informacija_obrazac();
+                novi.korisnik_id = korisnikID;
                 novi.tekst = TextBoxObrazacNovi.Text;
                 novi.datum = dateTimePickerObrazacNovi.Value;
 

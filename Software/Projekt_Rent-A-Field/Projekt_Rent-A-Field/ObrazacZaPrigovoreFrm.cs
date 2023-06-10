@@ -12,16 +12,21 @@ namespace Projekt_Rent_A_Field
 {
     public partial class ObrazacZaPrigovoreFrm : Form
     {
-        public ObrazacZaPrigovoreFrm()
+        private int korisnikID;
+        public ObrazacZaPrigovoreFrm(int korisnikID)
         {
             InitializeComponent();
+            this.korisnikID = korisnikID;
         }
 
         private object GetObrazac()
         {
             using (var context = new PI2306_DBEntities())
             {
-                return context.Povratna_informacija_obrazac.ToList();
+                var rezultat = context.Povratna_informacija_obrazac
+                        .Where(r => r.korisnik_id == korisnikID)
+                        .ToList();
+                return rezultat;
             }
         }
 
@@ -29,7 +34,10 @@ namespace Projekt_Rent_A_Field
         {
             using (var context = new PI2306_DBEntities())
             {
-                return context.Prihvati_prigovor.ToList();
+                var rezultat = context.Prihvati_prigovor
+                        .Where(r => r.korisnik_id == korisnikID)
+                        .ToList();
+                return rezultat;
             }
         }
 
@@ -39,6 +47,7 @@ namespace Projekt_Rent_A_Field
             dataGridViewObrazac.Columns["pi_obrazac_id"].Visible = false;
             dataGridViewObrazac.Columns["korisnik_id"].Visible = false;
             dataGridViewObrazac.Columns["Prihvati_prigovor"].Visible = false;
+            dataGridViewObrazac.Columns["Korisnik"].Visible = false;
 
             dataGridViewZavrseniObrazac.DataSource = GetZavrsenObrazac();
             dataGridViewZavrseniObrazac.Columns["prihvati_prigovor_id"].Visible = false;
@@ -54,7 +63,7 @@ namespace Projekt_Rent_A_Field
 
         private void ButtonKreirajObrazac_Click(object sender, EventArgs e)
         {
-            NoviObrazacFrm forma = new NoviObrazacFrm();
+            NoviObrazacFrm forma = new NoviObrazacFrm(korisnikID);
             forma.ShowDialog();
             dataGridViewObrazac.DataSource = GetObrazac();
         }

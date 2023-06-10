@@ -44,6 +44,7 @@
             this.buttonZatvoriEvidencijuRezultat.TabIndex = 7;
             this.buttonZatvoriEvidencijuRezultat.Text = "Zatvori";
             this.buttonZatvoriEvidencijuRezultat.UseVisualStyleBackColor = true;
+            this.buttonZatvoriEvidencijuRezultat.Click += new System.EventHandler(this.buttonZatvoriEvidencijuRezultat_Click);
             // 
             // buttonEvidentirajRezultat
             // 

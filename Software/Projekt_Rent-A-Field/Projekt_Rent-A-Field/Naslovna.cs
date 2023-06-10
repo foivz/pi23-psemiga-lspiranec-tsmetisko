@@ -36,7 +36,7 @@ namespace Projekt_Rent_A_Field
 
         private void buttonKreirajPrigovor_Click(object sender, EventArgs e)
         {
-            ObrazacZaPrigovoreFrm forma = new ObrazacZaPrigovoreFrm();
+            ObrazacZaPrigovoreFrm forma = new ObrazacZaPrigovoreFrm(korisnikID);
             forma.ShowDialog();
         }
 
@@ -60,7 +60,7 @@ namespace Projekt_Rent_A_Field
 
         private void button2_Click(object sender, EventArgs e)
         {
-            EvidencijaTerminaFrm forma = new EvidencijaTerminaFrm();
+            EvidencijaTerminaFrm forma = new EvidencijaTerminaFrm(korisnikID);
             forma.ShowDialog();
 
         }

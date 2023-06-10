@@ -39,6 +39,7 @@ namespace Projekt_Rent_A_Field
             dataGridViewZaPregled.Columns["pi_obrazac_id"].Visible = false;
             dataGridViewZaPregled.Columns["korisnik_id"].Visible = false;
             dataGridViewZaPregled.Columns["Prihvati_prigovor"].Visible = false;
+            dataGridViewZaPregled.Columns["Korisnik"].Visible = false;
 
             dataGridViewZavrseniObrasci.DataSource = GetNoviObrazac();
             dataGridViewZavrseniObrasci.Columns["prihvati_prigovor_id"].Visible = false;

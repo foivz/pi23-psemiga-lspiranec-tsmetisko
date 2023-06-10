@@ -36,9 +36,11 @@ namespace Projekt_Rent_A_Field
 
         }
 
+
         private void buttonPohraniEvidencija_Click(object sender, EventArgs e)
         {
             Prihvati_prigovor noviPrihvat = new Prihvati_prigovor();
+            noviPrihvat.korisnik_id = odabraniObrazac.korisnik_id;
             noviPrihvat.pi_obrazac_id = odabraniObrazac.pi_obrazac_id;
             noviPrihvat.prihvaceno = radioButtonPrihvati.Checked ? 1 : 0;
             noviPrihvat.komentar = textBoxOdogovrEvidentiraj.Text;
@@ -48,6 +50,7 @@ namespace Projekt_Rent_A_Field
                 context.Prihvati_prigovor.Add(noviPrihvat);
                 context.SaveChanges();
             }
+
 
             MessageBox.Show("Podaci su uspješno pohranjeni!");
 

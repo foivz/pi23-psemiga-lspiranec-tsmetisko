@@ -12,16 +12,21 @@ namespace Projekt_Rent_A_Field
 {
     public partial class EvidencijaTerminaFrm : Form
     {
-        public EvidencijaTerminaFrm()
+        private int korisnikID;
+        public EvidencijaTerminaFrm(int korisnikID)
         {
             InitializeComponent();
+            this.korisnikID = korisnikID;
         }
 
         private object GetEvidencijaProstora()
         {
             using (var context = new PI2306_DBEntities())
             {
-                return context.Rezervacija_prostora.ToList();
+                var rezultat = context.Rezervacija_prostora
+                        .Where(r => r.korisnik_id == korisnikID)
+                        .ToList();
+                return rezultat;
             }
 
         }
@@ -37,7 +42,6 @@ namespace Projekt_Rent_A_Field
         private void EvidencijaTerminaFrm_Load(object sender, EventArgs e)
         {
             dataGridViewEvidentirajRezultat.DataSource = GetEvidencijaProstora();
-            dataGridViewPrikaziRezultat.DataSource = GetRezultati();
 
             dataGridViewEvidentirajRezultat.Columns["sportski_prostor_id"].Visible = false;
             dataGridViewEvidentirajRezultat.Columns["placeno"].Visible = false;
@@ -49,8 +53,7 @@ namespace Projekt_Rent_A_Field
             dataGridViewEvidentirajRezultat.Columns["duljina_rezervacije"].Visible = false;
             dataGridViewEvidentirajRezultat.Columns["vrijeme_od"].Visible = false;
             dataGridViewEvidentirajRezultat.Columns["Rezultats"].Visible = false;
-            dataGridViewPrikaziRezultat.Columns["rezultat_id"].Visible = true;
-            dataGridViewPrikaziRezultat.Columns["Rezervacija_prostora"].Visible = false;
+
         }
 
         private void buttonEvidentirajRezultat_Click(object sender, EventArgs e)
@@ -65,19 +68,11 @@ namespace Projekt_Rent_A_Field
 
                 forma.ShowDialog();
 
-                dataGridViewEvidentirajRezultat.DataSource = GetRezervacijaProstoraWithRezultati();
+                dataGridViewEvidentirajRezultat.DataSource = GetEvidencijaProstora();
             }
             else
             {
                 MessageBox.Show("Odaberite rezervaciju za koju želite unijeti rezultat!");
-            }
-        }
-
-        private object GetRezervacijaProstoraWithRezultati()
-        {
-            using (var context = new PI2306_DBEntities())
-            {
-                return context.Rezervacija_prostora.Include("Rezultats").ToList();
             }
         }
 
@@ -118,6 +113,11 @@ namespace Projekt_Rent_A_Field
                     }
                 }
             }
+        }
+
+        private void buttonZatvoriEvidencijuRezultat_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
