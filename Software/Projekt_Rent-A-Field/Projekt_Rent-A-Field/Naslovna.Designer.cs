@@ -34,7 +34,6 @@
             this.buttonKreirajPrigovor = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.buttonSortiranjePrigovora = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonPopisRezervacija
@@ -101,23 +100,12 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // buttonSortiranjePrigovora
-            // 
-            this.buttonSortiranjePrigovora.Location = new System.Drawing.Point(12, 331);
-            this.buttonSortiranjePrigovora.Name = "buttonSortiranjePrigovora";
-            this.buttonSortiranjePrigovora.Size = new System.Drawing.Size(112, 23);
-            this.buttonSortiranjePrigovora.TabIndex = 38;
-            this.buttonSortiranjePrigovora.Text = "Sortiranje prigovora";
-            this.buttonSortiranjePrigovora.UseVisualStyleBackColor = true;
-            this.buttonSortiranjePrigovora.Click += new System.EventHandler(this.buttonSortiranjePrigovora_Click);
-            // 
             // Naslovna
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(600, 366);
-            this.Controls.Add(this.buttonSortiranjePrigovora);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.buttonKreirajPrigovor);
@@ -140,6 +128,5 @@
         private System.Windows.Forms.Button buttonKreirajPrigovor;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button buttonSortiranjePrigovora;
     }
 }

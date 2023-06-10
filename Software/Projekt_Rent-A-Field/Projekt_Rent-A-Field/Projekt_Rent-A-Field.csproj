@@ -87,6 +87,12 @@
     <Compile Include="AzuriranjeSportskihProstoraFrm.Designer.cs">
       <DependentUpon>AzuriranjeSportskihProstoraFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CjenikZaposlenikFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CjenikZaposlenikFrm.Designer.cs">
+      <DependentUpon>CjenikZaposlenikFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DodajOpremuFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +164,12 @@
     </Compile>
     <Compile Include="Naslovna.Designer.cs">
       <DependentUpon>Naslovna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NaslovnaZaposlenik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NaslovnaZaposlenik.Designer.cs">
+      <DependentUpon>NaslovnaZaposlenik.cs</DependentUpon>
     </Compile>
     <Compile Include="NoviObrazacFrm.cs">
       <SubType>Form</SubType>
@@ -345,6 +357,9 @@
     <EmbeddedResource Include="CjenikFrm.resx">
       <DependentUpon>CjenikFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CjenikZaposlenikFrm.resx">
+      <DependentUpon>CjenikZaposlenikFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DodajOpremuFrm.resx">
       <DependentUpon>DodajOpremuFrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -374,6 +389,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Naslovna.resx">
       <DependentUpon>Naslovna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NaslovnaZaposlenik.resx">
+      <DependentUpon>NaslovnaZaposlenik.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NoviObrazacFrm.resx">
       <DependentUpon>NoviObrazacFrm.cs</DependentUpon>

@@ -40,12 +40,6 @@ namespace Projekt_Rent_A_Field
             forma.ShowDialog();
         }
 
-        private void buttonSortiranjePrigovora_Click(object sender, EventArgs e)
-        {
-            SortiranjeObrazacaFrm forma = new SortiranjeObrazacaFrm();
-            forma.ShowDialog();
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
             GeneriranjeFrm forma = new GeneriranjeFrm();
