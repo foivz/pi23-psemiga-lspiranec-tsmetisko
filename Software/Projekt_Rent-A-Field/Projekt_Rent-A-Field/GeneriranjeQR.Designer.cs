@@ -35,6 +35,7 @@
             // 
             // button1
             // 
+            this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Location = new System.Drawing.Point(193, 80);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(118, 50);
@@ -45,6 +46,7 @@
             // 
             // btnGeneriraj
             // 
+            this.btnGeneriraj.ForeColor = System.Drawing.Color.Black;
             this.btnGeneriraj.Location = new System.Drawing.Point(59, 80);
             this.btnGeneriraj.Name = "btnGeneriraj";
             this.btnGeneriraj.Size = new System.Drawing.Size(118, 50);
@@ -69,10 +71,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(384, 147);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnGeneriraj);
             this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "GeneriranjeQR";
             this.Text = "GeneriranjeQRk";
             this.ResumeLayout(false);

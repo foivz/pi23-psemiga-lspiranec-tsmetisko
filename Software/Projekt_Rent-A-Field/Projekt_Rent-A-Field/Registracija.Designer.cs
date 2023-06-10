@@ -98,6 +98,7 @@
             // 
             // btnClose
             // 
+            this.btnClose.ForeColor = System.Drawing.Color.Black;
             this.btnClose.Location = new System.Drawing.Point(218, 339);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(146, 46);
@@ -108,6 +109,7 @@
             // 
             // btnRegistriraj
             // 
+            this.btnRegistriraj.ForeColor = System.Drawing.Color.Black;
             this.btnRegistriraj.Location = new System.Drawing.Point(26, 339);
             this.btnRegistriraj.Name = "btnRegistriraj";
             this.btnRegistriraj.Size = new System.Drawing.Size(146, 46);
@@ -175,6 +177,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(403, 427);
             this.Controls.Add(this.txtKorIme);
             this.Controls.Add(this.label7);
@@ -191,6 +194,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "Registracija";
             this.Text = "Registracija";
             this.ResumeLayout(false);

@@ -42,6 +42,7 @@
             // 
             // button1
             // 
+            this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Location = new System.Drawing.Point(16, 219);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(99, 45);
@@ -52,6 +53,7 @@
             // 
             // btnNazad
             // 
+            this.btnNazad.ForeColor = System.Drawing.Color.Black;
             this.btnNazad.Location = new System.Drawing.Point(16, 185);
             this.btnNazad.Name = "btnNazad";
             this.btnNazad.Size = new System.Drawing.Size(99, 28);
@@ -121,6 +123,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(433, 343);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnNazad);
@@ -131,6 +134,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "PojedinacanTreningProgram";
             this.Text = "PojedinacanTreningProgram";
             this.Load += new System.EventHandler(this.PojedinacanTreningProgram_Load);
