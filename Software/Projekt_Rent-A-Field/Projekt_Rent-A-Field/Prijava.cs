@@ -57,7 +57,7 @@ namespace Projekt_Rent_A_Field
             }
             else
             {
-                MessageBox.Show("greska");
+                MessageBox.Show("Krivo uneseni podaci!");
             }
         }
         private List<Korisnik> DohvatiSveKorisnike()

@@ -98,5 +98,11 @@ namespace Projekt_Rent_A_Field
                 txtCijena.Enabled = false;
             }
         }
+
+        private void buttonKreiraj_Click(object sender, EventArgs e)
+        {
+            KreiranjeDogadajaFrm kd = new KreiranjeDogadajaFrm();
+            kd.Show();
+        }
     }
 }

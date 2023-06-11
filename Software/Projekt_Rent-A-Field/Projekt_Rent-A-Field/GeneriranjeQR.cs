@@ -25,7 +25,6 @@ namespace Projekt_Rent_A_Field
         {
             QRkod QRkod = new QRkod(email, lozinka);
             QRkod.Show();
-            GeneriranjeQR.ActiveForm.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)

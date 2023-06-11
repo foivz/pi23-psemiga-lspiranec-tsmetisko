@@ -42,6 +42,7 @@
             this.dtpDatumDostupnosti = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvProstori = new System.Windows.Forms.DataGridView();
+            this.buttonKreiraj = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProstori)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,6 +70,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.Transparent;
             this.label6.Location = new System.Drawing.Point(9, 451);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(48, 16);
@@ -78,6 +80,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.Transparent;
             this.label5.Location = new System.Drawing.Point(9, 422);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(54, 16);
@@ -87,6 +90,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.Transparent;
             this.label4.Location = new System.Drawing.Point(12, 392);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 16);
@@ -96,6 +100,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(12, 358);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(211, 16);
@@ -134,6 +139,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.Transparent;
             this.label3.Location = new System.Drawing.Point(272, 113);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 16);
@@ -150,6 +156,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(269, 23);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(164, 32);
@@ -167,12 +174,23 @@
             this.dgvProstori.TabIndex = 22;
             this.dgvProstori.SelectionChanged += new System.EventHandler(this.dgvProstori_SelectionChanged);
             // 
+            // buttonKreiraj
+            // 
+            this.buttonKreiraj.Location = new System.Drawing.Point(64, 512);
+            this.buttonKreiraj.Name = "buttonKreiraj";
+            this.buttonKreiraj.Size = new System.Drawing.Size(342, 48);
+            this.buttonKreiraj.TabIndex = 36;
+            this.buttonKreiraj.Text = "Kreiranje događaja";
+            this.buttonKreiraj.UseVisualStyleBackColor = true;
+            this.buttonKreiraj.Click += new System.EventHandler(this.buttonKreiraj_Click);
+            // 
             // PreglediTerena
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(475, 519);
+            this.ClientSize = new System.Drawing.Size(475, 572);
+            this.Controls.Add(this.buttonKreiraj);
             this.Controls.Add(this.txtCijena);
             this.Controls.Add(this.txtAdresa);
             this.Controls.Add(this.txtNaziv);
@@ -187,7 +205,7 @@
             this.Controls.Add(this.dtpDatumDostupnosti);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvProstori);
-            this.ForeColor = System.Drawing.Color.White;
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "PreglediTerena";
             this.Text = "PreglediTerena";
             ((System.ComponentModel.ISupportInitialize)(this.dgvProstori)).EndInit();
@@ -212,5 +230,6 @@
         private System.Windows.Forms.DateTimePicker dtpDatumDostupnosti;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvProstori;
+        private System.Windows.Forms.Button buttonKreiraj;
     }
 }
