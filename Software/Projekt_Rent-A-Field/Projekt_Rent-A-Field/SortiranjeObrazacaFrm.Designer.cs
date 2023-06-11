@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ButtonobrisiZavrsene = new System.Windows.Forms.Button();
             this.ButtonZatvoriEvidenciju = new System.Windows.Forms.Button();
             this.ButtonEvidentiraj = new System.Windows.Forms.Button();
             this.dataGridViewZavrseniObrasci = new System.Windows.Forms.DataGridView();
@@ -39,16 +38,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewZavrseniObrasci)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewZaPregled)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ButtonobrisiZavrsene
-            // 
-            this.ButtonobrisiZavrsene.Location = new System.Drawing.Point(42, 269);
-            this.ButtonobrisiZavrsene.Name = "ButtonobrisiZavrsene";
-            this.ButtonobrisiZavrsene.Size = new System.Drawing.Size(75, 23);
-            this.ButtonobrisiZavrsene.TabIndex = 13;
-            this.ButtonobrisiZavrsene.Text = "Brisi";
-            this.ButtonobrisiZavrsene.UseVisualStyleBackColor = true;
-            this.ButtonobrisiZavrsene.Click += new System.EventHandler(this.ButtonobrisiZavrsene_Click);
             // 
             // ButtonZatvoriEvidenciju
             // 
@@ -117,7 +106,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(600, 311);
-            this.Controls.Add(this.ButtonobrisiZavrsene);
             this.Controls.Add(this.ButtonZatvoriEvidenciju);
             this.Controls.Add(this.ButtonEvidentiraj);
             this.Controls.Add(this.dataGridViewZavrseniObrasci);
@@ -136,8 +124,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button ButtonobrisiZavrsene;
         private System.Windows.Forms.Button ButtonZatvoriEvidenciju;
         private System.Windows.Forms.Button ButtonEvidentiraj;
         public System.Windows.Forms.DataGridView dataGridViewZavrseniObrasci;

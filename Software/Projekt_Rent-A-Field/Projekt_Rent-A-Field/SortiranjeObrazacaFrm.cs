@@ -65,19 +65,6 @@ namespace Projekt_Rent_A_Field
             }
             Osvjezi();
         }
-
-        private void ButtonobrisiZavrsene_Click(object sender, EventArgs e)
-        {
-            Prihvati_prigovor odabran = dataGridViewZavrseniObrasci.CurrentRow.DataBoundItem as Prihvati_prigovor;
-            using (var context = new PI2306_DBEntities())
-            {
-                context.Prihvati_prigovor.Attach(odabran);
-                context.Prihvati_prigovor.Remove(odabran);
-                context.SaveChanges();
-            }
-            dataGridViewZavrseniObrasci.DataSource = GetNoviObrazac();
-        }
-
         private void ButtonZatvoriEvidenciju_Click(object sender, EventArgs e)
         {
             this.Close();
