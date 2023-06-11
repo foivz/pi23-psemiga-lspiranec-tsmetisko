@@ -43,7 +43,7 @@ F05 | Pregled događaja | Korisnik može pregledavati događaje i filtrirati ih.
 F06 | Stvaranje i brisanje terena | Zaposlenik može dodavati nove i brisati postojeće prostore | Petar Šemiga
 F07 | Najam sportske opreme | Korisnik je u mogućnosti unajmiti dodatne sportske rekvizite (lopte, reketi, sprave i pomagala...), a rezervacija je potvrđena ispisanom potvrdom | Tomislav Smetiško
 F08 | Najam privatnog trenera | Korisnik može unajmiti privatnog trenera i ima mogućnost individualnih treninga | Tomislav Smetiško
-F09 | Plaćanje | Korisnik odabire način plaćanja, ima opciju plačanja gotovinom u centru ili karticom preko aplikacije. | Tomislav Smetiško
+F09 | Plaćanje | Korisnik ima mogućnost platiti unajmljeni sportski prostor, opremu i trenera putem aplikacije. | Tomislav Smetiško
 F10 | Kreiranje i ažuriranje cjenika | Zaposlenik ima mogućnost dodavanja novih stavki u cjenik te ažuriranje postojećih, dok korisnik ima opciju samo pregledati cjenik. | David Milanović
 F11 | Stvaranje obrazca za prigovore/poboljšanja | Korisnik ima mogućnost kreiranja obrazca za prigovore/poboljšanja. Zaposlenik prigovor/poboljšanje može prihvatiti ili odbiti uz obrazloženje u komentaru. | David Milanović
 F12 | Evidencija termina korisnika | Aplikacija ima mogućnost evidentiranja termina gdje korisnik može evidentirati rezultate odigranih susreta. Također aplikacija nudi mogućnost generiranja osoba u timove za sljedeći termin odigravanja susreta. | David Milanović
