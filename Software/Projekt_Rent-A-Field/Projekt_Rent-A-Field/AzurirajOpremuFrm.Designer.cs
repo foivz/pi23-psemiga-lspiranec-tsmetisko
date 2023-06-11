@@ -104,8 +104,7 @@
             // 
             // helpProvider1
             // 
-            this.helpProvider1.HelpNamespace = "C:\\Users\\david\\source\\repos\\pi23-psemiga-lspiranec-tsmetisko\\Software\\Projekt_Ren" +
-    "t-A-Field\\Resources\\test.htm";
+            this.helpProvider1.HelpNamespace = "";
             // 
             // AzurirajOpremuFrm
             // 
