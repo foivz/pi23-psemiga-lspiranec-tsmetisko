@@ -48,7 +48,7 @@ namespace Projekt_Rent_A_Field
 
         private void btnPopisTreningPrograma_Click(object sender, EventArgs e)
         {
-            PopisTreningPrograma ptp = new PopisTreningPrograma();
+            PopisTreningPrograma ptp = new PopisTreningPrograma(korisnikID);
             ptp.Show();
         }
 
@@ -75,6 +75,17 @@ namespace Projekt_Rent_A_Field
         {
             PregledDogadajaFrm form = new PregledDogadajaFrm();
             form.ShowDialog();
+        }
+
+        private void textBoxKorisnik_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Naslovna_Load(object sender, EventArgs e)
+        {
+            textBoxKorisnik.Text = korisnikID.ToString();
+            textBoxKorisnik.Enabled = false;
         }
     }
 }

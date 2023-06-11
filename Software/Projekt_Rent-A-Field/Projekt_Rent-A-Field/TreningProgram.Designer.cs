@@ -64,6 +64,7 @@
             this.txtVlasnik.Name = "txtVlasnik";
             this.txtVlasnik.Size = new System.Drawing.Size(351, 22);
             this.txtVlasnik.TabIndex = 19;
+            this.txtVlasnik.TextChanged += new System.EventHandler(this.txtVlasnik_TextChanged);
             // 
             // label4
             // 

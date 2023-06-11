@@ -49,7 +49,7 @@ namespace Projekt_Rent_A_Field
                 }
                 else
                 {
-                    NaslovnaZaposlenik naslovnaZ = new NaslovnaZaposlenik();
+                    NaslovnaZaposlenik naslovnaZ = new NaslovnaZaposlenik(korisnikID);
                     naslovnaZ.Show();
                 }
                 

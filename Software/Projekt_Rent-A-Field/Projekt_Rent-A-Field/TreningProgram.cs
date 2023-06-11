@@ -12,13 +12,17 @@ namespace Projekt_Rent_A_Field
 {
     public partial class TreningProgram : Form
     {
-        public TreningProgram()
+        int korisnikId;
+        string korime;
+        public TreningProgram(int korID)
         {
             InitializeComponent();
             cmbTip.Items.Add("Plesni");
             cmbTip.Items.Add("Fitness");
             cmbTip.Items.Add("Sportski");
             cmbTip.Items.Add("Za djecu");
+            korisnikId = korID;
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -29,6 +33,17 @@ namespace Projekt_Rent_A_Field
         private void TreningProgram_Load(object sender, EventArgs e)
         {
             txtVlasnik.Enabled = false;
+            
+            List<Korisnik> korisnici = DohvatiSveKorisnike();
+            
+            foreach (Korisnik item in korisnici)
+            {
+                if (item.korisnik_id == korisnikId)
+                {
+                    korime = item.korisnicko_ime;
+                }
+            }
+            txtVlasnik.Text = korime;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -60,6 +75,21 @@ namespace Projekt_Rent_A_Field
                     Close();
                 }
 
+            }
+        }
+
+        private void txtVlasnik_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private List<Korisnik> DohvatiSveKorisnike()
+        {
+            using (var context = new PI2306_DBEntities())
+            {
+                var query = from k in context.Korisniks
+                            select k;
+
+                return query.ToList();
             }
         }
     }

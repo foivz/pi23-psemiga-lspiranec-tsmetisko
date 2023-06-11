@@ -12,9 +12,11 @@ namespace Projekt_Rent_A_Field
 {
     public partial class NaslovnaZaposlenik : Form
     {
-        public NaslovnaZaposlenik()
+        int korisnikID;
+        public NaslovnaZaposlenik(int korID)
         {
             InitializeComponent();
+            korisnikID = korID;
         }
 
         private void buttonSortiranjePrigovora_Click(object sender, EventArgs e)
@@ -31,7 +33,7 @@ namespace Projekt_Rent_A_Field
 
         private void btnPopisTreningPrograma_Click(object sender, EventArgs e)
         {
-            PopisTreningPrograma ptp = new PopisTreningPrograma();
+            PopisTreningPrograma ptp = new PopisTreningPrograma(korisnikID);
             ptp.Show();
         }
 
@@ -51,6 +53,17 @@ namespace Projekt_Rent_A_Field
         {
             PregledSportskihProstoraFrm form = new PregledSportskihProstoraFrm();
             form.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NaslovnaZaposlenik_Load(object sender, EventArgs e)
+        {
+            textBoxKorisnik.Text = korisnikID.ToString();
+            textBoxKorisnik.Enabled = false;
         }
     }
 }
