@@ -104,7 +104,8 @@
             // 
             // helpProvider1
             // 
-            this.helpProvider1.HelpNamespace = "";
+            this.helpProvider1.HelpNamespace = "C:\\Users\\david\\source\\repos\\Evidencija termina korisnika\\Evidencija termina koris" +
+    "nika\\Resources\\Help.chm";
             // 
             // AzurirajOpremuFrm
             // 
