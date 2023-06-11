@@ -16,7 +16,7 @@ namespace Projekt_Rent_A_Field
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Naslovna(1,1));
+            Application.Run(new Prijava());
         }
     }
 }

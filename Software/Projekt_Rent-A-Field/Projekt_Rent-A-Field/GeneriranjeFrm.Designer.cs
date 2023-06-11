@@ -46,6 +46,7 @@
             this.textBoxIme3 = new System.Windows.Forms.TextBox();
             this.textBoxIme2 = new System.Windows.Forms.TextBox();
             this.textBoxIme1 = new System.Windows.Forms.TextBox();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTim2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTim1)).BeginInit();
             this.SuspendLayout();
@@ -190,6 +191,11 @@
             this.textBoxIme1.Size = new System.Drawing.Size(113, 20);
             this.textBoxIme1.TabIndex = 18;
             // 
+            // helpProvider1
+            // 
+            this.helpProvider1.HelpNamespace = "C:\\Users\\david\\source\\repos\\pi23-psemiga-lspiranec-tsmetisko\\Software\\Projekt_Ren" +
+    "t-A-Field\\Projekt_Rent-A-Field\\Resources\\Generiraj.chm";
+            // 
             // GeneriranjeFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -215,6 +221,7 @@
             this.Controls.Add(this.textBoxIme2);
             this.Controls.Add(this.textBoxIme1);
             this.Name = "GeneriranjeFrm";
+            this.helpProvider1.SetShowHelp(this, true);
             this.Text = "GeneriranjeFrm";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTim2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTim1)).EndInit();
@@ -243,5 +250,6 @@
         private System.Windows.Forms.TextBox textBoxIme3;
         private System.Windows.Forms.TextBox textBoxIme2;
         private System.Windows.Forms.TextBox textBoxIme1;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }

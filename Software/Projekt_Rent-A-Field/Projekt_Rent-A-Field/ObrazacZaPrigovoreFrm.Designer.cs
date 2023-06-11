@@ -34,6 +34,7 @@
             this.dataGridViewObrazac = new System.Windows.Forms.DataGridView();
             this.ButtonZatvoriObrazac = new System.Windows.Forms.Button();
             this.ButtonKreirajObrazac = new System.Windows.Forms.Button();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewZavrseniObrazac)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewObrazac)).BeginInit();
             this.SuspendLayout();
@@ -94,6 +95,11 @@
             this.ButtonKreirajObrazac.UseVisualStyleBackColor = true;
             this.ButtonKreirajObrazac.Click += new System.EventHandler(this.ButtonKreirajObrazac_Click);
             // 
+            // helpProvider1
+            // 
+            this.helpProvider1.HelpNamespace = "C:\\Users\\david\\source\\repos\\pi23-psemiga-lspiranec-tsmetisko\\Software\\Projekt_Ren" +
+    "t-A-Field\\Projekt_Rent-A-Field\\Resources\\Obrazac za prigovore.chm";
+            // 
             // ObrazacZaPrigovoreFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -107,6 +113,7 @@
             this.Controls.Add(this.ButtonZatvoriObrazac);
             this.Controls.Add(this.ButtonKreirajObrazac);
             this.Name = "ObrazacZaPrigovoreFrm";
+            this.helpProvider1.SetShowHelp(this, true);
             this.Text = "ObrazacZaPrigovoreFrm";
             this.Load += new System.EventHandler(this.ObrazacZaPrigovoreFrm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewZavrseniObrazac)).EndInit();
@@ -124,5 +131,6 @@
         private System.Windows.Forms.DataGridView dataGridViewObrazac;
         private System.Windows.Forms.Button ButtonZatvoriObrazac;
         private System.Windows.Forms.Button ButtonKreirajObrazac;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }

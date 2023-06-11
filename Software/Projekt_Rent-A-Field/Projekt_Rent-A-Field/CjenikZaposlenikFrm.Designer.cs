@@ -32,6 +32,7 @@
             this.ZatvoriCjenikButton = new System.Windows.Forms.Button();
             this.ProstorCjenikButton = new System.Windows.Forms.Button();
             this.OpremaCjenikButton = new System.Windows.Forms.Button();
+            this.helpProviderCjenikZaposlenik = new System.Windows.Forms.HelpProvider();
             this.SuspendLayout();
             // 
             // TreneriCjenikButton
@@ -74,6 +75,11 @@
             this.OpremaCjenikButton.UseVisualStyleBackColor = true;
             this.OpremaCjenikButton.Click += new System.EventHandler(this.OpremaCjenikButton_Click);
             // 
+            // helpProviderCjenikZaposlenik
+            // 
+            this.helpProviderCjenikZaposlenik.HelpNamespace = "C:\\Users\\david\\source\\repos\\pi23-psemiga-lspiranec-tsmetisko\\Software\\Projekt_Ren" +
+    "t-A-Field\\Projekt_Rent-A-Field\\Resources\\CjenikZaposlenikHelp.chm";
+            // 
             // CjenikZaposlenikFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -85,6 +91,7 @@
             this.Controls.Add(this.ProstorCjenikButton);
             this.Controls.Add(this.OpremaCjenikButton);
             this.Name = "CjenikZaposlenikFrm";
+            this.helpProviderCjenikZaposlenik.SetShowHelp(this, true);
             this.Text = "Cjenik zaposlenik";
             this.ResumeLayout(false);
 
@@ -96,5 +103,6 @@
         private System.Windows.Forms.Button ZatvoriCjenikButton;
         private System.Windows.Forms.Button ProstorCjenikButton;
         private System.Windows.Forms.Button OpremaCjenikButton;
+        private System.Windows.Forms.HelpProvider helpProviderCjenikZaposlenik;
     }
 }

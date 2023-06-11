@@ -35,6 +35,7 @@
             this.dataGridViewZaPregled = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewZavrseniObrasci)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewZaPregled)).BeginInit();
             this.SuspendLayout();
@@ -105,6 +106,11 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Obrasci za pregled";
             // 
+            // helpProvider1
+            // 
+            this.helpProvider1.HelpNamespace = "C:\\Users\\david\\source\\repos\\pi23-psemiga-lspiranec-tsmetisko\\Software\\Projekt_Ren" +
+    "t-A-Field\\Projekt_Rent-A-Field\\Resources\\SortiranjeObrazacaProjekt.chm";
+            // 
             // SortiranjeObrazacaFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -119,6 +125,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "SortiranjeObrazacaFrm";
+            this.helpProvider1.SetShowHelp(this, true);
             this.Text = "Sortiranje obrazaca";
             this.Load += new System.EventHandler(this.SortiranjeObrazacaFrm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewZavrseniObrasci)).EndInit();
@@ -137,5 +144,6 @@
         private System.Windows.Forms.DataGridView dataGridViewZaPregled;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }

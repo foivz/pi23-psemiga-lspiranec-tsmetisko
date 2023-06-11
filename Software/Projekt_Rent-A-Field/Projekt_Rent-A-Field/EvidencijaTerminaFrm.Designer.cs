@@ -32,6 +32,7 @@
             this.buttonEvidentirajRezultat = new System.Windows.Forms.Button();
             this.dataGridViewPrikaziRezultat = new System.Windows.Forms.DataGridView();
             this.dataGridViewEvidentirajRezultat = new System.Windows.Forms.DataGridView();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPrikaziRezultat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEvidentirajRezultat)).BeginInit();
             this.SuspendLayout();
@@ -73,6 +74,11 @@
             this.dataGridViewEvidentirajRezultat.TabIndex = 4;
             this.dataGridViewEvidentirajRezultat.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dataGridViewEvidentirajRezultat_RowStateChanged);
             // 
+            // helpProvider1
+            // 
+            this.helpProvider1.HelpNamespace = "C:\\Users\\david\\source\\repos\\pi23-psemiga-lspiranec-tsmetisko\\Software\\Projekt_Ren" +
+    "t-A-Field\\Projekt_Rent-A-Field\\Resources\\Evidencija rezultata.chm";
+            // 
             // EvidencijaTerminaFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -84,6 +90,7 @@
             this.Controls.Add(this.dataGridViewPrikaziRezultat);
             this.Controls.Add(this.dataGridViewEvidentirajRezultat);
             this.Name = "EvidencijaTerminaFrm";
+            this.helpProvider1.SetShowHelp(this, true);
             this.Text = "EvidencijaTerminaFrm";
             this.Load += new System.EventHandler(this.EvidencijaTerminaFrm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPrikaziRezultat)).EndInit();
@@ -98,5 +105,6 @@
         private System.Windows.Forms.Button buttonEvidentirajRezultat;
         private System.Windows.Forms.DataGridView dataGridViewPrikaziRezultat;
         private System.Windows.Forms.DataGridView dataGridViewEvidentirajRezultat;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }
