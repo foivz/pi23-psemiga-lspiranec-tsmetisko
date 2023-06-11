@@ -38,9 +38,9 @@ Oznaka | Naziv | Kratki opis | Odgovorni član tima
 F01 | Registracija i prijava| Prilikom registracije generira se "članska" iskaznica (QR/Barcode) preko koje će se korisnici moći prijaviti u sustav. | Leon Špiranec
 F02 | Prijava za izradu vlastitih trening programa | Korisnik se može prijaviti za izradu vlastitog programa u koji se mogu uključiti ostali korisnici | Leon Špiranec
 F03 | Izbor i pregled terena | Korisnik dobiva uvid u raspoloživost i popis terena | Leon Špiranec
-F04 | Kreiranje događaja | Korisnik kreira događaj kojem prirodaje teren | Petar Šemiga
-F05 | Pregled događaja | Korisnik može pregledavati događaje i filtrirati ih. | Petar Šemiga
-F06 | Stvaranje i brisanje terena | Zaposlenik može dodavati nove i brisati postojeće prostore | Petar Šemiga
+F04 | Kreiranje i pregled događaja | Korisnik kreira događaj kojem prirodaje teren te je u mogućnosti događaje pregledati i filtrirati | Petar Šemiga
+F05 | Evidencija događaja | Zaposlenik može dodavati nove i brisati i ažurirati postojeće događaje | Petar Šemiga
+F06 | Evidencija sportskih terena | Zaposlenik može dodavati nove i brisati i ažurirati postojeće sportske prostore | Petar Šemiga
 F07 | Najam sportske opreme | Korisnik je u mogućnosti unajmiti dodatne sportske rekvizite (lopte, reketi, sprave i pomagala...), a rezervacija je potvrđena ispisanom potvrdom | Tomislav Smetiško
 F08 | Najam privatnog trenera | Korisnik može unajmiti privatnog trenera i ima mogućnost individualnih treninga | Tomislav Smetiško
 F09 | Plaćanje | Korisnik ima mogućnost platiti unajmljeni sportski prostor, opremu i trenera putem aplikacije. | Tomislav Smetiško
